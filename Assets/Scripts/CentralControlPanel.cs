@@ -33,7 +33,7 @@ public class CentralControlPanel : MonoBehaviour
     [SerializeField]
     private int _RPMDrainAmount = 1;
     [SerializeField]
-    private int _accumulateWasteAmount = 1;
+    private float _accumulateWasteAmount = 1;
     [SerializeField]
     private float _powerDrainSpeed = 0.5f;
     [SerializeField]
@@ -54,7 +54,7 @@ public class CentralControlPanel : MonoBehaviour
     private int _powerEfficiency = 100;
     private int _fanRPM = 3600;
     private int _pipePSI = 150;
-    private int _wasteTimer = 100;
+    private int _wasteTimer = 400;
 
     private Coroutine _decreaseOutputEfficiency;
     private Coroutine _decreaseFanRPM;
@@ -73,6 +73,8 @@ public class CentralControlPanel : MonoBehaviour
     private int _allowedActiveMinigames = 1;
     private int _completedMinigames = 0;
     private int _maxCompletedMinigames = 5;
+
+    private bool _canClosePanel = false;
 
     private void OnEnable()
     {
@@ -195,7 +197,7 @@ public class CentralControlPanel : MonoBehaviour
     {
         yield return new WaitForSeconds(_accumulateWasteSpeed);
 
-        _wasteTimer -= _accumulateWasteAmount;
+        _wasteTimer -= (int)_accumulateWasteAmount;
 
         PlayAlarm();
 
@@ -206,9 +208,17 @@ public class CentralControlPanel : MonoBehaviour
         _accumulateWaste = StartCoroutine(AccumulateWaste());
     }
 
+    private IEnumerator AllowClose()
+    {
+        yield return new WaitForEndOfFrame();
+        _canClosePanel = true;
+    }
+
     public void OpenControlPanel(Component sender, object obj)
     {
+        if (_canClosePanel) return;
         _openControlPanel.Raise(this, true);
+        StartCoroutine(AllowClose());
     }
 
     public void StartOutputMiniGame(Component sender, object obj)
@@ -300,7 +310,10 @@ public class CentralControlPanel : MonoBehaviour
     private void Update()
     {
         if (!_closePanel.action.WasPressedThisFrame()) return;
+        if (!_canClosePanel) return;
+
         _openControlPanel.Raise(this, false);
+        _canClosePanel = false;
     }
 
     private void PlayAlarm()

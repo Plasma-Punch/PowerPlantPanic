@@ -29,7 +29,9 @@ public class Interaction : MonoBehaviour
     {
         if (!IsLayerInMask(_playerMask, collision.gameObject.layer)) return;
 
-        _changeInteractionUI.Raise(this, false);
+        if (_changeInteractionUI != null)
+            _changeInteractionUI.Raise(this, false);
+
         _isInTrigger = false;
     }
     private bool IsLayerInMask(LayerMask mask, int layer)

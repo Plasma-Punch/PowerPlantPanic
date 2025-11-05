@@ -392,7 +392,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 2
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1133,6 +1133,10 @@ PrefabInstance:
       propertyPath: _soundManager
       value: 
       objectReference: {fileID: 200784404}
+    - target: {fileID: 7994807786281305073, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
+      propertyPath: _rotatingSpeed
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1340,9 +1344,17 @@ PrefabInstance:
       value: PoweOutputControls
       objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: _topValue
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _miniGameUI
       value: 
       objectReference: {fileID: 115908038}
+    - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: _bottomValue
+      value: -130
+      objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _progressBar
       value: 
@@ -1351,6 +1363,10 @@ PrefabInstance:
       propertyPath: _soundManager
       value: 
       objectReference: {fileID: 200784404}
+    - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: _spaceBetween
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: '_lights.Array.data[0]'
       value: 
@@ -2566,7 +2582,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807863854870733255, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2502148913665175712, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
       propertyPath: m_IsActive
@@ -2660,6 +2676,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8167794551004064216, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8180684677309990250, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2667,6 +2687,10 @@ PrefabInstance:
     - target: {fileID: 8477306445605834231, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622644509400268383, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8952205945904101622, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
       propertyPath: m_Size.y
@@ -2919,6 +2943,14 @@ PrefabInstance:
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: _minigamesInterval
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _accumulateWasteSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _accumulateWasteAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: m_Name
@@ -3711,6 +3743,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 73242812100309645, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2315817493257022627, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       propertyPath: m_Points.Array.data[0].x
       value: 11.025628
@@ -3759,6 +3795,10 @@ PrefabInstance:
       propertyPath: m_Points.Array.data[86].y
       value: 20.603598
       objectReference: {fileID: 0}
+    - target: {fileID: 6856441247115535723, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7885933110765647453, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       propertyPath: m_Volume
       value: 0.5
@@ -3805,11 +3845,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8680583737334249459, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9116902608777028121, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       propertyPath: m_Name
       value: GroundFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116902608777028121, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -30,6 +30,9 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private float _progressSpeed;
     [SerializeField]
     private GameEvent _changeCanWalk;
+    [SerializeField]
+    private int _spaceBetween, _topValue, _bottomValue;
+
 
     [Header("Sound Variables")]
     [SerializeField]
@@ -52,6 +55,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private bool _updateProgress;
 
+    private bool _miniGameFinished;
+
     private void OnEnable()
     {
         if (GameObject.Find("SoundManager") != null)
@@ -67,6 +72,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        if (_updateProgress) return;
+        _miniGameFinished = false;
         _updateProgress = true;
         foreach (Image image in _lights)
         {
@@ -74,8 +81,10 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         }
         initializeMiniGame();
     }
+
     public void completed()
     {
+        _miniGameFinished = true;
         _completedSliders.Clear();
         _isHoldingSlider = false;
         _activeSlider = null;
@@ -119,9 +128,9 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             {
                  startHeight = UnityEngine.Random.Range(1, 6);
             }
-            _yStartPoints.Add(-260 + ((startHeight - 1) * 130));
+            _yStartPoints.Add(_bottomValue + ((startHeight - 1) * _spaceBetween));
 
-            _yfinishPoints.Add(-260 + ((desiredHeight - 1) * 130));
+            _yfinishPoints.Add(_bottomValue + ((desiredHeight - 1) * _spaceBetween));
         }
 
         for(int i = 0; i < _yStartPoints.Count; i++)
@@ -153,8 +162,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         int direction = UnityEngine.Random.Range(1, 3);
 
         Vector3 newpos = randomSlider.transform.position;
-        if (direction == 1 && randomSlider.transform.localPosition.y > -260) newpos.y -= 130;
-        else if (direction == 2 && randomSlider.transform.localPosition.y < 260) newpos.y += 130;
+        if (direction == 1 && randomSlider.transform.localPosition.y > _bottomValue) newpos.y -= _spaceBetween;
+        else if (direction == 2 && randomSlider.transform.localPosition.y < _topValue) newpos.y += _spaceBetween;
 
         randomSlider.transform.position = newpos;
 
@@ -184,6 +193,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private void MoveSlider(Vector3 newpos)
     {
+        if (_miniGameFinished) return;
         _activeSlider.transform.position = newpos;
 
         MoveRandomSlider(_activeSlider);
@@ -220,16 +230,16 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
             Vector2 objectPos = _activeSlider.transform.position;
             Vector2 mousePos = Mouse.current.position.ReadValue();
-            if (Vector2.Distance(objectPos, mousePos) < 130) return;
+            if (Vector2.Distance(objectPos, mousePos) < _spaceBetween) return;
             Debug.Log("reachedMax");
-            if (objectPos.y < mousePos.y && _activeSlider.transform.localPosition.y < 260)
+            if (objectPos.y < mousePos.y && _activeSlider.transform.localPosition.y < _topValue)
             {
-                objectPos.y += 130;
+                objectPos.y += _spaceBetween;
                 MoveSlider(objectPos);
             }
-            else if (objectPos.y > mousePos.y && _activeSlider.transform.localPosition.y > -260)
+            else if (objectPos.y > mousePos.y && _activeSlider.transform.localPosition.y > _bottomValue)
             {
-                objectPos.y -= 130;
+                objectPos.y -= _spaceBetween;
                 MoveSlider(objectPos);
             }
         }
