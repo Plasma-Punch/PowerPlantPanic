@@ -3,12 +3,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MapUI : MonoBehaviour
+public class TutorialUI : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _mapUIImage;
+    private GameObject _tutorialScreen;
+
     [SerializeField]
-    private InputActionReference _closeMap;
+    private InputActionReference _closeTutorial;
     [SerializeField]
     private GameEvent _changeCanMove;
 
@@ -16,20 +17,20 @@ public class MapUI : MonoBehaviour
 
     private void Start()
     {
-        _closeMap.action.performed += Close_Map_Performed;
+        _closeTutorial.action.performed += Close_Map_Performed;
     }
 
     private void Close_Map_Performed(InputAction.CallbackContext obj)
     {
-        if (!_mapUIImage.activeSelf) return;
+        if (!_tutorialScreen.activeSelf) return;
         CloseUI();
     }
 
-    public void OpenMapUI(Component sender, object obj)
+    public void OpenTutorialUI(Component sender, object obj)
     {
-        if (!_canOpenPanel) return;
+        if(!_canOpenPanel) return;
         _changeCanMove.Raise(this, false);
-        _mapUIImage.SetActive(true);
+        _tutorialScreen.SetActive(true);
         _canOpenPanel = false;
     }
 
@@ -37,7 +38,7 @@ public class MapUI : MonoBehaviour
     {
         if (_canOpenPanel) return;
         _changeCanMove.Raise(this, true);
-        _mapUIImage.SetActive(false);
+        _tutorialScreen.SetActive(false);
         StartCoroutine(AllowOpen());
     }
 
