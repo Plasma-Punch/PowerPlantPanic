@@ -8,6 +8,7 @@ TagManager:
   - Red
   - Green
   - Blue
+  - GarbageBin
   layers:
   - Default
   - TransparentFX
