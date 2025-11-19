@@ -1015,6 +1015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProgressBarChanging
   ProgressBars:
   - {fileID: 1809753897}
+  ThreshHold: 10
 --- !u!1 &1393052766
 GameObject:
   m_ObjectHideFlags: 0
