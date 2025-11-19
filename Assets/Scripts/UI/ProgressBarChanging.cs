@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ProgressBarChanging : MonoBehaviour
 {
     [SerializeField]
-    private Image[] ProgressBars;
+    private Image ProgressBar;
 
     [SerializeField]
     private float ThreshHold;
@@ -17,7 +17,7 @@ public class ProgressBarChanging : MonoBehaviour
 
     private void Start()
     {
-        _oldBarValue = ProgressBars[0].fillAmount;
+        _oldBarValue = ProgressBar.fillAmount;
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class ProgressBarChanging : MonoBehaviour
     private IEnumerator MoveProgressBar()
     {
         _newBarValue = Random.Range(1, 101);
-        _newBarValue = _newBarValue / 100;
+        _newBarValue /= 100;
 
         float duration = 4f;
         float elapsed = 0f;
@@ -53,12 +53,12 @@ public class ProgressBarChanging : MonoBehaviour
             float t = elapsed / duration;
             t = Mathf.SmoothStep(0f, 1f, t);
 
-            ProgressBars[0].fillAmount = Mathf.Lerp(_oldBarValue, _newBarValue, t);
+            ProgressBar.fillAmount = Mathf.Lerp(_oldBarValue, _newBarValue, t);
 
             yield return null;
         }
 
-        ProgressBars[0].fillAmount = _newBarValue;
+        ProgressBar.fillAmount = _newBarValue;
         _oldBarValue = _newBarValue;
 
         
