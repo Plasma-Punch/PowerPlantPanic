@@ -1,7 +1,10 @@
 using System;
 using UnityEngine;
 
-public class PowerEfficiencyChangedEventArgs : EventArgs
+namespace System
 {
-    public int PowerEfficiency;
+    public class PowerEfficiencyChangedEventArgs : EventArgs
+    {
+        public int PowerEfficiency;
+    }
 }

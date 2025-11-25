@@ -1,7 +1,10 @@
 using System;
 using UnityEngine;
 
-public class PipePresureEventArgs : EventArgs
+namespace System
 {
-    public int PiperPressure;
+    public class PipePresureEventArgs : EventArgs
+    {
+        public int PiperPressure;
+    }
 }

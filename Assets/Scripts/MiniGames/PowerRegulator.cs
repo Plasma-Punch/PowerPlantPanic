@@ -11,6 +11,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameObject _miniGameUI;
     [SerializeField]
+    private GameObject FuseBoxTrigger;
+    [SerializeField]
     private int _numberOfSliders;
     [SerializeField]
     List<GameObject> _sliderObject = new List<GameObject>();
@@ -102,6 +104,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void failed()
     {
+        FuseBoxTrigger.SetActive(true);
         _completedSliders.Clear();
         _isHoldingSlider = false;
         _activeSlider = null;

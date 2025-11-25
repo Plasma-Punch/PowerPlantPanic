@@ -1,7 +1,10 @@
 using System;
 using UnityEngine;
 
-public class WasteTimerChangedEventArgs : EventArgs
+namespace System
 {
-    public int WasteTimer;
+    public class WasteTimerChangedEventArgs : EventArgs
+    {
+        public int WasteTimer;
+    }
 }

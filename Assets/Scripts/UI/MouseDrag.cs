@@ -1,10 +1,15 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
-    [SerializeField] 
+    [SerializeField]
+    private bool _disableImage;
+    [SerializeField]
+    private GameEvent _onPlacement;
+    [SerializeField]
     private string _tag;
     private bool _onObject, _clicked, _enteredObject;
     private float _timer;
@@ -16,6 +21,7 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
             transform.position = Input.mousePosition;
         }
 
+        if (!_disableImage) return;
         if (_enteredObject && !_clicked)
         {
             _timer += Time.deltaTime;
@@ -38,7 +44,11 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     {
         if (!_onObject) return;
         _clicked = !_clicked;
-        if(_enteredObject) _clicked = false;
+        if (_enteredObject)
+        {
+            if(_onPlacement != null)_onPlacement.Raise(this, EventArgs.Empty);
+            _clicked = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -48,7 +58,7 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag != _tag) return;
+        if (other.tag != this.tag) return;
         _enteredObject = false;
     }
 
