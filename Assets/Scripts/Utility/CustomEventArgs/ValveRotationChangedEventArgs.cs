@@ -1,8 +1,11 @@
 using System;
 using UnityEngine;
 
-public class ValveRotationChangedEventArgs : EventArgs
+namespace System
 {
-    public float ValveRotation;
-    public GameObject Valve;
+    public class ValveRotationChangedEventArgs : EventArgs
+    {
+        public float ValveRotation;
+        public GameObject Valve;
+    }
 }
