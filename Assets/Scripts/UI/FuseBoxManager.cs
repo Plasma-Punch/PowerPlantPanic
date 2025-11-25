@@ -15,7 +15,7 @@ public class FuseBoxManager : MonoBehaviour
     [SerializeField]
     private List<GameObject> _cablePrefabs = new List<GameObject>();
     [SerializeField]
-    private GameObject _UI;
+    private GameObject _cableSpawner;
     [SerializeField]
     private GameObject _powerTrigger;
     [SerializeField]
@@ -30,7 +30,7 @@ public class FuseBoxManager : MonoBehaviour
     [ContextMenu("initialize")]
     public void InitializeFuseBox(Component sender, object obj)
     {
-        _UI.transform.parent.gameObject.SetActive(true);
+        _cableSpawner.transform.parent.gameObject.SetActive(true);
         for(int i = 0; i < _cableHolder.Count; i++)
         {
             _movealbeCables[i].transform.parent = _cableHolder[i].transform.parent.transform;
@@ -56,7 +56,7 @@ public class FuseBoxManager : MonoBehaviour
             }
 
             GameObject cable = Instantiate(_cablePrefabs[cableIndex], _cableSpots[cableIndex].transform.position, Quaternion.identity);
-            cable.transform.parent = _UI.transform;
+            cable.transform.parent = _cableSpawner.transform;
             _cableSpots[cableIndex].SetActive(false);
             _spawnedCables.Add(cable);
             _spawnedIndex.Add(cableIndex);
@@ -94,6 +94,6 @@ public class FuseBoxManager : MonoBehaviour
         DestroySpawnedCables();
         _powerTrigger.SetActive(true);
         _fuseBoxTrigger.SetActive(false);
-        _UI.transform.parent.gameObject.SetActive(false);
+        _cableSpawner.transform.parent.gameObject.SetActive(false);
     }
 }
