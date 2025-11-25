@@ -131,9 +131,12 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             {
                  startHeight = UnityEngine.Random.Range(1, 6);
             }
-            _yStartPoints.Add(_bottomValue + ((startHeight - 1) * _spaceBetween));
 
-            _yfinishPoints.Add(_bottomValue + ((desiredHeight - 1) * _spaceBetween));
+            int yStart = _bottomValue + ((startHeight - 1) * _spaceBetween);
+            _yStartPoints.Add(yStart);
+
+            int yFinish = _bottomValue + ((desiredHeight - 1) * _spaceBetween);
+            _yfinishPoints.Add(yFinish);
         }
 
         for(int i = 0; i < _yStartPoints.Count; i++)
@@ -164,11 +167,11 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
         int direction = UnityEngine.Random.Range(1, 3);
 
-        Vector3 newpos = randomSlider.transform.position;
+        Vector3 newpos = randomSlider.transform.localPosition;
         if (direction == 1 && randomSlider.transform.localPosition.y > _bottomValue) newpos.y -= _spaceBetween;
         else if (direction == 2 && randomSlider.transform.localPosition.y < _topValue) newpos.y += _spaceBetween;
 
-        randomSlider.transform.position = newpos;
+        randomSlider.transform.localPosition = newpos;
 
         if (_completedSliders.Contains(randomSlider))
         {
@@ -197,7 +200,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private void MoveSlider(Vector3 newpos)
     {
         if (_miniGameFinished) return;
-        _activeSlider.transform.position = newpos;
+        _activeSlider.transform.localPosition = newpos;
 
         MoveRandomSlider(_activeSlider);
 
@@ -228,22 +231,23 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
         if (Mouse.current.leftButton.IsPressed())
         {
-            _isHoldingSlider = true;
             if (_activeSlider == null) return;
+            _isHoldingSlider = true;
 
             Vector2 objectPos = _activeSlider.transform.position;
+            Vector2 newPos = _activeSlider.transform.localPosition;
             Vector2 mousePos = Mouse.current.position.ReadValue();
             if (Vector2.Distance(objectPos, mousePos) < _spaceBetween) return;
             Debug.Log("reachedMax");
             if (objectPos.y < mousePos.y && _activeSlider.transform.localPosition.y < _topValue)
             {
-                objectPos.y += _spaceBetween;
-                MoveSlider(objectPos);
+                newPos.y += _spaceBetween;
+                MoveSlider(newPos);
             }
             else if (objectPos.y > mousePos.y && _activeSlider.transform.localPosition.y > _bottomValue)
             {
-                objectPos.y -= _spaceBetween;
-                MoveSlider(objectPos);
+                newPos.y -= _spaceBetween;
+                MoveSlider(newPos);
             }
         }
         else if(Mouse.current.leftButton.wasReleasedThisFrame)

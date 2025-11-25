@@ -362,6 +362,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8665133248514601492, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 130
+      objectReference: {fileID: 0}
     - target: {fileID: 9061865989898011952, guid: b34f773e04720974fa14c4c110bdcda9, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1714,7 +1718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _topValue
-      value: 130
+      value: 260
       objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _miniGameUI
@@ -1722,7 +1726,7 @@ PrefabInstance:
       objectReference: {fileID: 115908038}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _bottomValue
-      value: -130
+      value: -260
       objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _progressBar
@@ -1734,7 +1738,7 @@ PrefabInstance:
       objectReference: {fileID: 200784404}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _spaceBetween
-      value: 65
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: FuseBoxTrigger
@@ -4097,6 +4101,22 @@ PrefabInstance:
       propertyPath: _accumulateWasteAmount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _enableMiniGame.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: '_enableMiniGame.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: '_enableMiniGame.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c17c77cc858e76a48b13dd12fcdbb350, type: 2}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: '_enableMiniGame.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 06df464ca9a2550489bd1fbf9b963f02, type: 2}
     - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: m_Name
       value: CentralControlPanel
