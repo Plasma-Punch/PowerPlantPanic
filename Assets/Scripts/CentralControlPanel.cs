@@ -72,7 +72,7 @@ public class CentralControlPanel : MonoBehaviour
 
     private int _allowedActiveMinigames = 1;
     private int _completedMinigames = 0;
-    private int _maxCompletedMinigames = 5;
+    private int _maxCompletedMinigames = 10;
 
     private bool _canClosePanel = false;
 
@@ -208,17 +208,17 @@ public class CentralControlPanel : MonoBehaviour
         _accumulateWaste = StartCoroutine(AccumulateWaste());
     }
 
-    private IEnumerator AllowClose()
+    private IEnumerator AllowClose(bool state)
     {
         yield return new WaitForEndOfFrame();
-        _canClosePanel = true;
+        _canClosePanel = state;
     }
 
     public void OpenControlPanel(Component sender, object obj)
     {
         if (_canClosePanel) return;
         _openControlPanel.Raise(this, true);
-        StartCoroutine(AllowClose());
+        StartCoroutine(AllowClose(true));
     }
 
     public void StartOutputMiniGame(Component sender, object obj)
@@ -302,6 +302,7 @@ public class CentralControlPanel : MonoBehaviour
 
         if (_completedMinigames >= _maxCompletedMinigames)
         {
+            _allowedActiveMinigames += 1;
             _maxCompletedMinigames = _maxCompletedMinigames * 2;
             _completedMinigames = 0;
         }
@@ -313,7 +314,7 @@ public class CentralControlPanel : MonoBehaviour
         if (!_canClosePanel) return;
 
         _openControlPanel.Raise(this, false);
-        _canClosePanel = false;
+        StartCoroutine(AllowClose(false));
     }
 
     private void PlayAlarm()

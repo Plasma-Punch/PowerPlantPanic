@@ -1,7 +1,10 @@
 using System;
 using UnityEngine;
 
-public class FanRPMChangedEventArgs : EventArgs
+namespace System
 {
-    public int FanRPM;
+    public class FanRPMChangedEventArgs : EventArgs
+    {
+        public int FanRPM;
+    }
 }

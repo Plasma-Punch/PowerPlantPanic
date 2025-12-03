@@ -8,6 +8,10 @@ TagManager:
   - Red
   - Green
   - Blue
+  - GarbageBin
+  - RedCableH
+  - RedCableV
+  - BlueCable
   layers:
   - Default
   - TransparentFX

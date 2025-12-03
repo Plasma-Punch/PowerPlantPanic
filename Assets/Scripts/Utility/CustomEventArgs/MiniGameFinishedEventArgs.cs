@@ -1,16 +1,19 @@
 using System;
 using UnityEngine;
 
-public class MiniGameFinishedEventArgs : EventArgs
+namespace System
 {
-    public MiniGame FinishedMiniGame;
-}
+    public class MiniGameFinishedEventArgs : EventArgs
+    {
+        public MiniGame FinishedMiniGame;
+    }
 
-public enum MiniGame 
-{
-    PowerRegulating,
-    FanBlock,
-    PipeBroke,
-    WasteManagement
+    public enum MiniGame
+    {
+        PowerRegulating,
+        FanBlock,
+        PipeBroke,
+        WasteManagement
+    }
 }
 

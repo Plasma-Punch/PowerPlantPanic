@@ -696,7 +696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 672.1, y: 205.95}
+  m_AnchoredPosition: {x: 672.1, y: 355.95}
   m_SizeDelta: {x: 197.67, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &140619005
@@ -1325,6 +1325,7 @@ RectTransform:
   - {fileID: 781291733}
   - {fileID: 140619004}
   - {fileID: 1684424090}
+  - {fileID: 381990527}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1493,6 +1494,120 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1001 &381990526
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 199256224}
+    m_Modifications:
+    - target: {fileID: 2211486341931112781, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_Name
+      value: QRCode
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7808
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7808
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7808
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9719.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 769
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -368
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+--- !u!224 &381990527 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7934498659777181058, guid: c454d3be946a8f34285e521e8783849c, type: 3}
+  m_PrefabInstance: {fileID: 381990526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &395539229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,7 +2527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 332, y: 0}
+  m_AnchoredPosition: {x: 332, y: 150}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &781291734
