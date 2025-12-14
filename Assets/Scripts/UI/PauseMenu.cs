@@ -21,6 +21,8 @@ public class PauseMenu : MonoBehaviour
         _pauseButton.Enable();
         _pauseButton.started += _pauseButton_started;
         _pauseMenu.SetActive(false);
+
+        _canPause = true;
     }
 
     private void OnDisable()
