@@ -408,14 +408,14 @@ RectTransform:
   m_Children:
   - {fileID: 519262111}
   - {fileID: 569283549}
-  - {fileID: 4724981868728692390}
   - {fileID: 1233466459}
   - {fileID: 115908039}
   - {fileID: 1437066401}
-  - {fileID: 1207226402}
   - {fileID: 1474773670}
   - {fileID: 387594368}
   - {fileID: 1599070302}
+  - {fileID: 1207226402}
+  - {fileID: 4724981868728692390}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4164,7 +4164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: _enableMiniGame.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: '_enableMiniGame.Array.data[1]'
@@ -4173,11 +4173,11 @@ PrefabInstance:
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: '_enableMiniGame.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: c17c77cc858e76a48b13dd12fcdbb350, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: '_enableMiniGame.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 06df464ca9a2550489bd1fbf9b963f02, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: m_Name
       value: CentralControlPanel
