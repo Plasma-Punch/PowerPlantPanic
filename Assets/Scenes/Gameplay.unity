@@ -3540,10 +3540,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PresureRegulatorUI
       objectReference: {fileID: 0}
-    - target: {fileID: 6026947623701053382, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6826500919507576706, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
