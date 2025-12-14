@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting;
 using UnityEngine.UI;
+using System;
 
 public class PowerTurbin : MonoBehaviour, IMiniGame
 {
@@ -17,6 +18,8 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     private List<GameObject> garbagePositions = new List<GameObject>();
     private GameObject[] _garbageList = new GameObject[] { };
     private GarbageCollection _garbadgeCollection;
+
+    private bool _isActive;
 
     private void Start()
     {
@@ -46,6 +49,7 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
         turbinCleared.Raise(this, new MiniGameFinishedEventArgs{FinishedMiniGame = MiniGame.FanBlock});
         turbineScreen.SetActive(false);
         _changeCanWalk.Raise(this, true);
+        _isActive = false;
     }
 
     public void failed()
@@ -55,6 +59,8 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        if (_isActive) return;
+        _isActive = true;
         turbineScreen.SetActive(true);
         _changeCanWalk.Raise(this, false);
 

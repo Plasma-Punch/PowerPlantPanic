@@ -11,6 +11,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameObject _miniGameUI;
     [SerializeField]
+    private GameObject FuseBoxTrigger;
+    [SerializeField]
     private int _numberOfSliders;
     [SerializeField]
     List<GameObject> _sliderObject = new List<GameObject>();
@@ -30,6 +32,9 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private float _progressSpeed;
     [SerializeField]
     private GameEvent _changeCanWalk;
+    [SerializeField]
+    private int _spaceBetween, _topValue, _bottomValue;
+
 
     [Header("Sound Variables")]
     [SerializeField]
@@ -52,6 +57,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private bool _updateProgress;
 
+    private bool _miniGameFinished;
+
     private void OnEnable()
     {
         if (GameObject.Find("SoundManager") != null)
@@ -67,6 +74,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        if (_updateProgress) return;
+        _miniGameFinished = false;
         _updateProgress = true;
         foreach (Image image in _lights)
         {
@@ -74,8 +83,10 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         }
         initializeMiniGame();
     }
+
     public void completed()
     {
+        _miniGameFinished = true;
         _completedSliders.Clear();
         _isHoldingSlider = false;
         _activeSlider = null;
@@ -93,6 +104,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void failed()
     {
+        FuseBoxTrigger.SetActive(true);
         _completedSliders.Clear();
         _isHoldingSlider = false;
         _activeSlider = null;
@@ -119,9 +131,12 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             {
                  startHeight = UnityEngine.Random.Range(1, 6);
             }
-            _yStartPoints.Add(-260 + ((startHeight - 1) * 130));
 
-            _yfinishPoints.Add(-260 + ((desiredHeight - 1) * 130));
+            int yStart = _bottomValue + ((startHeight - 1) * _spaceBetween);
+            _yStartPoints.Add(yStart);
+
+            int yFinish = _bottomValue + ((desiredHeight - 1) * _spaceBetween);
+            _yfinishPoints.Add(yFinish);
         }
 
         for(int i = 0; i < _yStartPoints.Count; i++)
@@ -152,11 +167,11 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
         int direction = UnityEngine.Random.Range(1, 3);
 
-        Vector3 newpos = randomSlider.transform.position;
-        if (direction == 1 && randomSlider.transform.localPosition.y > -260) newpos.y -= 130;
-        else if (direction == 2 && randomSlider.transform.localPosition.y < 260) newpos.y += 130;
+        Vector3 newpos = randomSlider.transform.localPosition;
+        if (direction == 1 && randomSlider.transform.localPosition.y > _bottomValue) newpos.y -= _spaceBetween;
+        else if (direction == 2 && randomSlider.transform.localPosition.y < _topValue) newpos.y += _spaceBetween;
 
-        randomSlider.transform.position = newpos;
+        randomSlider.transform.localPosition = newpos;
 
         if (_completedSliders.Contains(randomSlider))
         {
@@ -184,7 +199,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private void MoveSlider(Vector3 newpos)
     {
-        _activeSlider.transform.position = newpos;
+        if (_miniGameFinished) return;
+        _activeSlider.transform.localPosition = newpos;
 
         MoveRandomSlider(_activeSlider);
 
@@ -215,22 +231,23 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
         if (Mouse.current.leftButton.IsPressed())
         {
-            _isHoldingSlider = true;
             if (_activeSlider == null) return;
+            _isHoldingSlider = true;
 
             Vector2 objectPos = _activeSlider.transform.position;
+            Vector2 newPos = _activeSlider.transform.localPosition;
             Vector2 mousePos = Mouse.current.position.ReadValue();
-            if (Vector2.Distance(objectPos, mousePos) < 130) return;
+            if (Vector2.Distance(objectPos, mousePos) < _spaceBetween) return;
             Debug.Log("reachedMax");
-            if (objectPos.y < mousePos.y && _activeSlider.transform.localPosition.y < 260)
+            if (objectPos.y < mousePos.y && _activeSlider.transform.localPosition.y < _topValue)
             {
-                objectPos.y += 130;
-                MoveSlider(objectPos);
+                newPos.y += _spaceBetween;
+                MoveSlider(newPos);
             }
-            else if (objectPos.y > mousePos.y && _activeSlider.transform.localPosition.y > -260)
+            else if (objectPos.y > mousePos.y && _activeSlider.transform.localPosition.y > _bottomValue)
             {
-                objectPos.y -= 130;
-                MoveSlider(objectPos);
+                newPos.y -= _spaceBetween;
+                MoveSlider(newPos);
             }
         }
         else if(Mouse.current.leftButton.wasReleasedThisFrame)
