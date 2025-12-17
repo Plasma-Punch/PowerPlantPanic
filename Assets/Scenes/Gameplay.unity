@@ -940,6 +940,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2778529398798357256, guid: 7e8c78de4527e4f4fb6541fdda8a6bd9, type: 3}
+      propertyPath: _smoothTime
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778529398798357256, guid: 7e8c78de4527e4f4fb6541fdda8a6bd9, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 898176836}
