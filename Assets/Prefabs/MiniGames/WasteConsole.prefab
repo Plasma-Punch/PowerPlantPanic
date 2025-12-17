@@ -56,7 +56,6 @@ MonoBehaviour:
   _minigameFinished: {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
   _grabSound: {fileID: 8300000, guid: a4fc52e24a8f09f4b8a22887528ff5d4, type: 3}
   _placeSound: {fileID: 8300000, guid: c0e9d4f3ec9705d44ad26792cb0421eb, type: 3}
-  _soundManager: {fileID: 0}
 --- !u!114 &415060747723909775
 MonoBehaviour:
   m_ObjectHideFlags: 0
