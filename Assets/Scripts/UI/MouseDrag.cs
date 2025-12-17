@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
+public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField]
     private bool _disableImage;
@@ -40,13 +40,18 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
         _onObject = true;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (!_onObject) return;
-        _clicked = !_clicked;
+        _clicked = true;
+    }
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (!_onObject) return;
+        _clicked = false;
         if (_enteredObject)
         {
-            if(_onPlacement != null)_onPlacement.Raise(this, EventArgs.Empty);
+            if (_onPlacement != null) _onPlacement.Raise(this, EventArgs.Empty);
             _clicked = false;
         }
     }

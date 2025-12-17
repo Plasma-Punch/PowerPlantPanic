@@ -4164,20 +4164,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: _enableMiniGame.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: '_enableMiniGame.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
+      objectReference: {fileID: 11400000, guid: c17c77cc858e76a48b13dd12fcdbb350, type: 2}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: '_enableMiniGame.Array.data[2]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: '_enableMiniGame.Array.data[3]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 06df464ca9a2550489bd1fbf9b963f02, type: 2}
     - target: {fileID: 8430369556381839005, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: m_Name
       value: CentralControlPanel
