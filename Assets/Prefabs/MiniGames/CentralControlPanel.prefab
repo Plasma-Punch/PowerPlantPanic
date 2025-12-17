@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _openControlPanel: {fileID: 11400000, guid: 64702b8d56bf3e848b99b004111217ee, type: 2}
-  _minigamesInterval: 10
-  _errorRate: 0
+  _minigamesInterval: 6
   _enableMiniGame:
   - {fileID: 11400000, guid: 1bc734a01b73f38498bb9520cb39928c, type: 2}
   - {fileID: 11400000, guid: c17c77cc858e76a48b13dd12fcdbb350, type: 2}
@@ -65,16 +64,15 @@ MonoBehaviour:
   _wasteTimerChanged: {fileID: 11400000, guid: 7564ef4e33beb4f40b9fc6ea11844c44, type: 2}
   _closePanel: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _gameLost: {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
-  _powerDrainAmount: 2
+  _powerDrainAmount: 1
   _pressureDrainAmount: 3
-  _RPMDrainAmount: 10
+  _RPMDrainAmount: 30
   _accumulateWasteAmount: 2
   _powerDrainSpeed: 1
-  _pressureDrainSpeed: 1
+  _pressureDrainSpeed: 2
   _RPMDrainSpeed: 1
-  _accumulateWasteSpeed: 1
+  _accumulateWasteSpeed: 0.5
   _alarmSound: {fileID: 8300000, guid: 91466ac01e37e7e4ab77fe34e41bf55d, type: 3}
-  _soundManager: {fileID: 0}
 --- !u!114 &998721114786211185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +209,10 @@ PrefabInstance:
       propertyPath: _interact
       value: 
       objectReference: {fileID: 11400000, guid: 6324eccb6dc16bb4eb21aab48bed68c6, type: 2}
+    - target: {fileID: 6457386082826074389, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
+      propertyPath: _miniGame
+      value: 
+      objectReference: {fileID: 6402226421691418178}
     - target: {fileID: 7785476439282817814, guid: 94aab3188f3480e4481cb244dbaf67a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18005656
