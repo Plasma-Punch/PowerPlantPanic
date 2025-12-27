@@ -26,7 +26,7 @@ public class MouseDrag : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         {
             _timer += Time.deltaTime;
 
-            if (_timer > 1.5f)
+            if (_timer > 0.5f)
             {
                 _timer = 0;
                 _enteredObject = false;
