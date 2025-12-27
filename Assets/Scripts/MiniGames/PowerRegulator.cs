@@ -59,6 +59,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private bool _miniGameFinished;
 
+
     private void OnEnable()
     {
         if (GameObject.Find("SoundManager") != null)
@@ -197,12 +198,11 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         if (_completedSliders.Count == 3) completed();
     }
 
-    private void MoveSlider(Vector3 newpos)
+    private void MoveSlider(Vector3 newPos)
     {
         if (_miniGameFinished) return;
-        _activeSlider.transform.localPosition = newpos;
-
-        MoveRandomSlider(_activeSlider);
+        Debug.Log(newPos);
+        _activeSlider.transform.localPosition = newPos;
 
         CheckSolution();
     }
@@ -229,29 +229,40 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             UpdateProgressBar(_timer);
         }
 
-        if (Mouse.current.leftButton.IsPressed())
+        if (Mouse.current.leftButton.isPressed)
         {
             if (_activeSlider == null) return;
             _isHoldingSlider = true;
 
-            Vector2 objectPos = _activeSlider.transform.position;
-            Vector2 newPos = _activeSlider.transform.localPosition;
-            Vector2 mousePos = Mouse.current.position.ReadValue();
-            if (Vector2.Distance(objectPos, mousePos) < _spaceBetween) return;
-            Debug.Log("reachedMax");
-            if (objectPos.y < mousePos.y && _activeSlider.transform.localPosition.y < _topValue)
-            {
-                newPos.y += _spaceBetween;
-                MoveSlider(newPos);
-            }
-            else if (objectPos.y > mousePos.y && _activeSlider.transform.localPosition.y > _bottomValue)
-            {
-                newPos.y -= _spaceBetween;
-                MoveSlider(newPos);
-            }
+            var sliderRect = (RectTransform)_activeSlider.transform;
+
+            // screen -> local (panel) space
+            Vector2 localMouse;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                _activeSlider.transform.parent.GetComponent<RectTransform>(), Mouse.current.position.ReadValue(), null, out localMouse); // null if Screen Space Overlay [web:34]
+
+            Vector2 newPos = sliderRect.localPosition;
+            newPos.y = Mathf.Clamp(localMouse.y, _bottomValue, _topValue);
+            MoveSlider(newPos);
         }
-        else if(Mouse.current.leftButton.wasReleasedThisFrame)
+        else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
+            if (_activeSlider == null) return;
+
+            int index = _sliderObject.IndexOf(_activeSlider);
+
+            // use local positions and snap distance in local units
+            var sliderRect = (RectTransform)_activeSlider.transform;
+            var targetRect = (RectTransform)_desiredLocations[index].transform;
+
+            if (Mathf.Abs(sliderRect.localPosition.y - targetRect.localPosition.y) < 20)
+            {
+                Vector2 newPos = sliderRect.localPosition;
+                newPos.y = targetRect.localPosition.y;
+                MoveSlider(newPos);
+                MoveRandomSlider(_activeSlider);
+            }
+
             _isHoldingSlider = false;
             _activeSlider = null;
         }
