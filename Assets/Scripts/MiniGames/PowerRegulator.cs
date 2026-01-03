@@ -110,7 +110,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _isHoldingSlider = false;
         _activeSlider = null;
         _timer = 0;
-        _failedMiniGame.Raise(this, EventArgs.Empty);
+        _failedMiniGame.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.PowerRegulating });
         _updateProgress = false;
         _yStartPoints.Clear();
         _yfinishPoints.Clear();
@@ -201,7 +201,6 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private void MoveSlider(Vector3 newPos)
     {
         if (_miniGameFinished) return;
-        Debug.Log(newPos);
         _activeSlider.transform.localPosition = newPos;
 
         CheckSolution();
