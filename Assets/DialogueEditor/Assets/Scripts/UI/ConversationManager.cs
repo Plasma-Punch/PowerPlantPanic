@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace DialogueEditor
 {
-    public class ConversationManager : MonoBehaviour
+    public class ConversationManager : MonoBehaviour, IPointerClickHandler
     {
         private enum eState
         {
@@ -254,6 +255,13 @@ namespace DialogueEditor
             }
 
             return value;
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (DialogueText.maxVisibleCharacters == m_targetScrollTextCount) return;
+            DialogueText.maxVisibleCharacters = m_targetScrollTextCount;
+            m_scrollIndex = m_targetScrollTextCount;
         }
 
 
