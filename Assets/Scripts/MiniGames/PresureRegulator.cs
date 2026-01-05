@@ -222,7 +222,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         _canOpenPanel = false;
         _uiIsOpen = true;
         _openPressureControlUI.Raise(this, true);
-        StartMiniGame(sender, obj);
+        //StartMiniGame(sender, obj);
     }
 
     private void Update()
