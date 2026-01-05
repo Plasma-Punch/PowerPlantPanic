@@ -14,6 +14,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private NPCConversation _turbineConvo;
     [SerializeField] private NPCConversation _turbineHelpConvo;
     [SerializeField] private NPCConversation _turbineCompleteConvo;
+    [SerializeField] private NPCConversation _PipeConvo;
+    [SerializeField] private NPCConversation _pipeHelpConvo;
+    [SerializeField] private NPCConversation _pipeCompleteConvo;
 
 
     private bool _failedPower;
@@ -29,10 +32,9 @@ public class DialogueManager : MonoBehaviour
                 break;
             case MiniGame.FanBlock:
                 ConversationManager.Instance.StartConversation(_turbineCompleteConvo);
-
                 break;
             case MiniGame.PipeBroke:
-
+                ConversationManager.Instance.StartConversation(_pipeCompleteConvo);
                 break;
             case MiniGame.WasteManagement:
 
@@ -54,10 +56,10 @@ public class DialogueManager : MonoBehaviour
                 ConversationManager.Instance.StartConversation(_failedConvo);
                 break;
             case MiniGame.PipeBroke:
-
+                ConversationManager.Instance.StartConversation(_failedConvo);
                 break;
             case MiniGame.WasteManagement:
-
+                ConversationManager.Instance.StartConversation(_failedConvo);
                 break;
         }
     }
@@ -80,5 +82,15 @@ public class DialogueManager : MonoBehaviour
     public void OpenTurbineHelpDialogue(Component sender, object obj)
     {
         ConversationManager.Instance.StartConversation(_turbineHelpConvo);
+    }
+
+    public void OpenPipeDialogue(Component sender, object obj)
+    {
+        ConversationManager.Instance.StartConversation(_PipeConvo);
+    }
+
+    public void OpenPipeHelpDialogue(Component sender, object obj)
+    {
+        ConversationManager.Instance.StartConversation(_pipeHelpConvo);
     }
 }

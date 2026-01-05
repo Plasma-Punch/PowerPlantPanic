@@ -99,6 +99,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         SetRandomBrokenPipe();
     }
 
+    public void StartMiniGameTroughDialogue()
+    {
+        StartMiniGame(this, EventArgs.Empty);
+    }
+
     public void RemovePipe(Component sender, object obj)
     {
         string pipeHolderTag = sender.gameObject.transform.parent.tag;

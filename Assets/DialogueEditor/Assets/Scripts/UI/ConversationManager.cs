@@ -259,8 +259,13 @@ namespace DialogueEditor
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (DialogueText.maxVisibleCharacters == m_targetScrollTextCount) return;
-            DialogueText.maxVisibleCharacters = m_targetScrollTextCount;
+            if (DialogueText.maxVisibleCharacters >= m_targetScrollTextCount)
+            {
+                SpeechNode next = GetValidSpeechOfNode(m_currentSpeech);
+                SetupSpeech(next);
+                return;
+            }
+                DialogueText.maxVisibleCharacters = m_targetScrollTextCount;
             m_scrollIndex = m_targetScrollTextCount;
         }
 
