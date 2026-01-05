@@ -54,6 +54,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private bool _canOpenPanel = true;
 
     private int _previousPipe;
+    private bool _justOpenedUI;
 
     private void OnEnable()
     {
@@ -221,7 +222,9 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         if (!_canOpenPanel) return;
         _canOpenPanel = false;
         _uiIsOpen = true;
+        _justOpenedUI = true;
         _openPressureControlUI.Raise(this, true);
+        StartCoroutine(CanClosePanel());
         //StartMiniGame(sender, obj);
     }
 
@@ -229,7 +232,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     {
         if (_closePanel.action.WasPressedThisFrame())
         {
-            if (_uiIsOpen)
+            if (_uiIsOpen && !_justOpenedUI)
             {
                 _openPressureControlUI.Raise(this, false);
                 _uiIsOpen = false;
@@ -292,5 +295,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     {
         yield return new WaitForEndOfFrame();
         _canOpenPanel = true;
+    }
+
+    private IEnumerator CanClosePanel()
+    {
+        yield return new WaitForEndOfFrame();
+        _justOpenedUI = false;
     }
 }
