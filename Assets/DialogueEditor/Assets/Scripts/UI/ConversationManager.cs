@@ -110,6 +110,18 @@ namespace DialogueEditor
 
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (DialogueText.maxVisibleCharacters >= m_targetScrollTextCount)
+                {
+                    SpeechNode next = GetValidSpeechOfNode(m_currentSpeech);
+                    SetupSpeech(next);
+                    return;
+                }
+                DialogueText.maxVisibleCharacters = m_targetScrollTextCount;
+                m_scrollIndex = m_targetScrollTextCount;
+            }
+
             switch (m_state)
             {
                 case eState.TransitioningDialogueBoxOn:
