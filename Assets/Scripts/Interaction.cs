@@ -44,6 +44,7 @@ public class Interaction : MonoBehaviour
     {
         if (!_interactInput.action.WasPressedThisFrame()) return;
         if (!_isInTrigger) return;
+        if (_changeInteractionUI == null) return;
 
         if (_miniGame == null)
         {
