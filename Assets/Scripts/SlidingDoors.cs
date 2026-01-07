@@ -37,6 +37,11 @@ public class SlidingDoors : MonoBehaviour
         StartCoroutine(CloseDoors());
     }
 
+    public void OpenDoor()
+    {
+        StartCoroutine(OpenDoors());
+    }
+
     IEnumerator OpenDoors() 
     {
         Vector3 leftDoorTargetPos = doorLeftPosition.position - transform.right * ((doorLeft.GetComponent<SpriteRenderer>().size.x / 2) * doorLeft.transform.localScale.x);

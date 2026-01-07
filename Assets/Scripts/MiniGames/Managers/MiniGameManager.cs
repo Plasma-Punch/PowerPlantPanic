@@ -85,11 +85,11 @@ public class MiniGameManager : MonoBehaviour
     public void DisableWasteControlTrigger(Component sender, object obj)
     {
        foreach (GameObject go in _miniGameTriggers)
-        {
+       {
             if (go.name != "WasteConsoleTrigger") continue;
             go.SetActive(false);
             return;
-        }
+       }
     }
 
     public void StartMiniGame(Component sender, object obj)
