@@ -16,6 +16,11 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameEvent _minigameFinished;
 
+    [SerializeField]
+    private Sprite[] _dropZones;
+    [SerializeField]
+    private SpriteRenderer _screenObject;
+
     [Header("Audio Variables")]
     [SerializeField]
     private AudioClip _grabSound;
@@ -44,7 +49,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
 
     public void completed()
     {
-        _minigameFinished.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement});
+        _minigameFinished.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement });
     }
 
     public void failed()
@@ -55,7 +60,19 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     public void StartMiniGame(Component sender, object obj)
     {
         SpawnBarrel();
+
+        // Show a random logo here
+        SelectRandomFigure();
+
     }
+
+    private void SelectRandomFigure()
+    {
+        int random = UnityEngine.Random.Range(0,_dropZones.Length);
+
+        _screenObject.sprite = _dropZones[random];
+    }
+
     private void SpawnBarrel()
     {
         if (_spawnedBarrel != null) return;
