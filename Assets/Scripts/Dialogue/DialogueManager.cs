@@ -20,6 +20,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private NPCConversation _wasteConvo;
     [SerializeField] private NPCConversation _wasteHelpConvo;
     [SerializeField] private NPCConversation _wasteCompleteConvo;
+    [SerializeField] private NPCConversation _tutorialFinishedConvo;
+    [SerializeField] private NPCConversation _controlConvo;
 
 
     private bool _failedPower;
@@ -105,5 +107,14 @@ public class DialogueManager : MonoBehaviour
     public void OpenWasteHelpDialogue(Component sender, object obj)
     {
         ConversationManager.Instance.StartConversation(_wasteHelpConvo);
+    }
+
+    public void OpenControlDialogue(Component sender, object obj)
+    {
+        ConversationManager.Instance.StartConversation(_controlConvo);
+    }
+    public void OpenCompletedDialogue(Component sender, object obj)
+    {
+        ConversationManager.Instance.StartConversation(_tutorialFinishedConvo);
     }
 }
