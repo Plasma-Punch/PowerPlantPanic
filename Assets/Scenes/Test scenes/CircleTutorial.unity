@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":162.099976,"yPos":159.599991},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     job you removed all the nuclear waste.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -873,7 +873,7 @@ Transform:
   m_GameObject: {fileID: 106493968}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.1, y: -11.5, z: 0}
+  m_LocalPosition: {x: 5.93, y: -10.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1082,15 +1082,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"This
     task has a lot of steps so listen carefully.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":171.6,"yPos":127.199905},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"First
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":152.799988,"yPos":127.199905},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"First
     turn of the right valve","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":171.600037,"yPos":241.599945},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":152.800018,"yPos":241.599945},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
     you can sefely remove the broken pipe and trow it in the trash bin.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":171.600037,"yPos":348.799774},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":152.800018,"yPos":348.799774},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
     walk over to the table with new pipes and grab the right one.","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":174.000061,"yPos":461.599731},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":155.200043,"yPos":461.599731},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
     place the pipe in the emty slot and turn the valve back open.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -1327,11 +1327,11 @@ PrefabInstance:
       objectReference: {fileID: 669905328}
     - target: {fileID: 6690144195043847262, guid: 7e8c78de4527e4f4fb6541fdda8a6bd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.58
+      value: 0.98999995
       objectReference: {fileID: 0}
     - target: {fileID: 6690144195043847262, guid: 7e8c78de4527e4f4fb6541fdda8a6bd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.93
+      value: 21.76
       objectReference: {fileID: 0}
     - target: {fileID: 6690144195043847262, guid: 7e8c78de4527e4f4fb6541fdda8a6bd9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1384,6 +1384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 305308127}
   - component: {fileID: 305308128}
+  - component: {fileID: 305308129}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1464,6 +1465,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &305308129
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305308126}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &319008391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,11 +1666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7923231707598028344, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.060001
+      value: 17.07
       objectReference: {fileID: 0}
     - target: {fileID: 7923231707598028344, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5468133
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 7923231707598028344, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1856,6 +1903,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1291737091}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &404995706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1952235751191339996, guid: a63bc50f18a30c44db45359484090e75, type: 3}
+  m_PrefabInstance: {fileID: 2145966511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413141042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +2008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 438258457}
   - component: {fileID: 438258458}
+  - component: {fileID: 438258459}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -2036,6 +2089,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &438258459
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438258456}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &477677703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,7 +2269,7 @@ Transform:
   m_GameObject: {fileID: 491494638}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 30.199997, y: 7.75, z: 0}
+  m_LocalPosition: {x: 30.199997, y: 7.87, z: 0}
   m_LocalScale: {x: 8.3159075, y: 10.298017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2365,7 +2464,7 @@ Transform:
   m_GameObject: {fileID: 521872490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70678014, w: 0.7074333}
-  m_LocalPosition: {x: -7.7, y: 37.6, z: 0}
+  m_LocalPosition: {x: -9.89, y: 37.6, z: 0}
   m_LocalScale: {x: 19.60089, y: 10.298017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2463,9 +2562,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 15
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"First
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"First
     you need the press the yellow button.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":176.400024,"yPos":141.6},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":157.6,"yPos":141.6},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"This
     will drop a waste barrel from the ceiling. bring this barrel to the waste barrel
     pool.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -3420,6 +3519,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &729479324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 477960339113146955, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
+  m_PrefabInstance: {fileID: 1027521986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &757653046 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
@@ -3572,6 +3676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797427188}
   - component: {fileID: 797427189}
+  - component: {fileID: 797427190}
   m_Layer: 0
   m_Name: CentrelPanel
   m_TagString: Untagged
@@ -3588,7 +3693,7 @@ Transform:
   m_GameObject: {fileID: 797427187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.15, y: 1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3618,6 +3723,57 @@ MonoBehaviour:
   - {fileID: 1804787308}
   - {fileID: 1841543838}
   _Completed: {fileID: 11400000, guid: eb96ab7db2cbbdd4c98dca6b5f494281, type: 2}
+--- !u!61 &797427190
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797427187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.62, y: 1.88}
+  m_EdgeRadius: 0
+--- !u!1 &844415185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1952235751191339996, guid: a63bc50f18a30c44db45359484090e75, type: 3}
+  m_PrefabInstance: {fileID: 1026225389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &849160785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4024,7 +4180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     now you mastered this task!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -4100,7 +4256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 10
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     job you unclogged the turbine.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -4141,7 +4297,7 @@ Transform:
   m_GameObject: {fileID: 879891408}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 30.199997, y: -8.83, z: 0}
+  m_LocalPosition: {x: 30.199997, y: -11.04, z: 0}
   m_LocalScale: {x: 8.3159075, y: 10.298017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4438,14 +4594,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 10
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Needed
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Needed
     some help? The task is quite simple. All you have to do is drag the red sliders
     on top of the blue ones.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":174.800018,"yPos":140},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":156,"yPos":140},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     you somehow failed this you need to fix the fuse box.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":174.800018,"yPos":256.800049},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"To
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":156,"yPos":256.800049},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"To
     do this simply drag the right cable pieces into the empty slots.","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":174.000031,"yPos":374.4001},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":155.200012,"yPos":374.4001},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
     Luck!","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -4675,13 +4831,62 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1952235751191339996, guid: a63bc50f18a30c44db45359484090e75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1026225392}
   m_SourcePrefab: {fileID: 100100000, guid: a63bc50f18a30c44db45359484090e75, type: 3}
 --- !u!4 &1026225390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1617761358206159943, guid: a63bc50f18a30c44db45359484090e75, type: 3}
   m_PrefabInstance: {fileID: 1026225389}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1026225392
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844415185}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.45, y: 1.4}
+  m_EdgeRadius: 0
 --- !u!1001 &1027521986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4769,13 +4974,62 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5922137909385186676, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1478317029}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 477960339113146955, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1027521989}
   m_SourcePrefab: {fileID: 100100000, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
 --- !u!4 &1027521987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5922137909385186676, guid: 837119bb94d19c04aac14b1aa6017cb6, type: 3}
   m_PrefabInstance: {fileID: 1027521986}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1027521989
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729479324}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.04, y: 0.37}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.4, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1083362952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4856,7 +5110,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7019608, g: 0.6117647, b: 0.25490198, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5172,6 +5426,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1149688668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1952235751191339996, guid: a63bc50f18a30c44db45359484090e75, type: 3}
+  m_PrefabInstance: {fileID: 8362110540199691973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1149688670
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149688668}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.003394127, y: 0.013574362}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.3868465, y: 1.3800607}
+  m_EdgeRadius: 0
 --- !u!1001 &1175223880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5448,7 +5753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":148.5,"yPos":58},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     failed the task. Press the red button if you need anny help!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -5593,7 +5898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 10
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"One
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"One
     of the pipes burst quickly g ofix it before we lose all presure!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -6133,7 +6438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     you finished the task. Now lets try to fail it, once you do you need to fix the
     fuse box.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -6289,9 +6594,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":145.299988,"yPos":78},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     failed the task. First fix the fuze box before trying again. If you need any
-    help press the red button near the door.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
+    help press the red button.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Crazy Scientis Guy
@@ -6303,7 +6608,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 886225985}
+        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
+        m_MethodName: DisableTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1365390726
 Transform:
   m_ObjectHideFlags: 0
@@ -6366,12 +6683,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":true,"xPos":165.299988,"yPos":33.1999969},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     you found the Control Panel!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":174.4,"yPos":127.200012},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":167.599976,"yPos":138.400009},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
     you will see which machine is broken, for now a light will light up whenever
     you fix a machine.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":174.4,"yPos":236.8},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":167.599976,"yPos":248},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     all the light are lit up you will have completed your training.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -6597,7 +6914,7 @@ Transform:
   m_GameObject: {fileID: 1434037328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.38899297, w: 0.9212408}
-  m_LocalPosition: {x: 5.54, y: 9.73, z: 0}
+  m_LocalPosition: {x: 4.35, y: 8.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6697,7 +7014,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.854902, g: 0.57254905, b: 0.4039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6944,11 +7261,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2382255452762252047, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: 2382255452762252047, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.9
+      value: 21.73
       objectReference: {fileID: 0}
     - target: {fileID: 2382255452762252047, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7031,7 +7348,7 @@ Transform:
   m_GameObject: {fileID: 1542802894}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9, y: 4, z: 0}
+  m_LocalPosition: {x: -4.75, y: 3.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7156,7 +7473,7 @@ Transform:
   m_GameObject: {fileID: 1551261352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70678014, w: 0.7074333}
-  m_LocalPosition: {x: 10.13, y: 37.6, z: 0}
+  m_LocalPosition: {x: 10.91, y: 37.6, z: 0}
   m_LocalScale: {x: 19.60089, y: 10.298017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7312,7 +7629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     job you fixed the pipe pressure!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -7432,7 +7749,7 @@ Transform:
   m_GameObject: {fileID: 1569640103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.925518, y: -9.79, z: 0}
+  m_LocalPosition: {x: 41.925518, y: -12, z: 0}
   m_LocalScale: {x: 19.60089, y: 10.298017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7694,6 +8011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668777827}
   - component: {fileID: 1668777828}
+  - component: {fileID: 1668777829}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -7775,6 +8093,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1668777829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668777826}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.008450419, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.0169003, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1682936813
 GameObject:
   m_ObjectHideFlags: 0
@@ -8102,7 +8466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 10
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
     the turbine is broken. Quickly remove all the debry from the fan blades!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -8226,14 +8590,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
-  CurrentIDCounter: 19
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":173.699982,"yPos":-56.3999939},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Congratualations!
+  CurrentIDCounter: 22
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Congratualations!
     you fixed all the machines.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":177.6,"yPos":54.39998},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"As
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":154.000061,"yPos":124.799988},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"As
     of today you are promoted to facility manager.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":174.4,"yPos":153.599976},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":146.799988,"yPos":240.000092},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     can enter our facility trough the door on the right.","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":176.800018,"yPos":263.2},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":146.80011,"yPos":349.6},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
     Luck!","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -8252,19 +8616,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 339475733}
-        m_TargetAssemblyTypeName: SlidingDoors, Assembly-CSharp
-        m_MethodName: OpenDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1744134092
 GameObject:
   m_ObjectHideFlags: 0
@@ -9058,7 +9410,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6541606, y: 0.6541606, z: 0.6541606}
+  m_LocalScale: {x: 0.5986551, y: 0.5986551, z: 0.5986551}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 521872493}
@@ -9091,7 +9443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7923231707598028344, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.77328014
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 7923231707598028344, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9258,7 +9610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 10
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"To
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"To
     unclog the turbine blades you simply click and drag the debry into the trash
     can.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -9420,6 +9772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1981478547}
   - component: {fileID: 1981478548}
+  - component: {fileID: 1981478549}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -9500,6 +9853,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1981478549
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981478546}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1992195496
 GameObject:
   m_ObjectHideFlags: 0
@@ -9525,7 +9924,7 @@ Transform:
   m_GameObject: {fileID: 1992195496}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.9, y: -9.3, z: 0}
+  m_LocalPosition: {x: -10.26, y: -8.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9833,15 +10232,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 12
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":true,"xPos":167.300018,"yPos":-197.199982},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":true,"xPos":166.899963,"yPos":-58},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
     to our simulation facility.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":165.600037,"yPos":-101.599892},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":165.199982,"yPos":37.6000671},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
     you will complete youre training. ","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":167.200012,"yPos":0.0001449585},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Once
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":166.799957,"yPos":139.200348},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Once
     you completed youre training you will be promoted to our new facility manager.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":164,"yPos":111.200142},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"In
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":163.599945,"yPos":250.400177},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"In
     order to complete youre training you need to fix all the different machines.","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":160.799988,"yPos":229.600555},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":160.399933,"yPos":368.8005},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     you were to need help fixing a machine just press the red button that is near
     the machine. Good luck!","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -10009,7 +10408,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38823533, g: 0.5764706, b: 0.50980395, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10065,7 +10464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172.1,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Youre
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":153.299988,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Youre
     last job is removing the nuclear waste.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -10272,13 +10671,62 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1952235751191339996, guid: a63bc50f18a30c44db45359484090e75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2145966514}
   m_SourcePrefab: {fileID: 100100000, guid: a63bc50f18a30c44db45359484090e75, type: 3}
 --- !u!4 &2145966512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1617761358206159943, guid: a63bc50f18a30c44db45359484090e75, type: 3}
   m_PrefabInstance: {fileID: 2145966511}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &2145966514
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404995706}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0048457384, y: -0.014538854}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.3392384, y: 1.348933}
+  m_EdgeRadius: 0
 --- !u!1001 &8362110540199691973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10334,7 +10782,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1952235751191339996, guid: a63bc50f18a30c44db45359484090e75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1149688670}
   m_SourcePrefab: {fileID: 100100000, guid: a63bc50f18a30c44db45359484090e75, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
