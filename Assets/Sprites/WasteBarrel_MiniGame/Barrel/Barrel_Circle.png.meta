@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 65d0bc0139d707043b0e7cd5a8e35aa0
+guid: ee627b046d15c4e409e8497e0a2ca12c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7426960639596771911
-    second: WasteBarrel_Circle_0
+      213: 960602580132474304
+    second: Barrel_Circle_0
+  - first:
+      213: 7550602016756921013
+    second: Barrel_Circle_1
+  - first:
+      213: -8757346173454773597
+    second: Barrel_Circle_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,16 +52,16 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 0
+  spriteMode: 2
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 2
-  alphaIsTransparency: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -109,17 +115,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WasteBarrel_Circle_0
+      name: Barrel_Circle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 866
+        y: 1950
+        width: 72
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74a39fb1a5dd11760800000000000000
-      internalID: 7426960639596771911
+      spriteID: 0cdae1705feb45d00800000000000000
+      internalID: 960602580132474304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Circle_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 57
+        width: 1400
+        height: 1862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2f429878029c860800000000000000
+      internalID: 7550602016756921013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Circle_2
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1913
+        width: 112
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a21a1cbd08a77680800000000000000
+      internalID: -8757346173454773597
       vertices: []
       indices: 
       edges: []
@@ -138,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WasteBarrel_Circle_0: 7426960639596771911
+      Barrel_Circle_0: 960602580132474304
+      Barrel_Circle_1: 7550602016756921013
+      Barrel_Circle_2: -8757346173454773597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

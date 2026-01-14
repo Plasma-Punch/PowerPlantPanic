@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: e03e106b545a5df4290ad8f1da97b3df
+guid: 0b907144b5d16bd488f2edb10b43ee4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8096316712083149077
-    second: WasteBarrel_DropScreen_0
+      213: -1047613615868729241
+    second: Barrel_Triangle_0
+  - first:
+      213: -3004690812865721616
+    second: Barrel_Triangle_1
+  - first:
+      213: -7533485955752131910
+    second: Barrel_Triangle_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +60,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 2
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -109,17 +115,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WasteBarrel_DropScreen_0
+      name: Barrel_Triangle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 866
+        y: 1950
+        width: 72
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: beea933b8da14af80800000000000000
-      internalID: -8096316712083149077
+      spriteID: 768284487f02671f0800000000000000
+      internalID: -1047613615868729241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Triangle_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 57
+        width: 1400
+        height: 1862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa424f00a13d46d0800000000000000
+      internalID: -3004690812865721616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrel_Triangle_2
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 1913
+        width: 112
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab20007ff6ea37790800000000000000
+      internalID: -7533485955752131910
       vertices: []
       indices: 
       edges: []
@@ -138,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WasteBarrel_DropScreen_0: -8096316712083149077
+      Barrel_Triangle_0: -1047613615868729241
+      Barrel_Triangle_1: -3004690812865721616
+      Barrel_Triangle_2: -7533485955752131910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
