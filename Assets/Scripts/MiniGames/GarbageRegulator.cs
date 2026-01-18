@@ -22,7 +22,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     private Collider2D[] _dropZoneColliders; //Activate and deactivate drop zones based on the selected sprite
     [Tooltip("Always make sure that the logo's are in the same order as the colliders!")]
     [SerializeField]
-    private Sprite[] _dropZoneLogos; //The logos that show the player where to drop off the barrel
+    private Sprite[] _wasteBarrelSprites; //The logos that show the player where to drop off the barrel
     [SerializeField]
     private SpriteRenderer _screenObject; // The screen that shows the logo
 
@@ -67,18 +67,14 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
-        SpawnBarrel();
-
-        // Show a random logo here
-        SelectRandomFigure();
-
+        SpawnRandomBarrel();
     }
 
     private void SelectRandomFigure()
     {
-        int random = UnityEngine.Random.Range(0,_dropZoneLogos.Length);
+        int random = UnityEngine.Random.Range(0, _wasteBarrelSprites.Length);
 
-        _screenObject.sprite = _dropZoneLogos[random];
+        _screenObject.sprite = _wasteBarrelSprites[random];
         _dropZoneColliders[random].enabled = true;
     }
 
@@ -99,6 +95,20 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         _barrelPickUpTrigger.SetActive(true);
 
         ResetDropZoneColliders();
+    }
+
+    private void SpawnRandomBarrel()
+    {
+        if (_spawnedBarrel != null) return;
+        int random = UnityEngine.Random.Range(0, _wasteBarrelSprites.Length);
+        _barrelPrefab.GetComponentInChildren<SpriteRenderer>().sprite = _wasteBarrelSprites[random];
+        GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
+        _spawnedBarrel = go;
+        _barrelPickUpTrigger.SetActive(true);
+
+        ResetDropZoneColliders();
+
+        _dropZoneColliders[random].enabled = true;
     }
 
     public void OpenWasteControl(Component sender, object obj)

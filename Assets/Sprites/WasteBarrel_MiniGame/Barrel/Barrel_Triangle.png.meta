@@ -132,28 +132,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barrel_Triangle_0
-      rect:
-        serializedVersion: 2
-        x: 866
-        y: 1950
-        width: 72
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 768284487f02671f0800000000000000
-      internalID: -1047613615868729241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Barrel_Triangle_1
       rect:
         serializedVersion: 2
@@ -162,7 +140,7 @@ TextureImporter:
         width: 1400
         height: 1862
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,33 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Barrel_Triangle_2
-      rect:
-        serializedVersion: 2
-        x: 695
-        y: 1913
-        width: 112
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab20007ff6ea37790800000000000000
-      internalID: -7533485955752131910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 140b1a7a074b00d47912541354170b81
     internalID: 0
     vertices: []
     indices: 

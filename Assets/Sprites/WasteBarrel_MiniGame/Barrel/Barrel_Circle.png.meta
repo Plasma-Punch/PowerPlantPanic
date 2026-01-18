@@ -132,28 +132,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barrel_Circle_0
-      rect:
-        serializedVersion: 2
-        x: 866
-        y: 1950
-        width: 72
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cdae1705feb45d00800000000000000
-      internalID: 960602580132474304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Barrel_Circle_1
       rect:
         serializedVersion: 2
@@ -162,7 +140,7 @@ TextureImporter:
         width: 1400
         height: 1862
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,33 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Barrel_Circle_2
-      rect:
-        serializedVersion: 2
-        x: 695
-        y: 1913
-        width: 112
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a21a1cbd08a77680800000000000000
-      internalID: -8757346173454773597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b9c821dc3b75cd7419f3015c5f926d6a
     internalID: 0
     vertices: []
     indices: 
