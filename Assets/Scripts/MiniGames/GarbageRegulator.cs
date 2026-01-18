@@ -23,8 +23,6 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     [Tooltip("Always make sure that the logo's are in the same order as the colliders!")]
     [SerializeField]
     private Sprite[] _wasteBarrelSprites; //The logos that show the player where to drop off the barrel
-    [SerializeField]
-    private SpriteRenderer _screenObject; // The screen that shows the logo
 
     [Header("Audio Variables")]
     [SerializeField]
@@ -70,14 +68,6 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         SpawnRandomBarrel();
     }
 
-    private void SelectRandomFigure()
-    {
-        int random = UnityEngine.Random.Range(0, _wasteBarrelSprites.Length);
-
-        _screenObject.sprite = _wasteBarrelSprites[random];
-        _dropZoneColliders[random].enabled = true;
-    }
-
     private void ResetDropZoneColliders()
     {
         //Turn off all the colliders from the drop zones
@@ -102,7 +92,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         if (_spawnedBarrel != null) return;
         int random = UnityEngine.Random.Range(0, _wasteBarrelSprites.Length);
         _barrelPrefab.GetComponentInChildren<SpriteRenderer>().sprite = _wasteBarrelSprites[random];
-        GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
+        saGameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
         _spawnedBarrel = go;
         _barrelPickUpTrigger.SetActive(true);
 
