@@ -33,7 +33,7 @@ public class FuseBoxManager : MonoBehaviour
         _cableSpawner.transform.parent.gameObject.SetActive(true);
         for(int i = 0; i < _cableHolder.Count; i++)
         {
-            _movealbeCables[i].transform.parent = _cableHolder[i].transform.parent.transform;
+            _movealbeCables[i].transform.SetParent(_cableHolder[i].transform.parent.transform);
             _movealbeCables[i].transform.localPosition = _cableHolder[i].transform.localPosition;
         }
         foreach (GameObject cableSpot in _cableSpots)
@@ -56,7 +56,7 @@ public class FuseBoxManager : MonoBehaviour
             }
 
             GameObject cable = Instantiate(_cablePrefabs[cableIndex], _cableSpots[cableIndex].transform.position, Quaternion.identity);
-            cable.transform.parent = _cableSpawner.transform;
+            cable.transform.SetParent(_cableSpawner.transform);
             _cableSpots[cableIndex].SetActive(false);
             _spawnedCables.Add(cable);
             _spawnedIndex.Add(cableIndex);
@@ -88,7 +88,7 @@ public class FuseBoxManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         for (int i = 0; i < _cableHolder.Count; i++)
         {
-            _movealbeCables[i].transform.parent = _cableHolder[i].transform.parent.transform;
+            _movealbeCables[i].transform.SetParent(_cableHolder[i].transform.parent.transform);
             _movealbeCables[i].transform.localPosition = _cableHolder[i].transform.localPosition;
         }
         DestroySpawnedCables();
