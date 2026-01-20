@@ -1,5 +1,6 @@
 using DialogueEditor;
 using System;
+using System.Collections;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
@@ -115,6 +116,14 @@ public class DialogueManager : MonoBehaviour
     }
     public void OpenCompletedDialogue(Component sender, object obj)
     {
-        ConversationManager.Instance.StartConversation(_tutorialFinishedConvo);
+        if (ConversationManager.Instance.IsConversationActive) StartCoroutine(PlayNextDialogue());
+        else ConversationManager.Instance.StartConversation(_tutorialFinishedConvo);
+    }
+
+    private IEnumerator PlayNextDialogue()
+    {
+        yield return null;
+        if (ConversationManager.Instance.IsConversationActive) StartCoroutine(PlayNextDialogue());
+        else ConversationManager.Instance.StartConversation(_tutorialFinishedConvo);
     }
 }

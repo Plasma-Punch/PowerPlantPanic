@@ -39,6 +39,7 @@ namespace DialogueEditor
         public Sprite OptionImage;
         public bool OptionImageSliced;
         public bool AllowMouseInteraction;
+        public GameEvent FreezePlayer;
 
         // Non-User facing 
         // Not exposed via custom inspector
@@ -107,6 +108,17 @@ namespace DialogueEditor
         {
             Instance = null;
         }
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (DialogueText.maxVisibleCharacters >= m_targetScrollTextCount)
+            {
+                SpeechNode next = GetValidSpeechOfNode(m_currentSpeech);
+                SetupSpeech(next);
+                return;
+            }
+            DialogueText.maxVisibleCharacters = m_targetScrollTextCount;
+            m_scrollIndex = m_targetScrollTextCount;
+        }
 
         private void Update()
         {
@@ -158,6 +170,7 @@ namespace DialogueEditor
 
         public void StartConversation(NPCConversation conversation)
         {
+            if (IsConversationActive) return;
             m_conversation = conversation.Deserialize();
             if (OnConversationStarted != null)
                 OnConversationStarted.Invoke();
@@ -165,6 +178,7 @@ namespace DialogueEditor
             TurnOnUI();
             m_currentSpeech = m_conversation.Root;
             SetState(eState.TransitioningDialogueBoxOn);
+            FreezePlayer.Raise(this, false);
         }
 
         public void EndConversation()
@@ -173,6 +187,7 @@ namespace DialogueEditor
 
             if (OnConversationEnded != null)
                 OnConversationEnded.Invoke();
+            FreezePlayer.Raise(this, true);
         }
 
         public void SelectNextOption()
@@ -268,20 +283,6 @@ namespace DialogueEditor
 
             return value;
         }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            if (DialogueText.maxVisibleCharacters >= m_targetScrollTextCount)
-            {
-                SpeechNode next = GetValidSpeechOfNode(m_currentSpeech);
-                SetupSpeech(next);
-                return;
-            }
-                DialogueText.maxVisibleCharacters = m_targetScrollTextCount;
-            m_scrollIndex = m_targetScrollTextCount;
-        }
-
-
         //--------------------------------------
         // Set state
         //--------------------------------------
