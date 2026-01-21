@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class ScreenManager : MonoBehaviour
 {
     private int _scenes;
+    private int _sceneToLoadAtStart = 1;
+    private int _selectedTutorialScene = 2;
+    private bool _runTutorial;
 
     private void Start()
     {
@@ -14,7 +17,7 @@ public class ScreenManager : MonoBehaviour
 
     public void StartGame() //Next scene is the main game
     {
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(_sceneToLoadAtStart, LoadSceneMode.Single);
     }
 
     public void Quit()
@@ -30,5 +33,17 @@ public class ScreenManager : MonoBehaviour
     public void StartMenu()
     {
         SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+    }
+
+    public void SetTutorial(int index)
+    {
+        _selectedTutorialScene = 1 + 1 + index;
+        if(_runTutorial) _sceneToLoadAtStart = _selectedTutorialScene;
+    }
+    public void SetRunTutorial(bool state)
+    {
+        if (state) _sceneToLoadAtStart = _selectedTutorialScene;
+        else _sceneToLoadAtStart = 1;
+        _runTutorial = state;
     }
 }
