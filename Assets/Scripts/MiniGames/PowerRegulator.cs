@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -178,13 +179,13 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         {
             _completedSliders.Remove(randomSlider);
         }
-
+        CheckSolution();
         //Click Sound Implementation
         _soundManager.SetSFXVolume(0.1f);
         _soundManager.PlaySound("click");
     }
 
-    private void CheckSolution()
+    private bool CheckSolution()
     {
         for(int i = 0; i < _sliderObject.Count; i++)
         {
@@ -195,7 +196,13 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             }
         }
 
-        if (_completedSliders.Count == 3) completed();
+        if (_completedSliders.Count == 3)
+        {
+            completed();
+            return true;
+        }
+        else return false;
+
     }
 
     private void MoveSlider(Vector3 newPos)
@@ -259,7 +266,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
                 Vector2 newPos = sliderRect.localPosition;
                 newPos.y = targetRect.localPosition.y;
                 MoveSlider(newPos);
-                MoveRandomSlider(_activeSlider);
+                if(!CheckSolution())
+                    MoveRandomSlider(_activeSlider);
             }
 
             _isHoldingSlider = false;
