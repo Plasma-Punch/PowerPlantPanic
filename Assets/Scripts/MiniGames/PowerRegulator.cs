@@ -261,7 +261,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             var sliderRect = (RectTransform)_activeSlider.transform;
             var targetRect = (RectTransform)_desiredLocations[index].transform;
 
-            if (Mathf.Abs(sliderRect.localPosition.y - targetRect.localPosition.y) < 40)
+            if (Mathf.Abs(sliderRect.localPosition.y - targetRect.localPosition.y) < 80)
             {
                 Vector2 newPos = sliderRect.localPosition;
                 newPos.y = targetRect.localPosition.y;
