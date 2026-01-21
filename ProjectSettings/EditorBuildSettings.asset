@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay.unity
     guid: b9a7d7f99276dd04bb0aec932e836d43
   - enabled: 1
+    path: Assets/Scenes/Test scenes/HallWayTutorial.unity
+    guid: f37bd24ccaac4284d9c8643e9f92770a
+  - enabled: 1
+    path: Assets/Scenes/Test scenes/CircleTutorial.unity
+    guid: 63ad085da8f37da4aa4e9f1ae7ed74a9
+  - enabled: 1
     path: Assets/Scenes/End Scene.unity
     guid: e87379298dfa1a7488f6f881947b9e40
   - enabled: 1
