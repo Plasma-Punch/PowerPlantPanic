@@ -92,7 +92,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         if (_spawnedBarrel != null) return;
         int random = UnityEngine.Random.Range(0, _wasteBarrelSprites.Length);
         _barrelPrefab.GetComponentInChildren<SpriteRenderer>().sprite = _wasteBarrelSprites[random];
-        saGameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
+        GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
         _spawnedBarrel = go;
         _barrelPickUpTrigger.SetActive(true);
 
