@@ -1,10 +1,13 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScreenManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _stateManager;
     private int _scenes;
     private int _sceneToLoadAtStart = 1;
     private int _selectedTutorialScene = 2;
@@ -17,7 +20,12 @@ public class ScreenManager : MonoBehaviour
 
     public void StartGame() //Next scene is the main game
     {
-        SceneManager.LoadSceneAsync(_sceneToLoadAtStart, LoadSceneMode.Single);
+        if (!_runTutorial)
+        {
+            GameObject obj = Instantiate(_stateManager);
+            obj.GetComponent<GameStateManager>().SpawnedIn = true;
+        }
+            SceneManager.LoadSceneAsync(_sceneToLoadAtStart, LoadSceneMode.Single);
     }
 
     public void Quit()
