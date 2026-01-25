@@ -279,18 +279,18 @@ public class CentralControlPanel : MonoBehaviour
                 StopCoroutine(_decreaseFanRPM);
                 _canDecreaseFanRPM = false;
                 _fanRPM = 3600;
-                _isMinigameEnabled[2] = false;
+                _isMinigameEnabled[1] = false;
                 _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = _fanRPM });
-                _disableMiniGame[2].Raise(this, EventArgs.Empty);
+                _disableMiniGame[1].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
             case MiniGame.PipeBroke:
                 StopCoroutine(_decreasePipePressure);
                 _canDecreasePipePressure = false;
                 _pipePSI = 150;
-                _isMinigameEnabled[1] = false;
+                _isMinigameEnabled[2] = false;
                 _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = _pipePSI });
-                _disableMiniGame[1].Raise(this, EventArgs.Empty);
+                _disableMiniGame[2].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
             case MiniGame.WasteManagement:
