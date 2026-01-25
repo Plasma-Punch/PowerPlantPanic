@@ -210,7 +210,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         if (_miniGameFinished) return;
         _activeSlider.transform.localPosition = newPos;
 
-        CheckSolution();
+        //CheckSolution();
     }
 
     private void UpdateProgressBar(float progress)

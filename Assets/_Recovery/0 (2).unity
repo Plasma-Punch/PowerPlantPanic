@@ -4785,18 +4785,6 @@ PrefabInstance:
       propertyPath: '_dropZoneColliders.Array.data[3]'
       value: 
       objectReference: {fileID: 1583652211}
-    - target: {fileID: 8705223783012958765, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
-      propertyPath: '_wasteBarrelSprites.Array.data[0]'
-      value: 
-      objectReference: {fileID: -673489281894468256, guid: 723a2a8a8bc60e544bb30f40f9aaae91, type: 3}
-    - target: {fileID: 8705223783012958765, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
-      propertyPath: '_wasteBarrelSprites.Array.data[2]'
-      value: 
-      objectReference: {fileID: -4067657850157473823, guid: b4af552562b30f84888d24dbeae6b358, type: 3}
-    - target: {fileID: 8705223783012958765, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
-      propertyPath: '_wasteBarrelSprites.Array.data[3]'
-      value: 
-      objectReference: {fileID: -200293243786097641, guid: 4f00b38fd37838742a8bbb1c007edd89, type: 3}
     - target: {fileID: 9081902904832827244, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
       propertyPath: m_Sprite
       value: 
