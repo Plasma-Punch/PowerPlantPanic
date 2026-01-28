@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 2b3316bb7baa82a479addf7307ab3b2c
+guid: 89fec2e7a55d991409d94eb19cac2af9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 608527198645387287
-    second: T_OpenCloseValve_0
-  - first:
-      213: 5572316212844606214
-    second: T_OpenCloseValve_1
-  - first:
-      213: -4417491450495121181
-    second: T_OpenCloseValve_2
-  - first:
-      213: 8383251558051407880
-    second: T_OpenCloseValve_3
-  - first:
-      213: -5069319647928671321
-    second: T_OpenCloseValve_4
-  - first:
-      213: 5758785013976804808
-    second: T_OpenCloseValve_5
+      213: 4553938698167802408
+    second: MG_PipeTable_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_OpenCloseValve_1
+      name: MG_PipeTable_0
       rect:
         serializedVersion: 2
-        x: 857
-        y: 988
-        width: 358
-        height: 155
+        x: 470
+        y: 444
+        width: 84
+        height: 136
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 603b0ca7218d45d40800000000000000
-      internalID: 5572316212844606214
+      spriteID: 82a52314e17d23f30800000000000000
+      internalID: 4553938698167802408
       vertices: []
       indices: 
       edges: []
@@ -166,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d015a83112ae9fb49a6418fec933d021
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -176,12 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_OpenCloseValve_0: 608527198645387287
-      T_OpenCloseValve_1: 5572316212844606214
-      T_OpenCloseValve_2: -4417491450495121181
-      T_OpenCloseValve_3: 8383251558051407880
-      T_OpenCloseValve_4: -5069319647928671321
-      T_OpenCloseValve_5: 5758785013976804808
+      MG_PipeTable_0: 4553938698167802408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: 2b3316bb7baa82a479addf7307ab3b2c
+guid: 77add0f2af1462e43b12535f84f229b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 608527198645387287
-    second: T_OpenCloseValve_0
+      213: -4114578227757125665
+    second: T_CallWasteBarrelButton_0
   - first:
-      213: 5572316212844606214
-    second: T_OpenCloseValve_1
-  - first:
-      213: -4417491450495121181
-    second: T_OpenCloseValve_2
-  - first:
-      213: 8383251558051407880
-    second: T_OpenCloseValve_3
-  - first:
-      213: -5069319647928671321
-    second: T_OpenCloseValve_4
-  - first:
-      213: 5758785013976804808
-    second: T_OpenCloseValve_5
+      213: -5686277082507341377
+    second: T_CallWasteBarrelButton_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_OpenCloseValve_1
+      name: T_CallWasteBarrelButton_1
       rect:
         serializedVersion: 2
-        x: 857
-        y: 988
-        width: 358
-        height: 155
+        x: 176
+        y: 156
+        width: 160
+        height: 171
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 603b0ca7218d45d40800000000000000
-      internalID: 5572316212844606214
+      spriteID: fb194b2ee194611b0800000000000000
+      internalID: -5686277082507341377
       vertices: []
       indices: 
       edges: []
@@ -166,7 +154,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d015a83112ae9fb49a6418fec933d021
+    spriteID: 1bfe430593419964eb7f185a1635483b
     internalID: 0
     vertices: []
     indices: 
@@ -176,12 +164,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_OpenCloseValve_0: 608527198645387287
-      T_OpenCloseValve_1: 5572316212844606214
-      T_OpenCloseValve_2: -4417491450495121181
-      T_OpenCloseValve_3: 8383251558051407880
-      T_OpenCloseValve_4: -5069319647928671321
-      T_OpenCloseValve_5: 5758785013976804808
+      T_CallWasteBarrelButton_0: -4114578227757125665
+      T_CallWasteBarrelButton_1: -5686277082507341377
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
