@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _miniGameUI: {fileID: 0}
+  FuseBoxTrigger: {fileID: 0}
   _numberOfSliders: 3
   _sliderObject:
   - {fileID: 0}
@@ -63,10 +64,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _progressBar: {fileID: 0}
-  _progressSpeed: 10
+  _progressSpeed: 5
   _changeCanWalk: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
+  _spaceBetween: 130
+  _topValue: 260
+  _bottomValue: -260
   _clickSound: {fileID: 8300000, guid: d202b31e40f09214592193e478fc9e7f, type: 3}
-  _soundManager: {fileID: 0}
 --- !u!114 &2257024124524449931
 MonoBehaviour:
   m_ObjectHideFlags: 0

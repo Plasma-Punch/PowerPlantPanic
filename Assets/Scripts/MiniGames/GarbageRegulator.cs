@@ -16,6 +16,14 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     [SerializeField]
     private GameEvent _minigameFinished;
 
+    [Header("Waste Mini Game")]
+    [Tooltip("Always make sure that the logo's are in the same order as the colliders!")]
+    [SerializeField]
+    private Collider2D[] _dropZoneColliders; //Activate and deactivate drop zones based on the selected sprite
+    [Tooltip("Always make sure that the logo's are in the same order as the colliders!")]
+    [SerializeField]
+    private Sprite[] _wasteBarrelSprites; //The logos that show the player where to drop off the barrel
+
     [Header("Audio Variables")]
     [SerializeField]
     private AudioClip _grabSound;
@@ -34,6 +42,9 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
             _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         else
             Debug.Log("SoundManager not found");
+
+
+        ResetDropZoneColliders();
     }
 
     private void Start()
@@ -44,7 +55,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
 
     public void completed()
     {
-        _minigameFinished.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement});
+        _minigameFinished.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement });
     }
 
     public void failed()
@@ -54,14 +65,40 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
-        SpawnBarrel();
+        SpawnRandomBarrel();
     }
+
+    private void ResetDropZoneColliders()
+    {
+        //Turn off all the colliders from the drop zones
+        foreach (var collider in _dropZoneColliders)
+        {
+            collider.enabled = false;
+        }
+    }
+
     private void SpawnBarrel()
     {
         if (_spawnedBarrel != null) return;
         GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
         _spawnedBarrel = go;
         _barrelPickUpTrigger.SetActive(true);
+
+        ResetDropZoneColliders();
+    }
+
+    private void SpawnRandomBarrel()
+    {
+        if (_spawnedBarrel != null) return;
+        int random = UnityEngine.Random.Range(0, _wasteBarrelSprites.Length);
+        _barrelPrefab.GetComponentInChildren<SpriteRenderer>().sprite = _wasteBarrelSprites[random];
+        GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
+        _spawnedBarrel = go;
+        _barrelPickUpTrigger.SetActive(true);
+
+        ResetDropZoneColliders();
+
+        _dropZoneColliders[random].enabled = true;
     }
 
     public void OpenWasteControl(Component sender, object obj)

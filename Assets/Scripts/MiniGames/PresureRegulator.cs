@@ -38,7 +38,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private SoundManager _soundManager;
 
     private GameObject _brokenPipe;
-    private int _currentBrokenPipeIndex;
+    private int _currentBrokenPipeIndex = -1;
 
     private GameObject _activeValve;
     private GameObject _heldItem;
@@ -53,7 +53,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private bool _uiIsOpen = false;
     private bool _canOpenPanel = true;
 
-    private int _previousPipe;
+    private int _previousPipe = -1;
+    private bool _justOpenedUI;
 
     private void OnEnable()
     {
@@ -77,6 +78,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
             randomPipe = UnityEngine.Random.Range(0, _pipes.Count);
         }
 
+        _previousPipe = _currentBrokenPipeIndex;
         _currentBrokenPipeIndex = randomPipe;
 
         for (int i = 0; i < _brokenPipePrefabs.Count; i++)
@@ -97,6 +99,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         if (_miniGameStarted) return;
         _miniGameStarted = true;
         SetRandomBrokenPipe();
+    }
+
+    public void StartMiniGameTroughDialogue()
+    {
+        StartMiniGame(this, EventArgs.Empty);
     }
 
     public void RemovePipe(Component sender, object obj)
@@ -216,15 +223,17 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         if (!_canOpenPanel) return;
         _canOpenPanel = false;
         _uiIsOpen = true;
+        _justOpenedUI = true;
         _openPressureControlUI.Raise(this, true);
-        StartMiniGame(sender, obj);
+        StartCoroutine(CanClosePanel());
+        //StartMiniGame(sender, obj);
     }
 
     private void Update()
     {
         if (_closePanel.action.WasPressedThisFrame())
         {
-            if (_uiIsOpen)
+            if (_uiIsOpen && !_justOpenedUI)
             {
                 _openPressureControlUI.Raise(this, false);
                 _uiIsOpen = false;
@@ -287,5 +296,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     {
         yield return new WaitForEndOfFrame();
         _canOpenPanel = true;
+    }
+
+    private IEnumerator CanClosePanel()
+    {
+        yield return new WaitForEndOfFrame();
+        _justOpenedUI = false;
     }
 }

@@ -21,7 +21,8 @@ public class Interaction : MonoBehaviour
     {
         if (!IsLayerInMask(_playerMask, collision.gameObject.layer)) return;
 
-        _changeInteractionUI.Raise(this, true);
+        if (_changeInteractionUI != null) _changeInteractionUI.Raise(this, true);
+        else _interact.Raise(this, _miniGame as IMiniGame);
         _isInTrigger = true;
     }
 
@@ -43,6 +44,7 @@ public class Interaction : MonoBehaviour
     {
         if (!_interactInput.action.WasPressedThisFrame()) return;
         if (!_isInTrigger) return;
+        if (_changeInteractionUI == null) return;
 
         if (_miniGame == null)
         {
@@ -54,5 +56,10 @@ public class Interaction : MonoBehaviour
             _interact.Raise(this, _miniGame as IMiniGame);
             _changeInteractionUI.Raise(this, false);
         }
+    }
+
+    public void DisableTrigger()
+    {
+        this.gameObject.SetActive(false);
     }
 }
