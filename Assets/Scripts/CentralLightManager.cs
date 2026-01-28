@@ -11,7 +11,7 @@ public class CentralLightManager : MonoBehaviour
 
     public void TurnOnLight()
     {
-        _lights[_lightIndex].color = Color.green;
+        if(_lightIndex <= 3)_lights[_lightIndex].color = Color.green;
         _lightIndex++;
         if (_lightIndex >= 4) _Completed.Raise(this, EventArgs.Empty);
     }
