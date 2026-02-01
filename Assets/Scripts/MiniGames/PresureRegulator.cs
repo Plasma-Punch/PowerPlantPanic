@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -34,6 +35,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private List<GameObject> _pipeTriggers = new List<GameObject>();
     [SerializeField]
     private List<GameObject> _PipeSpawnerTriggers = new List<GameObject>();
+    [SerializeField]
+    private GameEvent _playSteam;
 
     private SoundManager _soundManager;
 
@@ -92,6 +95,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
         }
 
         Destroy(_pipes[randomPipe]);
+        _playSteam.Raise(this, _brokenPipe.transform);
     }
 
     public void StartMiniGame(Component sender, object obj)
@@ -279,6 +283,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
             _valveProgress = 180;
             _valveIsOpen = false;
             _valveLocked = true;
+            _playSteam.Raise(this, _brokenPipe.transform);
         }
 
 

@@ -46,6 +46,8 @@ public class CentralControlPanel : MonoBehaviour
     [Header("Sound Variables")]
     [SerializeField]
     private AudioClip _alarmSound;
+    [SerializeField]
+    private GameEvent _playAlarm;
 
     private SoundManager _soundManager;
 
@@ -325,7 +327,12 @@ public class CentralControlPanel : MonoBehaviour
 
     private void PlayAlarm()
     {
+        if (_soundManager.SfxSource.clip != null)
+        {
+            if (_soundManager.SfxSource.clip.name == "Alarm" && _soundManager.SfxSource.isPlaying) return;
+        }
         _soundManager.PlaySound("Alarm");
+        _playAlarm.Raise(this, EventArgs.Empty);
     }
 
     private void StopAlarm()

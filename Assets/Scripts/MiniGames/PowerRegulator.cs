@@ -35,6 +35,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private GameEvent _changeCanWalk;
     [SerializeField]
     private int _spaceBetween, _topValue, _bottomValue;
+    [SerializeField]
+    private ParticleSystem _electricityObject;
 
 
     [Header("Sound Variables")]
@@ -102,6 +104,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             image.color = Color.green;
         }
         StartCoroutine(DissableUI());
+        _electricityObject.emissionRate = 0;
     }
 
     public void failed()
@@ -281,6 +284,10 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _activeSlider = obj as GameObject;
     }
 
+    public void EnableVFX(Component sender, object obj)
+    {
+        _electricityObject.emissionRate = 30;
+    }
     private IEnumerator DissableUI()
     {
         yield return new WaitForSeconds(0.75f);
