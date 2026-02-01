@@ -9,8 +9,13 @@ public class SoundManager : MonoBehaviour
     public AudioSource SfxSource { get; private set; } //For sound effects
     public AudioSource MusicSource { get; private set; } //For background music
 
+    public AudioSource AmbianceSource { get; private set; } //For background music
+    public AudioClip AbiantSound;
+
     private Dictionary<string, AudioClip> _soundClips;
     private List<AudioClip> _activeClips = new List<AudioClip>();
+
+    private float _masterVolume = 0.5f;
 
     private void Awake()
     {
@@ -28,8 +33,22 @@ public class SoundManager : MonoBehaviour
         //Initialize audio
         SfxSource = gameObject.AddComponent<AudioSource>();
         MusicSource = gameObject.AddComponent<AudioSource>();
+        AmbianceSource = gameObject.AddComponent<AudioSource>();
+        AmbianceSource.clip = AbiantSound;
+        AmbianceSource.loop = true;
+        AmbianceSource.Play();
         MusicSource.enabled = true;
         _soundClips = new Dictionary<string, AudioClip>();
+    }
+
+    public void SetMasterVolume(Component sender, object obj)
+    {
+        float? volume = obj as float?;
+        _masterVolume = volume.Value;
+
+        MusicSource.volume = _masterVolume;
+        SfxSource.volume = _masterVolume;
+        AmbianceSource.volume = _masterVolume;
     }
 
     // Load an audio clip from Resource folder
@@ -111,13 +130,15 @@ public class SoundManager : MonoBehaviour
     // Set volume for sound effects
     public void SetSFXVolume(float volume)
     {
-        SfxSource.volume = Mathf.Clamp01(volume);
+        float tempVolume = Mathf.Clamp01(volume);
+        SfxSource.volume = tempVolume * _masterVolume;
     }
 
     // Set volume for background music
     public void SetMusicVolume(float volume)
     {
-        MusicSource.volume = Mathf.Clamp01(volume);
+        float tempVolume = Mathf.Clamp01(volume);
+        MusicSource.volume = tempVolume * _masterVolume;
     }
 
     private IEnumerator RemoveClipAfterPlaying(AudioClip clip, float duration)
