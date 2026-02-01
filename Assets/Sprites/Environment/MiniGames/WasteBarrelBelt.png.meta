@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6a4833ddf23b9d34ab4f5cf37fffef49
+guid: 13317b62bf4886f44810e022250abc2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1287205435167325629
-    second: MG_ValveBoard_0
+      213: 5633696434512461408
+    second: WasteBarrelBelt_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MG_ValveBoard_0
+      name: WasteBarrelBelt_0
       rect:
         serializedVersion: 2
-        x: 582
-        y: 531
-        width: 884
-        height: 986
+        x: 581
+        y: 564
+        width: 886
+        height: 921
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34246e30a7de22ee0800000000000000
-      internalID: -1287205435167325629
+      spriteID: 06eff7ffe09ee2e40800000000000000
+      internalID: 5633696434512461408
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: afb4a2ae9a3f75d45936f2543c2bf21b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MG_ValveBoard_0: -1287205435167325629
+      WasteBarrelBelt_0: 5633696434512461408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

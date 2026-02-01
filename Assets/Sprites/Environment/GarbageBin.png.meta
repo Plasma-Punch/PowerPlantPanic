@@ -129,12 +129,12 @@ TextureImporter:
       name: GarbageBin_0
       rect:
         serializedVersion: 2
-        x: 475
-        y: 476
-        width: 73
-        height: 72
+        x: 661
+        y: 670
+        width: 733
+        height: 715
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b62cba8c1b05cd445a4c5b479dde697e
     internalID: 0
     vertices: []
     indices: 

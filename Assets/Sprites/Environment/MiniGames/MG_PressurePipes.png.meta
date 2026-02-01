@@ -129,12 +129,12 @@ TextureImporter:
       name: MG_PressurePipes_0
       rect:
         serializedVersion: 2
-        x: 444
-        y: 474
-        width: 136
-        height: 85
+        x: 491
+        y: 705
+        width: 1066
+        height: 661
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f1887522ae4d5b4499dda906bb6ce10b
     internalID: 0
     vertices: []
     indices: 
