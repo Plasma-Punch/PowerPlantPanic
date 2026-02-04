@@ -5179,6 +5179,10 @@ PrefabInstance:
       propertyPath: _runningSound
       value: 
       objectReference: {fileID: 8300000, guid: 8cf63818a8be1064a9f9c06cd91ea3ea, type: 3}
+    - target: {fileID: 7994807786281305073, guid: fc60bfa9c06884f46aa2fbe21fe481c2, type: 3}
+      propertyPath: _rotatingSpeed
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
