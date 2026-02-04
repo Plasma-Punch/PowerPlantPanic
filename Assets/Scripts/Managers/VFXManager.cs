@@ -17,6 +17,7 @@ public class VFXManager : MonoBehaviour
 
     private void Start()
     {
+        if (_globalVolume == null) return;
         if (_globalVolume.profile.TryGet(out _vignette))
         {
             // Make sure the override is active

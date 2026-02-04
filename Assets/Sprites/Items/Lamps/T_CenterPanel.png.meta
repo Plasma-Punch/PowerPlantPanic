@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1c3f881bca829bf438950843dcf99deb
+guid: 73ba2366873f1da448bb613223df9999
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -540292684488198850
-    second: T_CenterPanelLamp01_On_0
+      213: 7991441259732435384
+    second: T_CenterPanel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_CenterPanelLamp01_On_0
+      name: T_CenterPanel_0
       rect:
         serializedVersion: 2
-        x: 88
-        y: 296
-        width: 64
-        height: 65
+        x: 22
+        y: 124
+        width: 463
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e35b6528aae7088f0800000000000000
-      internalID: -540292684488198850
+      spriteID: 8b180c93c7d47ee60800000000000000
+      internalID: 7991441259732435384
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_CenterPanelLamp01_On_0: -540292684488198850
+      T_CenterPanel_0: 7991441259732435384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
