@@ -689,7 +689,7 @@ MonoBehaviour:
     of the pipes burst quickly go repair it before we lose all presure!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -2077,11 +2077,11 @@ MonoBehaviour:
   json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great,
     you repaired the machine. Now you should try to repair the fuse box. Normaly
     you would only need to do this after you failed at repairing the power machine","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Sientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":163.5,"yPos":144},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"After
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":163.5,"yPos":144},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"After
     you repaired the fuse box you will need to try and repair the power machine again.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Sientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Sientist Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -2138,11 +2138,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     failed at repairing the machine. Press the red button if you need anny help!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -2198,11 +2198,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     job you repaired the broken pipe.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -2211,55 +2211,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3100801398722347797}
-        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
-        m_MethodName: DisableTrigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1480679016}
-        m_TargetAssemblyTypeName: Light, Assembly-CSharp
-        m_MethodName: EnableLight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797427189}
-        m_TargetAssemblyTypeName: CentralLightManager, Assembly-CSharp
-        m_MethodName: TurnOnLight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1280696808}
-        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
-        m_MethodName: DisableTrigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &477677703
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,7 +3279,7 @@ MonoBehaviour:
     the turbine is broken. Quickly remove all the debry from the fan blades!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -3759,7 +3711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb18eb845832b144b04070c7a1f080b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AbiantSound: {fileID: 0}
+  AbiantSound: {fileID: 8300000, guid: 26ae617b6c5462741927cb47be9397e7, type: 3}
 --- !u!4 &911996621
 Transform:
   m_ObjectHideFlags: 0
@@ -3821,12 +3773,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     failed the task. First repair the fuze box before trying again. If you need any
     help press the red button.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -4472,17 +4424,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 22
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":172,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Congratualations!
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Congratualations!
     you fixed all the machines.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":172.700073,"yPos":124.799988},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"As
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":160.200073,"yPos":124.799988},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"As
     of today you are promoted to facility manager.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":165.5,"yPos":240.000092},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":153,"yPos":240.000092},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     can enter our facility trough the door on the right.","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":165.500122,"yPos":349.6},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":153.000122,"yPos":349.6},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
     Luck!","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -4751,18 +4703,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 10
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":true,"xPos":168,"yPos":-155},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Needed
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Needed
     some help? The task is quite simple. All you have to do is drag the red sliders
     on top of the blue ones.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":170.700012,"yPos":-37},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":162.200012,"yPos":140},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     you somehow failed this you need to repair the fuse box.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":170.700012,"yPos":79.80005},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"To
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":162.200012,"yPos":256.800049},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"To
     do this simply drag the right cable pieces into the empty slots.","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":169.900024,"yPos":197.400085},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":161.400024,"yPos":374.4001},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
     Luck!","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -5601,11 +5553,11 @@ MonoBehaviour:
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":161.799988,"yPos":127.200012},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
     you will see which machine is broken, for now a light will light up whenever
     you fix a machine.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":161.799988,"yPos":236.8},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":161.799988,"yPos":236.8},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     all the light are lit up you will have completed your training.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -5667,16 +5619,16 @@ MonoBehaviour:
     to our simulation facility.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":158.800018,"yPos":117.600067},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Here
     you will complete you''re training. ","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":160.4,"yPos":219.200348},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Once
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":160.4,"yPos":219.200348},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Once
     you completed youre training you will be promoted to our new facility manager.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":163.199982,"yPos":326.400177},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"In
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":163.199982,"yPos":326.400177},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"In
     order to complete youre training you need to repair all the different machines.","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":158.999969,"yPos":427.8005},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"If
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":158.999969,"yPos":427.8005},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"If
     you were to need help repairing a machine just press the red button that is near
     the machine. Good luck!","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -5877,11 +5829,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 10
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     job you unclogged the turbine.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -5890,43 +5842,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1027521988}
-        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
-        m_MethodName: DisableTrigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1869566399}
-        m_TargetAssemblyTypeName: Light, Assembly-CSharp
-        m_MethodName: EnableLight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797427189}
-        m_TargetAssemblyTypeName: CentralLightManager, Assembly-CSharp
-        m_MethodName: TurnOnLight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1455827808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7000680810413788846, guid: 1665e2f2a09c6754bab1c7626832618e, type: 3}
@@ -5978,14 +5894,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 16
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":true,"xPos":172,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"First
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"First
     you need the press the yellow button.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":177.300018,"yPos":141.6},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"This
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":164.800018,"yPos":141.6},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"This
     will drop a waste barrel from the ceiling. bring this barrel to the waste barrel
     pool.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -7101,7 +7017,7 @@ MonoBehaviour:
     now you mastered repairing this machine!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -8028,11 +7944,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":172,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
     job you removed all the nuclear waste.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -8041,43 +7957,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2014381160}
-        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
-        m_MethodName: DisableTrigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 316603941}
-        m_TargetAssemblyTypeName: Light, Assembly-CSharp
-        m_MethodName: EnableLight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 797427189}
-        m_TargetAssemblyTypeName: CentralLightManager, Assembly-CSharp
-        m_MethodName: TurnOnLight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &1809323621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8493,16 +8373,16 @@ MonoBehaviour:
     task has a lot of steps so listen carefully.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":159,"yPos":127.199905},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"First
     turn of the right valve.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":160.000031,"yPos":241.599945},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":160.000031,"yPos":241.599945},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Now
     you can sefely remove the broken pipe and trow it in the trash bin.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":160.000031,"yPos":348.799774},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Grab
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":160.000031,"yPos":348.799774},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Grab
     a replacement pipe from the table.","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":162.400055,"yPos":461.599731},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":162.400055,"yPos":461.599731},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     need to place this pipe in the right spot. after this dont forget to re-open
     the valve.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
-    Scientis Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -9020,7 +8900,7 @@ MonoBehaviour:
     can.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -9076,12 +8956,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 14
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":171,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":159.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     nuclear waste storage is completely full. quickly take a barrel out before we
     have a leak.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Crazy
     Scientist Guy","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
-  DefaultName: Crazy Scientis Guy
+  DefaultName: Crazy Scientist Guy
   DefaultSprite: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
   DefaultFont: {fileID: 11400000, guid: ef696c47a74acb14da2f8f27211bd620, type: 2}
   NodeSerializedDataList:
@@ -9090,19 +8970,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2014381160}
-        m_TargetAssemblyTypeName: Interaction, Assembly-CSharp
-        m_MethodName: DisableTrigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1992195496
 GameObject:
   m_ObjectHideFlags: 0
