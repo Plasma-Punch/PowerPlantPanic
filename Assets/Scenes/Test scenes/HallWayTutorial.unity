@@ -1430,13 +1430,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 477677707}
     m_Modifications:
+    - target: {fileID: 5823537168762392898, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5823537168762392898, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 6026947623701053382, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
       propertyPath: m_Name
       value: PresureRegulatorUI
       objectReference: {fileID: 0}
     - target: {fileID: 6026947623701053382, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6826500919507576706, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
       propertyPath: m_Pivot.x
@@ -1517,6 +1525,22 @@ PrefabInstance:
     - target: {fileID: 6826500919507576706, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375336183682639938, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375336183682639938, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001258364428562599, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001258364428562599, guid: b16f0cec8d4bcdf4babec91d1351a7ad, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
