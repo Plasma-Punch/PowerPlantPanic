@@ -9,7 +9,7 @@ public class GameStateManager : MonoBehaviour
     public bool SpawnedIn;
     private void Start()
     {
-        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0) && !SpawnedIn || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCountInBuildSettings  -2) && !SpawnedIn)
+        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(0) && !SpawnedIn || SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(SceneManager.sceneCountInBuildSettings  -1) && !SpawnedIn)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         SpawnedIn = false;
