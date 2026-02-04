@@ -5439,6 +5439,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 359403276431112055, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1809323626}
+    - target: {fileID: 359403276431112055, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Credits
+      objectReference: {fileID: 0}
     - target: {fileID: 372236927608881861, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5454,6 +5462,14 @@ PrefabInstance:
     - target: {fileID: 372236927608881861, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939476160073096956, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1809323626}
+    - target: {fileID: 939476160073096956, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1617157045463979694, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5511,6 +5527,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2554803791595706477, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1809323626}
+    - target: {fileID: 2554803791595706477, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 3272541871368376625, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5542,6 +5566,18 @@ PrefabInstance:
     - target: {fileID: 3849529712854115174, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471759500068552135, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471759500068552135, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1809323626}
+    - target: {fileID: 4471759500068552135, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVolume
       objectReference: {fileID: 0}
     - target: {fileID: 5542426234079310216, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5603,6 +5639,11 @@ PrefabInstance:
 --- !u!4 &1220455680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1617157045463979694, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
+  m_PrefabInstance: {fileID: 1220455679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1220455681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 54918126600029956, guid: 64c6fc0310dddc34599cea1b3ac0a863, type: 3}
   m_PrefabInstance: {fileID: 1220455679}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1247266934
@@ -8358,7 +8399,11 @@ PrefabInstance:
     - target: {fileID: 2320283844131842775, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: _pauseMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1220455681}
+    - target: {fileID: 2320283844131842775, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: _volumeChange
+      value: 
+      objectReference: {fileID: 11400000, guid: 20124cd52fa041444bd67f536b1b0473, type: 2}
     - target: {fileID: 2878252551740345185, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: _UI
       value: 
