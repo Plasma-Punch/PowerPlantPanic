@@ -144,10 +144,10 @@ TextureImporter:
       name: T_OpenCloseValve_1
       rect:
         serializedVersion: 2
-        x: 857
-        y: 988
-        width: 358
-        height: 155
+        x: 93
+        y: 214
+        width: 344
+        height: 149
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
