@@ -5037,6 +5037,10 @@ PrefabInstance:
       propertyPath: FreezePlayer
       value: 
       objectReference: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
+    - target: {fileID: 3900108755196472086, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
+      propertyPath: ChangeCanMove
+      value: 
+      objectReference: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
