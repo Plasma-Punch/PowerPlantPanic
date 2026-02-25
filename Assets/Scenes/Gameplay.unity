@@ -1919,6 +1919,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1565780653}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: _progressSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _electricityObject
       value: 
       objectReference: {fileID: 2034708521}
