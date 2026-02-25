@@ -70,7 +70,7 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
 
     IEnumerator DelayedUIClose()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.35f);
 
         completed();
     }

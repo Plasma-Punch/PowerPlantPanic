@@ -337,7 +337,7 @@ MonoBehaviour:
   - {fileID: 35609043}
   - {fileID: 996418961}
   _progressBar: {fileID: 13125128}
-  _progressSpeed: 3
+  _progressSpeed: 15
   _changeCanWalk: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
   _spaceBetween: 130
   _topValue: 260
