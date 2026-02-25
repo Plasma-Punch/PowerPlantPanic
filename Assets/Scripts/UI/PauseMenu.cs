@@ -35,6 +35,12 @@ public class PauseMenu : MonoBehaviour
     private void _pauseButton_started(InputAction.CallbackContext obj)
     {
         if (!_canPause) return;
+        if (_pauseMenu.activeSelf)
+        {
+            Time.timeScale = 1f;
+            _pauseMenu.SetActive(false);
+            return;
+        }
         Time.timeScale = 0f;
         _pauseMenu.SetActive(true);
     }
