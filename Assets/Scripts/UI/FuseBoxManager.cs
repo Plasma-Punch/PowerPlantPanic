@@ -27,9 +27,13 @@ public class FuseBoxManager : MonoBehaviour
     private int _cablesToPlace;
     private int _cablesPlaced;
 
+    private bool _isRunning;
+
     [ContextMenu("initialize")]
     public void InitializeFuseBox(Component sender, object obj)
     {
+        if (_isRunning) return;
+        _isRunning = true;
         _cableSpawner.transform.parent.gameObject.SetActive(true);
         for(int i = 0; i < _cableHolder.Count; i++)
         {
@@ -95,5 +99,6 @@ public class FuseBoxManager : MonoBehaviour
         _powerTrigger.SetActive(true);
         _fuseBoxTrigger.SetActive(false);
         _cableSpawner.transform.parent.gameObject.SetActive(false);
+        _isRunning = false;
     }
 }
