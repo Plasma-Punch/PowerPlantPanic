@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class PresureRegulator : MonoBehaviour, IMiniGame
+public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField]
     private List<GameObject> _pipes = new List<GameObject>();
@@ -21,6 +21,12 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     private GameObject _itemHolder;
     [SerializeField]
     private InputActionReference _closePanel;
+    [SerializeField]
+    private InputActionReference _leftClickAction;
+    [SerializeField]
+    private float _mouseSensitivity = 0.25f;
+    [SerializeField]
+    private bool _invertMouse = false;
     [SerializeField]
     private GameEvent _miniGameFinished;
     
@@ -65,7 +71,24 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
             _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         else
             Debug.Log("SoundManager not found");
+        if (_leftClickAction != null && _leftClickAction.action != null)
+        {
+            _leftClickAction.action.started += OnLeftClick;
+            _leftClickAction.action.canceled += OnLeftRelease;
+        }
     }
+
+    private void OnDisable()
+    {
+        if (_leftClickAction != null && _leftClickAction.action != null)
+        {
+            _leftClickAction.action.started -= OnLeftClick;
+            _leftClickAction.action.canceled -= OnLeftRelease;
+        }
+    }
+
+    private Coroutine _holdCoroutine;
+    private bool _leftPressed;
 
     private void Start()
     {
@@ -245,56 +268,56 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
             }
         }
 
-        if (!_miniGameStarted) return;
-        if (Mouse.current.leftButton.wasReleasedThisFrame)
-        {
-            _valveLocked = false;
-        }
-        if (!Mouse.current.leftButton.IsPressed()) return;
-        if (_activeValve == null) return;
+        //if (!_miniGameStarted) return;
+        //if (Mouse.current.leftButton.wasReleasedThisFrame)
+        //{
+        //    _valveLocked = false;
+        //}
+        //if (!Mouse.current.leftButton.IsPressed()) return;
+        //if (_activeValve == null) return;
 
-        switch (_currentBrokenPipeIndex)
-        {
-            case 0:
-                if (_activeValve.tag != "Red") break;
-                if (_valveLocked) break;
-                if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
-                else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
-                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
-                break;
-            case 1:
-                if (_activeValve.tag != "Green") break;
-                if (_valveLocked) break;
-                if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
-                else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
-                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
-                break;
-            case 2:
-                if (_activeValve.tag != "Blue") break;
-                if (_valveLocked) break;
-                if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
-                else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
-                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
-                break;
-        }
+        //switch (_currentBrokenPipeIndex)
+        //{
+        //    case 0:
+        //        if (_activeValve.tag != "Red") break;
+        //        if (_valveLocked) break;
+        //        if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
+        //        else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
+        //        _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
+        //        break;
+        //    case 1:
+        //        if (_activeValve.tag != "Green") break;
+        //        if (_valveLocked) break;
+        //        if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
+        //        else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
+        //        _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
+        //        break;
+        //    case 2:
+        //        if (_activeValve.tag != "Blue") break;
+        //        if (_valveLocked) break;
+        //        if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
+        //        else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
+        //        _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
+        //        break;
+        //}
 
-        if (_valveProgress > 180)
-        {
-            _valveProgress = 180;
-            _valveIsOpen = false;
-            _valveLocked = true;
-            _playSteam.Raise(this, _brokenPipe.transform);
-        }
+        //if (_valveProgress > 180)
+        //{
+        //    _valveProgress = 180;
+        //    _valveIsOpen = false;
+        //    _valveLocked = true;
+        //    _playSteam.Raise(this, _brokenPipe.transform);
+        //}
 
 
-        if (_valveProgress < 0)
-        {
-            _valveProgress = 0;
-            _valveIsOpen = true;
-            _valveLocked = true;
+        //if (_valveProgress < 0)
+        //{
+        //    _valveProgress = 0;
+        //    _valveIsOpen = true;
+        //    _valveLocked = true;
 
-            completed();
-        }
+        //    completed();
+        //}
     }
 
     private IEnumerator CanOpenPanel()
@@ -307,5 +330,108 @@ public class PresureRegulator : MonoBehaviour, IMiniGame
     {
         yield return new WaitForEndOfFrame();
         _justOpenedUI = false;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        ProcessValveTurn();
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (!_miniGameStarted) return;
+        _valveLocked = false;
+    }
+
+    private void OnLeftClick(InputAction.CallbackContext ctx)
+    {
+        // called when left mouse button (or bound control) is pressed (started)
+        if (ctx.started)
+        {
+            _leftPressed = true;
+            if (_holdCoroutine == null)
+                _holdCoroutine = StartCoroutine(HoldTurn());
+        }
+    }
+
+    private void OnLeftRelease(InputAction.CallbackContext ctx)
+    {
+        // called when left mouse button (or bound control) is released (canceled)
+        if (ctx.canceled)
+        {
+            _leftPressed = false;
+            if (_holdCoroutine != null)
+            {
+                StopCoroutine(_holdCoroutine);
+                _holdCoroutine = null;
+            }
+            if (!_miniGameStarted) return;
+            _valveLocked = false;
+        }
+    }
+
+    private IEnumerator HoldTurn()
+    {
+        while (_leftPressed)
+        {
+            ProcessValveTurn();
+            yield return null; // run next frame
+        }
+        _holdCoroutine = null;
+    }
+
+    private void ProcessValveTurn()
+    {
+        if (!_miniGameStarted) return;
+        if (_activeValve == null) return;
+
+        // read mouse delta (Input System). If no mouse available, exit.
+        var mouse = Mouse.current;
+        if (mouse == null) return;
+        Vector2 mouseDelta = mouse.delta.ReadValue();
+        // use horizontal movement to rotate the valve; apply sensitivity and optional inversion
+        float move = mouseDelta.x * _mouseSensitivity * (_invertMouse ? -1f : 1f);
+
+        switch (_currentBrokenPipeIndex)
+        {
+            case 0:
+                if (_activeValve.tag != "Red") break;
+                if (_valveLocked) break;
+                if (!(_valveIsOpen || (!_valveIsOpen && _itemPlaced))) break;
+                _valveProgress += move;
+                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
+                break;
+            case 1:
+                if (_activeValve.tag != "Green") break;
+                if (_valveLocked) break;
+                if (!(_valveIsOpen || (!_valveIsOpen && _itemPlaced))) break;
+                _valveProgress += move;
+                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
+                break;
+            case 2:
+                if (_activeValve.tag != "Blue") break;
+                if (_valveLocked) break;
+                if (!(_valveIsOpen || (!_valveIsOpen && _itemPlaced))) break;
+                _valveProgress += move;
+                _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
+                break;
+        }
+
+        if (_valveProgress > 180)
+        {
+            _valveProgress = 180;
+            _valveIsOpen = false;
+            _valveLocked = true;
+            _playSteam.Raise(this, _brokenPipe.transform);
+        }
+
+        if (_valveProgress < 0)
+        {
+            _valveProgress = 0;
+            _valveIsOpen = true;
+            _valveLocked = true;
+
+            completed();
+        }
     }
 }
