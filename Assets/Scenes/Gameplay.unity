@@ -4454,6 +4454,18 @@ PrefabInstance:
       propertyPath: _itemHolder
       value: 
       objectReference: {fileID: 872774762}
+    - target: {fileID: 7201458428208991982, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
+      propertyPath: _invertMouse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201458428208991982, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
+      propertyPath: _leftClickAction
+      value: 
+      objectReference: {fileID: 3592338218588539176, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    - target: {fileID: 7201458428208991982, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
+      propertyPath: _mouseSensitivity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7479534547516673959, guid: 31292e894e8560944914fd89c6d26b7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.29

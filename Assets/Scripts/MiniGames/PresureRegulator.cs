@@ -28,6 +28,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
     [SerializeField]
     private bool _invertMouse = false;
     [SerializeField]
+    private bool _allowRotateWithoutMiniGame = false; // for testing in editor
+    [SerializeField]
     private GameEvent _miniGameFinished;
     
     [Header("AudioVariables")]
@@ -89,6 +91,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
     private Coroutine _holdCoroutine;
     private bool _leftPressed;
+    private float _previousMouseAngle;
+    private bool _hasPreviousMouseAngle;
 
     private void Start()
     {
@@ -334,21 +338,75 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        ProcessValveTurn();
+        // support pointer down similarly to input action start
+        _leftPressed = true;
+        // if active valve not set via hover event, try to resolve it from the pointer event
+        if (_activeValve == null && eventData != null)
+        {
+            GameObject source = eventData.pointerPress != null ? eventData.pointerPress : eventData.pointerEnter;
+            if (source != null)
+            {
+                // try to find a parent with a color tag (Red/Green/Blue) or a ValveUI component
+                Transform t = source.transform;
+                ValveUI valveUI = source.GetComponent<ValveUI>();
+                if (valveUI != null)
+                {
+                    // ValveUI raises parent as the valve object, so use parent
+                    if (source.transform.parent != null)
+                        _activeValve = source.transform.parent.gameObject;
+                }
+                else
+                {
+                    while (t != null)
+                    {
+                        if (t.gameObject.CompareTag("Red") || t.gameObject.CompareTag("Green") || t.gameObject.CompareTag("Blue"))
+                        {
+                            _activeValve = t.gameObject;
+                            break;
+                        }
+                        t = t.parent;
+                    }
+                }
+            }
+        }
+        // initialize previous angle so the first delta is zero
+        float angle;
+        if (TryGetMouseAngle(out angle))
+        {
+            _previousMouseAngle = angle;
+            _hasPreviousMouseAngle = true;
+        }
+        if (_holdCoroutine == null)
+            _holdCoroutine = StartCoroutine(HoldTurn());
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (!_miniGameStarted) return;
+        _leftPressed = false;
+        _hasPreviousMouseAngle = false;
+        if (_holdCoroutine != null)
+        {
+            StopCoroutine(_holdCoroutine);
+            _holdCoroutine = null;
+        }
+        if (!_miniGameStarted && !_allowRotateWithoutMiniGame) return;
         _valveLocked = false;
     }
 
     private void OnLeftClick(InputAction.CallbackContext ctx)
     {
+        if (!_miniGameStarted) return;
         // called when left mouse button (or bound control) is pressed (started)
         if (ctx.started)
         {
             _leftPressed = true;
+            // initialize previous angle so the first delta is zero
+            float angle;
+            if (TryGetMouseAngle(out angle))
+            {
+                _previousMouseAngle = angle;
+                _hasPreviousMouseAngle = true;
+            }
             if (_holdCoroutine == null)
                 _holdCoroutine = StartCoroutine(HoldTurn());
         }
@@ -360,6 +418,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         if (ctx.canceled)
         {
             _leftPressed = false;
+            _hasPreviousMouseAngle = false;
             if (_holdCoroutine != null)
             {
                 StopCoroutine(_holdCoroutine);
@@ -385,12 +444,20 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         if (!_miniGameStarted) return;
         if (_activeValve == null) return;
 
-        // read mouse delta (Input System). If no mouse available, exit.
-        var mouse = Mouse.current;
-        if (mouse == null) return;
-        Vector2 mouseDelta = mouse.delta.ReadValue();
-        // use horizontal movement to rotate the valve; apply sensitivity and optional inversion
-        float move = mouseDelta.x * _mouseSensitivity * (_invertMouse ? -1f : 1f);
+        // compute angle of mouse relative to the active valve center and use angle delta
+        float currentAngle;
+        if (!TryGetMouseAngle(out currentAngle)) return;
+
+        if (!_hasPreviousMouseAngle)
+        {
+            _previousMouseAngle = currentAngle;
+            _hasPreviousMouseAngle = true;
+            return;
+        }
+
+        float delta = Mathf.DeltaAngle(_previousMouseAngle, currentAngle);
+        _previousMouseAngle = currentAngle;
+        float move = delta * _mouseSensitivity * (_invertMouse ? -1f : 1f);
 
         switch (_currentBrokenPipeIndex)
         {
@@ -417,7 +484,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
                 break;
         }
 
-        if (_valveProgress > 180)
+        if (_valveProgress > 180 && _valveIsOpen)
         {
             _valveProgress = 180;
             _valveIsOpen = false;
@@ -425,7 +492,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
             _playSteam.Raise(this, _brokenPipe.transform);
         }
 
-        if (_valveProgress < 0)
+        if (_valveProgress < 0 && !_valveIsOpen)
         {
             _valveProgress = 0;
             _valveIsOpen = true;
@@ -433,5 +500,38 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
             completed();
         }
+    }
+
+    private bool TryGetMouseAngle(out float angle)
+    {
+        angle = 0f;
+        var mouse = Mouse.current;
+        if (mouse == null) return false;
+        Vector2 mousePos = mouse.position.ReadValue();
+
+        // If the active valve is a UI element (RectTransform), use RectTransformUtility
+        if (_activeValve != null)
+        {
+            var rt = _activeValve.GetComponent<RectTransform>();
+            if (rt != null)
+            {
+                // Determine the camera to use for ScreenPointToLocalPointInRectangle.
+                Canvas canvas = rt.GetComponentInParent<Canvas>();
+                Camera cam = null;
+                if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+                    cam = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
+
+                Vector2 localPoint;
+                bool ok = RectTransformUtility.ScreenPointToLocalPointInRectangle(rt, mousePos, cam, out localPoint);
+                if (!ok)
+                    return false;
+
+                // localPoint is relative to the rect center/pivot — compute angle
+                if (localPoint.sqrMagnitude <= Mathf.Epsilon) return false;
+                angle = Mathf.Atan2(localPoint.y, localPoint.x) * Mathf.Rad2Deg;
+                return true;
+            }
+        }
+        return false;
     }
 }
