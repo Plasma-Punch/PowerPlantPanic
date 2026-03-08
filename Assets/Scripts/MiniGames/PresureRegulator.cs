@@ -505,7 +505,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
             completed();
         }
-        else if (_valveProgress < 230 && !_valveIsOpen)
+        else if (_valveProgress > 230 && !_valveIsOpen)
         {
             _valveLocked = true;
             Debug.Log("ValveBrokeOff");
@@ -551,5 +551,12 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         if (dir.sqrMagnitude <= Mathf.Epsilon) return false;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         return true;
+    }
+
+    private IEnumerator PopOffValve()
+    {
+        // This is a placeholder for a coroutine that would handle the valve popping off when over-turned
+        // It could play an animation, disable the valve, and trigger any related effects
+        yield return null;
     }
 }
