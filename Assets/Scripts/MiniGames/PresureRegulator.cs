@@ -491,6 +491,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
             _valveLocked = true;
             _playSteam.Raise(this, _brokenPipe.transform);
         }
+        else if(_valveProgress < - 50 && _valveIsOpen)
+        {
+            _valveLocked = true;
+            Debug.Log("ValveBrokeOff");
+        }
 
         if (_valveProgress < 0 && !_valveIsOpen)
         {
@@ -499,6 +504,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
             _valveLocked = true;
 
             completed();
+        }
+        else if (_valveProgress < 230 && !_valveIsOpen)
+        {
+            _valveLocked = true;
+            Debug.Log("ValveBrokeOff");
         }
     }
 
