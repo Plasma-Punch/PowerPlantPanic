@@ -519,29 +519,37 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         if (mouse == null) return false;
         Vector2 mousePos = mouse.position.ReadValue();
 
-        // If the active valve is a UI element (RectTransform), use RectTransformUtility
-        if (_activeValve != null)
+        if (_activeValve == null) return false;
+
+        // Compute the screen position of the valve center and use that to get a stable angle
+        Vector2 centerScreen;
+        var rt = _activeValve.GetComponent<RectTransform>();
+        if (rt != null)
         {
-            var rt = _activeValve.GetComponent<RectTransform>();
-            if (rt != null)
-            {
-                // Determine the camera to use for ScreenPointToLocalPointInRectangle.
-                Canvas canvas = rt.GetComponentInParent<Canvas>();
-                Camera cam = null;
-                if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
-                    cam = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
+            // For UI elements, convert the rect's center to screen space
+            Canvas canvas = rt.GetComponentInParent<Canvas>();
+            Camera cam = null;
+            if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+                cam = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
 
-                Vector2 localPoint;
-                bool ok = RectTransformUtility.ScreenPointToLocalPointInRectangle(rt, mousePos, cam, out localPoint);
-                if (!ok)
-                    return false;
-
-                // localPoint is relative to the rect center/pivot — compute angle
-                if (localPoint.sqrMagnitude <= Mathf.Epsilon) return false;
-                angle = Mathf.Atan2(localPoint.y, localPoint.x) * Mathf.Rad2Deg;
-                return true;
-            }
+            // Transform the rect center to world space then to screen space — this is more stable than
+            // relying on ScreenPointToLocalPointInRectangle for per-frame angle deltas.
+            Vector3 worldPos = rt.TransformPoint(rt.rect.center);
+            Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(cam, worldPos);
+            centerScreen = screenPoint;
         }
-        return false;
+        else
+        {
+            // For world-space objects, use the main camera to get screen position of the object center
+            Camera cam = Camera.main;
+            if (cam == null) return false;
+            Vector3 screenPoint3 = cam.WorldToScreenPoint(_activeValve.transform.position);
+            centerScreen = new Vector2(screenPoint3.x, screenPoint3.y);
+        }
+
+        Vector2 dir = mousePos - centerScreen;
+        if (dir.sqrMagnitude <= Mathf.Epsilon) return false;
+        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        return true;
     }
 }
