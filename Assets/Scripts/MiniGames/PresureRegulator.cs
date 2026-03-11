@@ -260,6 +260,15 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         //StartMiniGame(sender, obj);
     }
 
+    public void EnableValve(Component sender, object obj)
+    {
+        Vector3 rotation = sender.transform.eulerAngles;
+        rotation.z = _valveProgress;
+        sender.transform.eulerAngles = rotation;
+        _activeValve = sender.gameObject;
+        _valveLocked = false;
+    }
+
     private void Update()
     {
         if (_closePanel.action.WasPressedThisFrame())
@@ -271,57 +280,6 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
                 StartCoroutine(CanOpenPanel());
             }
         }
-
-        //if (!_miniGameStarted) return;
-        //if (Mouse.current.leftButton.wasReleasedThisFrame)
-        //{
-        //    _valveLocked = false;
-        //}
-        //if (!Mouse.current.leftButton.IsPressed()) return;
-        //if (_activeValve == null) return;
-
-        //switch (_currentBrokenPipeIndex)
-        //{
-        //    case 0:
-        //        if (_activeValve.tag != "Red") break;
-        //        if (_valveLocked) break;
-        //        if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
-        //        else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
-        //        _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
-        //        break;
-        //    case 1:
-        //        if (_activeValve.tag != "Green") break;
-        //        if (_valveLocked) break;
-        //        if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
-        //        else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
-        //        _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
-        //        break;
-        //    case 2:
-        //        if (_activeValve.tag != "Blue") break;
-        //        if (_valveLocked) break;
-        //        if (_valveIsOpen) _valveProgress += _valveTurnSpeed * Time.deltaTime;
-        //        else if (!_valveIsOpen && _itemPlaced) _valveProgress -= _valveTurnSpeed * Time.deltaTime;
-        //        _ValveRotationChanged.Raise(this, new ValveRotationChangedEventArgs { ValveRotation = _valveProgress, Valve = _activeValve });
-        //        break;
-        //}
-
-        //if (_valveProgress > 180)
-        //{
-        //    _valveProgress = 180;
-        //    _valveIsOpen = false;
-        //    _valveLocked = true;
-        //    _playSteam.Raise(this, _brokenPipe.transform);
-        //}
-
-
-        //if (_valveProgress < 0)
-        //{
-        //    _valveProgress = 0;
-        //    _valveIsOpen = true;
-        //    _valveLocked = true;
-
-        //    completed();
-        //}
     }
 
     private IEnumerator CanOpenPanel()
@@ -493,8 +451,9 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         }
         else if(_valveProgress < - 50 && _valveIsOpen)
         {
+            StartCoroutine(PopOffValve());
             _valveLocked = true;
-            Debug.Log("ValveBrokeOff");
+            _valveProgress = 0;
         }
 
         if (_valveProgress < 0 && !_valveIsOpen)
@@ -507,8 +466,9 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         }
         else if (_valveProgress > 230 && !_valveIsOpen)
         {
+            StartCoroutine(PopOffValve());
+            _valveProgress = 180;
             _valveLocked = true;
-            Debug.Log("ValveBrokeOff");
         }
     }
 
@@ -555,8 +515,83 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
     private IEnumerator PopOffValve()
     {
-        // This is a placeholder for a coroutine that would handle the valve popping off when over-turned
-        // It could play an animation, disable the valve, and trigger any related effects
-        yield return null;
+        // handle a valve popping off: disable interaction, detach, animate or apply physics and destroy
+        if (_activeValve == null) yield break;
+
+        // clear reference so other systems stop updating this valve while it animates
+        GameObject valve = _activeValve;
+        _activeValve = null;
+
+        // disable raycast/interaction if present
+        var canvasGroup = valve.GetComponent<CanvasGroup>();
+        if (canvasGroup != null)
+            canvasGroup.blocksRaycasts = false;
+
+        var col2d = valve.GetComponent<Collider2D>();
+        if (col2d != null)
+            col2d.enabled = false;
+
+        var col = valve.GetComponent<Collider>();
+        if (col != null)
+            col.enabled = false;
+
+        // detach from current parent but keep it under the root Canvas (so it remains visible)
+        var parentCanvas = valve.GetComponentInParent<Canvas>();
+        if (parentCanvas != null)
+        {
+            valve.transform.SetParent(parentCanvas.transform, true);
+        }
+        else
+        {
+            // fallback to detaching to scene root
+            valve.transform.SetParent(null, true);
+        }
+
+        // If this is a UI element (RectTransform) animate it in an arch (up-right then down)
+        var rt = valve.GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            float duration = 1.0f;
+            Vector3 startWorld = rt.position;
+            // end point slightly below start to simulate falling back down
+            Vector3 endWorld = startWorld + new Vector3(Screen.width * 0.08f, -Screen.height * 0.05f, 0f);
+            // control point to create an arch (up and right)
+            Vector3 control = startWorld + new Vector3(Screen.width * 0.12f, Screen.height * 0.25f, 0f);
+
+            CanvasGroup cg = valve.GetComponent<CanvasGroup>();
+            if (cg == null) cg = valve.AddComponent<CanvasGroup>();
+
+            // store original transform and parent to restore later
+            Transform originalParent = valve.transform.parent;
+            int originalSibling = valve.transform.GetSiblingIndex();
+            Vector3 originalLocalPos = valve.transform.localPosition;
+            Vector3 originalLocalEuler = valve.transform.localEulerAngles;
+
+            // ensure any layout or other scripts stop affecting the element while animating
+            var layout = valve.GetComponent<UnityEngine.UI.LayoutGroup>();
+            if (layout != null) layout.enabled = false;
+
+            float t = 0f;
+            while (t < duration)
+            {
+                t += Time.deltaTime;
+                float u = Mathf.Clamp01(t / duration);
+                // quadratic Bezier: B(t) = (1-t)^2 P0 + 2(1-t)t C + t^2 P2
+                float it = 1f - u;
+                Vector3 pos = it * it * startWorld + 2f * it * u * control + u * u * endWorld;
+                rt.position = pos;
+                cg.alpha = Mathf.Lerp(1f, 0f, u);
+                valve.transform.Rotate(0f, 0f, 600f * Time.deltaTime);
+                yield return null;
+            }
+
+            // keep valve invisible but present in canvas until UI closes, then restore
+            cg.alpha = 0f;
+            // keep it on top so it doesn't get occluded
+            valve.transform.SetAsLastSibling();
+
+            Destroy(valve);
+            yield break;
+        }
     }
 }

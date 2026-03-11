@@ -9,16 +9,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784073696290054026}
-  - component: {fileID: 5359515142040932428}
   - component: {fileID: 2320283844131842775}
   - component: {fileID: 6980723673616064319}
   - component: {fileID: 3567837852882869339}
-  - component: {fileID: 642703184053148743}
-  - component: {fileID: 1418606777079147112}
   - component: {fileID: 4479975893585226315}
   - component: {fileID: 5975745657232034335}
   - component: {fileID: 8144200304835270878}
   - component: {fileID: 2878252551740345185}
+  - component: {fileID: 642703184053148743}
+  - component: {fileID: 1418606777079147112}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -41,18 +40,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5359515142040932428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4375979170619066883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba97f6f749dbbf2439f208d6cfd36a86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2320283844131842775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +70,7 @@ MonoBehaviour:
       m_Action: Pause Button
       m_Flags: 0
     m_Flags: 0
+  _volumeChange: {fileID: 11400000, guid: 20124cd52fa041444bd67f536b1b0473, type: 2}
 --- !u!114 &6980723673616064319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +104,84 @@ MonoBehaviour:
   _gameLost: {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
   _ChangeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
   _explosionSound: {fileID: 8300000, guid: 5511d8ce3ad957c4e872c52392a6c17a, type: 3}
+--- !u!114 &4479975893585226315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea922891cf2e3240b0a0f3743431441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimerUI
+  _timer:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: 8399b49e2f72f034ea2f9a12e25bad94, type: 2}
+  _timerText: {fileID: 0}
+--- !u!114 &5975745657232034335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0725f669f461eee4f81a5b158122b779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapUI
+  _mapUIImage: {fileID: 0}
+  _closeMap: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _changeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
+--- !u!114 &8144200304835270878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d96ef6a5e4fa84986a1bcdf19fc5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialUI
+  _tutorialScreen: {fileID: 0}
+  _closeTutorial: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _changeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
+--- !u!114 &2878252551740345185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375979170619066883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6890a4a52aa4c9c40929e61e4e342279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FuseBoxManager
+  _cableSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _cableHolder:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _movealbeCables:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _cablePrefabs:
+  - {fileID: 7177734795470785147, guid: dab0f2a4496e71347a329aeeaf9e4718, type: 3}
+  - {fileID: 2796312938878975689, guid: ef83d37fb3f17254189e5c466e95ae78, type: 3}
+  - {fileID: 6148137523227247717, guid: 778932ec93ee79f44808b67e668bd365, type: 3}
+  _cableSpawner: {fileID: 0}
+  _powerTrigger: {fileID: 0}
+  _fuseBoxTrigger: {fileID: 0}
 --- !u!114 &642703184053148743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +195,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ui: {fileID: 0}
+  _glass: {fileID: 0}
+  _spawnPos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _prefabs:
+  - {fileID: 8502364665751747502, guid: fd2cd0314c08ad94eb1268a15ce73ec3, type: 3}
+  - {fileID: 797948188042896010, guid: a47a0d96ff05ebf43bc3fca8146e275c, type: 3}
+  - {fileID: 6043743623792300376, guid: bd685d4dd8776c746be6338a9cd16a84, type: 3}
+  _valvePos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _valveTurning: {fileID: 8300000, guid: 65bbccba878c5ca478462c4d90c2bf6e, type: 3}
   _ChangeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
 --- !u!114 &1418606777079147112
@@ -150,7 +229,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a5d941dd9215fd4cb2b185060044828, type: 2}
   - {fileID: 11400000, guid: 962fcb3f1198e6f428f2cd487339794d, type: 2}
   - {fileID: 11400000, guid: 7564ef4e33beb4f40b9fc6ea11844c44, type: 2}
-  - {fileID: 11400000, guid: 7aa1f835ba951a742ba66dcb6fdb6480, type: 2}
   - {fileID: 11400000, guid: 00d5ecc1dee2e4f449c1169d840a77f2, type: 2}
   - {fileID: 11400000, guid: e8b00010fd4fbcc4b85ba82d403239be, type: 2}
   - {fileID: 11400000, guid: d48538bd13763d04bbf5f3adcaa78ede, type: 2}
@@ -256,20 +334,6 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5359515142040932428}
-        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
-        m_MethodName: GameLost
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 642703184053148743}
         m_TargetAssemblyTypeName: PressureControlUI, Assembly-CSharp
         m_MethodName: EnableUi
@@ -364,81 +428,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4479975893585226315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4375979170619066883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bea922891cf2e3240b0a0f3743431441, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimerUI
-  _timer:
-    useConstant: 0
-    constantValue: 0
-    variable: {fileID: 11400000, guid: 8399b49e2f72f034ea2f9a12e25bad94, type: 2}
-  _timerText: {fileID: 0}
---- !u!114 &5975745657232034335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4375979170619066883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0725f669f461eee4f81a5b158122b779, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MapUI
-  _mapUIImage: {fileID: 0}
-  _closeMap: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  _changeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
---- !u!114 &8144200304835270878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4375979170619066883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d96ef6a5e4fa84986a1bcdf19fc5cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TutorialUI
-  _tutorialScreen: {fileID: 0}
-  _closeTutorial: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  _changeCanMove: {fileID: 11400000, guid: c655288190e47e843b214df3a3145980, type: 2}
---- !u!114 &2878252551740345185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4375979170619066883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6890a4a52aa4c9c40929e61e4e342279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FuseBoxManager
-  _cableSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _cableHolder:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _movealbeCables:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _cablePrefabs:
-  - {fileID: 7177734795470785147, guid: dab0f2a4496e71347a329aeeaf9e4718, type: 3}
-  - {fileID: 2796312938878975689, guid: ef83d37fb3f17254189e5c466e95ae78, type: 3}
-  - {fileID: 6148137523227247717, guid: 778932ec93ee79f44808b67e668bd365, type: 3}
-  _UI: {fileID: 0}
-  _powerTrigger: {fileID: 0}
-  _fuseBoxTrigger: {fileID: 0}
