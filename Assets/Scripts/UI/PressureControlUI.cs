@@ -10,8 +10,6 @@ public class PressureControlUI : MonoBehaviour
     [SerializeField]
     private GameObject _ui;
     [SerializeField]
-    private GameObject _glass;
-    [SerializeField]
     private List<GameObject> _spawnPos = new List<GameObject>();
     [SerializeField]
     private List<GameObject> _prefabs = new List<GameObject>();
@@ -33,7 +31,6 @@ public class PressureControlUI : MonoBehaviour
 
     private void OnEnable()
     {
-        //_glass.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         if (GameObject.Find("SoundManager") != null)
             _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         else
@@ -89,11 +86,6 @@ public class PressureControlUI : MonoBehaviour
             _soundManager.PlaySound("turning");
 
         args.Valve.transform.eulerAngles = new Vector3(0, 0, args.ValveRotation * -1);
-    }
-
-    public void BreakGlass(Component sender, object obj)
-    {
-        _glass.GetComponent<Image>().color = new Color(1, 1, 1, 0);
     }
 
     public void PlaceValve(Component sender, object obj)
