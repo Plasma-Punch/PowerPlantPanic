@@ -56,6 +56,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     public void completed()
     {
         _minigameFinished.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement });
+        ResetDropZoneColliders();
     }
 
     public void failed()
