@@ -56,7 +56,7 @@ public class ControlPanelUI : MonoBehaviour
         }
     }
 
-        public void PowerEfficiencyChanged(Component sender, object obj)
+    public void PowerEfficiencyChanged(Component sender, object obj)
     {
         PowerEfficiencyChangedEventArgs args = obj as PowerEfficiencyChangedEventArgs;
         if (args == null) return;
