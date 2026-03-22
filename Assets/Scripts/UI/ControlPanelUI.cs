@@ -89,6 +89,7 @@ public class ControlPanelUI : MonoBehaviour
         _wasteLight.SetActive(!_wasteLight.activeSelf);
 
         if (args.WasteTimer == 100) _wasteLight.SetActive(true);
+        if (args.WasteTimer == 0) _wasteLight.SetActive(true);
     }
 
     public void GiveUp()
