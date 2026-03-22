@@ -44,6 +44,8 @@ public class CentralControlPanel : MonoBehaviour
     private float _accumulateWasteSpeed = 1;
     [SerializeField]
     private int _maxBrokenMachines = 2;
+    [SerializeField]
+    private float _decreaseMultiplier = 1.5f;
 
     [Header("Sound Variables")]
     [SerializeField]
@@ -55,10 +57,10 @@ public class CentralControlPanel : MonoBehaviour
 
     private int _lastEnabledMiniGame = -1;
 
-    private int _powerEfficiency = 100;
-    private int _fanRPM = 3600;
-    private int _pipePSI = 150;
-    private int _wasteTimer = 400;
+    private float _powerEfficiency = 100;
+    private float _fanRPM = 3600;
+    private float _pipePSI = 150;
+    private float _wasteTimer = 400;
 
     private Coroutine _decreaseOutputEfficiency;
     private Coroutine _decreaseFanRPM;
@@ -71,6 +73,7 @@ public class CentralControlPanel : MonoBehaviour
     private bool _canAccumulateWaste = false;
 
     private List<bool> _isMinigameEnabled = new List<bool>();
+    private List<bool> _isMinigameBroken = new List<bool>();
 
     private int _activeMiniGames;
 
@@ -87,6 +90,11 @@ public class CentralControlPanel : MonoBehaviour
             _soundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         else
             Debug.Log("SoundManager not found");
+
+        for(int i = 0; i < 4; i++)
+        {
+            _isMinigameBroken.Add(false);
+        }
     }
 
     private void Start()
@@ -158,15 +166,18 @@ public class CentralControlPanel : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         PlayAlarm();
-        _powerEfficiency -= 1;
+        float multiplier = 1;
+        if (_isMinigameBroken[3]) multiplier = _decreaseMultiplier;
+        _powerEfficiency -= _powerDrainAmount * multiplier;
 
-        _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = _powerEfficiency });
+        _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency });
         _decreaseOutputEfficiency = StartCoroutine(DecreasePowerEfficiency());
 
         if (_powerEfficiency <= 0)
         {
             FailedMiniGame(new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.PowerRegulating });
             _machinesBroken++;
+            _isMinigameBroken[0] = true;
             CheckGameOver();
         }
     }
@@ -178,15 +189,18 @@ public class CentralControlPanel : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         PlayAlarm();
-        _fanRPM -= 1;
+        float multiplier = 1;
+        if (_isMinigameBroken[0]) multiplier = _decreaseMultiplier;
+        _fanRPM -= _RPMDrainAmount * multiplier;
 
-        _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = _fanRPM });
+        _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM });
         _decreaseFanRPM = StartCoroutine(DecreaseFanRPM());
 
         if (_fanRPM <= 0)
         {
             FailedMiniGame(new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.FanBlock });
             _machinesBroken++;
+            _isMinigameBroken[1] = true;
             CheckGameOver();
         }
     }
@@ -198,15 +212,18 @@ public class CentralControlPanel : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         PlayAlarm();
-        _pipePSI -= 1;
+        float multiplier = 1;
+        if (_isMinigameBroken[1]) multiplier = _decreaseMultiplier;
+        _pipePSI -= _pressureDrainAmount * multiplier;
 
-        _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = _pipePSI });
+        _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI });
         _decreasePipePressure = StartCoroutine(DecreasePipePressure());
 
         if (_pipePSI <= 0)
         {
             FailedMiniGame(new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.PipeBroke });
             _machinesBroken++;
+            _isMinigameBroken[2] = true;
             CheckGameOver();
         }
     }
@@ -217,15 +234,18 @@ public class CentralControlPanel : MonoBehaviour
         yield return new WaitForSeconds(_accumulateWasteSpeed);
 
         PlayAlarm();
-        _wasteTimer -= (int)_accumulateWasteAmount;
+        float multiplier = 1;
+        if (_isMinigameBroken[2]) multiplier = _decreaseMultiplier;
+        _wasteTimer -= _accumulateWasteAmount * multiplier;
 
-        _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = _wasteTimer });
+        _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer });
         _accumulateWaste = StartCoroutine(AccumulateWaste());
 
         if (_wasteTimer <= 0)
         {
             FailedMiniGame(new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement });
             _machinesBroken++;
+            _isMinigameBroken[3] = true;
             CheckGameOver();
         }
     }
@@ -285,7 +305,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canDecreasePower = false;
                 _powerEfficiency = 100;
                 _isMinigameEnabled[0] = false;
-                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = _powerEfficiency });
+                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency });
                 _disableMiniGame[0].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -294,7 +314,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canDecreaseFanRPM = false;
                 _fanRPM = 3600;
                 _isMinigameEnabled[1] = false;
-                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = _fanRPM });
+                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM });
                 _disableMiniGame[1].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -303,7 +323,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canDecreasePipePressure = false;
                 _pipePSI = 150;
                 _isMinigameEnabled[2] = false;
-                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = _pipePSI });
+                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI });
                 _disableMiniGame[2].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -312,7 +332,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canAccumulateWaste = false;
                 _wasteTimer = 100;
                 _isMinigameEnabled[3] = false;
-                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = _wasteTimer });
+                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer });
                 _disableMiniGame[3].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -366,28 +386,28 @@ public class CentralControlPanel : MonoBehaviour
                 StopCoroutine(_decreaseOutputEfficiency);
                 _canDecreasePower = false;
                 _powerEfficiency = 0;
-                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = _powerEfficiency });
+                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency });
                 _disableMiniGame[0].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.FanBlock:
                 StopCoroutine(_decreaseFanRPM);
                 _canDecreaseFanRPM = false;
                 _fanRPM = 0;
-                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = _fanRPM });
+                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM });
                 _disableMiniGame[1].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.PipeBroke:
                 StopCoroutine(_decreasePipePressure);
                 _canDecreasePipePressure = false;
                 _pipePSI = 0;
-                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = _pipePSI });
+                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI });
                 _disableMiniGame[2].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.WasteManagement:
                 StopCoroutine(_accumulateWaste);
                 _canAccumulateWaste = false;
                 _wasteTimer = 0;
-                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = _wasteTimer });
+                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer });
                 _disableMiniGame[3].Raise(this, EventArgs.Empty);
                 break;
         }
