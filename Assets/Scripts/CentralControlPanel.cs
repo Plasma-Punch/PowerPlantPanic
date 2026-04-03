@@ -170,7 +170,7 @@ public class CentralControlPanel : MonoBehaviour
         if (_isMinigameBroken[3]) multiplier = _decreaseMultiplier;
         _powerEfficiency -= _powerDrainAmount * multiplier;
 
-        _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency });
+        _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency, MaxPowerEfficiency = 100});
         _decreaseOutputEfficiency = StartCoroutine(DecreasePowerEfficiency());
 
         if (_powerEfficiency <= 0)
@@ -193,7 +193,7 @@ public class CentralControlPanel : MonoBehaviour
         if (_isMinigameBroken[0]) multiplier = _decreaseMultiplier;
         _fanRPM -= _RPMDrainAmount * multiplier;
 
-        _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM });
+        _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM, MaxFanRPM = 3600});
         _decreaseFanRPM = StartCoroutine(DecreaseFanRPM());
 
         if (_fanRPM <= 0)
@@ -216,7 +216,7 @@ public class CentralControlPanel : MonoBehaviour
         if (_isMinigameBroken[1]) multiplier = _decreaseMultiplier;
         _pipePSI -= _pressureDrainAmount * multiplier;
 
-        _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI });
+        _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI, MaxPiperPressure = 150});
         _decreasePipePressure = StartCoroutine(DecreasePipePressure());
 
         if (_pipePSI <= 0)
@@ -238,7 +238,7 @@ public class CentralControlPanel : MonoBehaviour
         if (_isMinigameBroken[2]) multiplier = _decreaseMultiplier;
         _wasteTimer -= _accumulateWasteAmount * multiplier;
 
-        _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer });
+        _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer, MaxWasteTimer = 400});
         _accumulateWaste = StartCoroutine(AccumulateWaste());
 
         if (_wasteTimer <= 0)

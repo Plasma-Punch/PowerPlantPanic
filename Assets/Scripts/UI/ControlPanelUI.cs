@@ -1,8 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.GPUSort;
 
 public class ControlPanelUI : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class ControlPanelUI : MonoBehaviour
     private GameEvent _gameLost;
     [SerializeField]
     private GameEvent _ChangeCanMove;
+    [SerializeField]
+    private List<Image> _uiIcons = new List<Image>();
+    [SerializeField]
+    private List<TextMeshProUGUI> _uiText = new List<TextMeshProUGUI>();
 
     [Header("Sound Variables")]
     [SerializeField]
@@ -27,6 +32,7 @@ public class ControlPanelUI : MonoBehaviour
 
 
     private SoundManager _soundManager;
+    private Color _redColor = new Color(115, 12, 12, 255);
 
     private void OnEnable()
     {
@@ -39,6 +45,55 @@ public class ControlPanelUI : MonoBehaviour
     private void Start()
     {
         _soundManager.LoadSoundWithOutPath("explosion", _explosionSound);
+    }
+
+    private void ChangeIconColor(int maxValue, int value, Color startcolor, Color endcolor, Image icon = null, TextMeshProUGUI text = null)
+    {
+        float t = (float)value / (float)maxValue;
+
+        if(t < 0.76f && t > 0.74f)
+        {
+            StartCoroutine(ChangeColor(startcolor / 255f, Color.yellow, icon, text));
+        }
+        if (t < 0.51f && t > 0.49f)
+        {
+            StartCoroutine(ChangeColor(Color.yellow / 255f, Color.orange, icon, text));
+        }
+        if (t < 0.25f && t > 0.24f)
+        {
+            StartCoroutine(ChangeColor(Color.orange / 255f, Color.red, icon, text));
+        }
+    }
+
+    private IEnumerator ChangeColor(Color start, Color end, Image icon = null, TextMeshProUGUI text = null)
+    {
+        float t = 0;
+        if(icon!= null)
+        {
+            while (icon.color != end)
+            {
+                t += Time.deltaTime / 2;
+                Color newColor = Color.Lerp(start, end, t);
+                icon.color = newColor;
+                yield return null;
+            }
+            icon.color = end;
+            yield return null;
+        }
+
+        if (text != null)
+        {
+            while (text.color != end)
+            {
+                t += Time.deltaTime / 2;
+                Color newColor = Color.Lerp(start, end, t);
+                text.color = newColor;
+                yield return null;
+            }
+            text.color = end;
+            yield return null;
+        }
+        yield return null;
     }
 
     public void EnableUi(Component sender, object obj)
@@ -62,6 +117,7 @@ public class ControlPanelUI : MonoBehaviour
         if (args == null) return;
 
         _powerEfficiency.text = $"{args.PowerEfficiency} %";
+        ChangeIconColor(args.MaxPowerEfficiency, args.PowerEfficiency, new Color(155, 222, 136, 255), _redColor, null, _uiText[0]);
     }
 
     public void FanRPMChanged(Component sender, object obj)
@@ -70,6 +126,7 @@ public class ControlPanelUI : MonoBehaviour
         if (args == null) return;
 
         _fanRPM.text = args.FanRPM.ToString();
+        ChangeIconColor(args.MaxFanRPM, args.FanRPM, new Color(155, 222, 136, 255), _redColor, null, _uiText[1]);
     }
 
     public void PipePressureChanged(Component sender, object obj)
@@ -79,6 +136,7 @@ public class ControlPanelUI : MonoBehaviour
 
         float newAngle = (args.PiperPressure / 150f  * 135f - 90f) * -1f;
         _pressureNeedle.transform.eulerAngles = new Vector3(0, 0, newAngle);
+        ChangeIconColor(args.MaxPiperPressure, args.PiperPressure, new Color(155, 222, 136, 255), _redColor, _uiIcons[0], null);
     }
 
     public void WasteTimerChanged(Component sender, object obj)
@@ -87,7 +145,8 @@ public class ControlPanelUI : MonoBehaviour
         if (args == null) return;
 
         _wasteLight.SetActive(!_wasteLight.activeSelf);
-
+        ChangeIconColor(args.MaxWasteTimer, args.WasteTimer, new Color(155, 222, 136, 255), _redColor, _uiIcons[1], null);
+        
         if (args.WasteTimer == 100) _wasteLight.SetActive(true);
         if (args.WasteTimer == 0) _wasteLight.SetActive(true);
     }

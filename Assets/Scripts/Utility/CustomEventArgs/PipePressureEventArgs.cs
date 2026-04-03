@@ -6,5 +6,6 @@ namespace System
     public class PipePresureEventArgs : EventArgs
     {
         public int PiperPressure;
+        public int MaxPiperPressure;
     }
 }

@@ -6,5 +6,6 @@ namespace System
     public class WasteTimerChangedEventArgs : EventArgs
     {
         public int WasteTimer;
+        public int MaxWasteTimer;
     }
 }
