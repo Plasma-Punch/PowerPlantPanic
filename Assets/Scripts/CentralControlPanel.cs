@@ -305,7 +305,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canDecreasePower = false;
                 _powerEfficiency = 100;
                 _isMinigameEnabled[0] = false;
-                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency });
+                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency, MaxPowerEfficiency = (int)_powerEfficiency });
                 _disableMiniGame[0].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -314,7 +314,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canDecreaseFanRPM = false;
                 _fanRPM = 3600;
                 _isMinigameEnabled[1] = false;
-                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM });
+                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM, MaxFanRPM = (int)_fanRPM });
                 _disableMiniGame[1].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -323,7 +323,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canDecreasePipePressure = false;
                 _pipePSI = 150;
                 _isMinigameEnabled[2] = false;
-                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI });
+                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI, MaxPiperPressure = (int)_pipePSI });
                 _disableMiniGame[2].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -332,7 +332,7 @@ public class CentralControlPanel : MonoBehaviour
                 _canAccumulateWaste = false;
                 _wasteTimer = 100;
                 _isMinigameEnabled[3] = false;
-                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer });
+                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer, MaxWasteTimer = (int)_wasteTimer });
                 _disableMiniGame[3].Raise(this, EventArgs.Empty);
                 StopAlarm();
                 break;
@@ -386,28 +386,28 @@ public class CentralControlPanel : MonoBehaviour
                 StopCoroutine(_decreaseOutputEfficiency);
                 _canDecreasePower = false;
                 _powerEfficiency = 0;
-                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency });
+                _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency, MaxPowerEfficiency = (int)_powerEfficiency });
                 _disableMiniGame[0].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.FanBlock:
                 StopCoroutine(_decreaseFanRPM);
                 _canDecreaseFanRPM = false;
                 _fanRPM = 0;
-                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM });
+                _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM, MaxFanRPM = (int)_fanRPM, });
                 _disableMiniGame[1].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.PipeBroke:
                 StopCoroutine(_decreasePipePressure);
                 _canDecreasePipePressure = false;
                 _pipePSI = 0;
-                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI });
+                _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI, MaxPiperPressure = (int)_pipePSI });
                 _disableMiniGame[2].Raise(this, EventArgs.Empty);
                 break;
             case MiniGame.WasteManagement:
                 StopCoroutine(_accumulateWaste);
                 _canAccumulateWaste = false;
                 _wasteTimer = 0;
-                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer });
+                _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer, MaxWasteTimer = (int)_wasteTimer });
                 _disableMiniGame[3].Raise(this, EventArgs.Empty);
                 break;
         }

@@ -4486,6 +4486,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1320577953 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2654428709943988742, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
+  m_PrefabInstance: {fileID: 1858152551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1329752092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4680,11 +4691,11 @@ PrefabInstance:
       objectReference: {fileID: 507303034}
     - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: _uiText.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: _uiIcons.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: '_uiText.Array.data[0]'
@@ -4695,11 +4706,35 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1489946735}
     - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: '_uiText.Array.data[2]'
+      value: 
+      objectReference: {fileID: 71532740}
+    - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: '_uiText.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1939254075}
+    - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: '_uiText.Array.data[4]'
+      value: 
+      objectReference: {fileID: 100571762}
+    - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: '_uiText.Array.data[5]'
+      value: 
+      objectReference: {fileID: 807711694}
+    - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
       propertyPath: '_uiIcons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1585576928}
+    - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: '_uiIcons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1320577953}
+    - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
+      propertyPath: '_uiIcons.Array.data[2]'
       value: 
       objectReference: {fileID: 456389182}
     - target: {fileID: 3567837852882869339, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
-      propertyPath: '_uiIcons.Array.data[1]'
+      propertyPath: '_uiIcons.Array.data[3]'
       value: 
       objectReference: {fileID: 1579695708}
     - target: {fileID: 4375979170619066883, guid: d87a52901ce9478449ae65ae43f70f99, type: 3}
@@ -5883,6 +5918,17 @@ CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 3800268915382903382, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
   m_PrefabInstance: {fileID: 1740862824}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1585576928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2180885220596659497, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
+  m_PrefabInstance: {fileID: 1858152551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1599070302 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1416057344386734742, guid: 256bbc11e49d2994bad94736db1ea08b, type: 3}
@@ -6483,6 +6529,10 @@ PrefabInstance:
     - target: {fileID: 495203247184503050, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
       propertyPath: m_Color.r
       value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216074955928622736, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1288579669211082605, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
