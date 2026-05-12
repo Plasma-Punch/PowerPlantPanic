@@ -413,4 +413,9 @@ public class CentralControlPanel : MonoBehaviour
         }
         _activeMiniGames -= 1;
     }
+
+    private void MachineBreaks()
+    {
+
+    }
 }

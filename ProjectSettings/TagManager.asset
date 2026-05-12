@@ -12,6 +12,7 @@ TagManager:
   - RedCableH
   - RedCableV
   - BlueCable
+  - Machine
   layers:
   - Default
   - TransparentFX

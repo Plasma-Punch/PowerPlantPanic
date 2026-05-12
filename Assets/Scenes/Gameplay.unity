@@ -2316,6 +2316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354165069188073441, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2134197460702704360, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.36
@@ -2396,6 +2400,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerConsole
       objectReference: {fileID: 0}
+    - target: {fileID: 3922389711337677384, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922389711337677384, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      propertyPath: m_TagString
+      value: Machine
+      objectReference: {fileID: 0}
     - target: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       propertyPath: _miniGameUI
       value: 
@@ -2454,8 +2466,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2134197460702704360, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2034708522}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3922389711337677384, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 600642154}
   m_SourcePrefab: {fileID: 100100000, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+--- !u!1 &550250110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3922389711337677384, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
+  m_PrefabInstance: {fileID: 550250109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &569283548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8771580069511527898, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
@@ -2471,7 +2491,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4223460138312983591, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
   m_PrefabInstance: {fileID: 550250109}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 550250110}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 951b8929cd385ae41b500a19fa3720b5, type: 3}
@@ -2482,6 +2502,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2134197460702704360, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
   m_PrefabInstance: {fileID: 550250109}
   m_PrefabAsset: {fileID: 0}
+--- !u!60 &600642154
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550250110}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.7478193, y: -0.40559652}
+      - {x: 0.50729054, y: -0.14315388}
+      - {x: 0.6296927, y: 0.0867904}
+      - {x: 0.28168082, y: 0.44432485}
+      - {x: -0.13168746, y: 0.3698262}
+      - {x: -0.15831736, y: 0.09657276}
+      - {x: -0.41675478, y: -0.12868118}
+      - {x: -0.69030774, y: -0.54808384}
+      - {x: -0.37628472, y: -0.8396252}
+      - {x: -0.020378113, y: -1.0053163}
+      - {x: 0.7517328, y: -1.6732101}
+      - {x: 0.98656726, y: -1.726978}
+      - {x: 1.2042459, y: -1.6242865}
+      - {x: 1.3716978, y: -1.397719}
+      - {x: 1.3736467, y: -1.1712942}
+      - {x: 0.75643986, y: -0.5996229}
+  m_UseDelaunayMesh: 0
 --- !u!1001 &603890366
 PrefabInstance:
   m_ObjectHideFlags: 0
