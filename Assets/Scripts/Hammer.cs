@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HammerHitHandler : MonoBehaviour
+public class Hammer: MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
