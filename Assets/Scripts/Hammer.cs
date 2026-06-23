@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,10 +15,13 @@ public class Hammer: MonoBehaviour
     private InputAction _hitAction;
     [SerializeField]
     private GameEvent _fixMachine;
+    [SerializeField]
+    private GameEvent _pickUpItem;
 
     private GameObject _target;
-    private bool _isEquipped;
+    private GameObject _equipedItem;
     private bool _isInOtherTrigger;
+    private bool _canPickUpItem = true;
 
     private void Start()
     {
@@ -29,7 +33,7 @@ public class Hammer: MonoBehaviour
 
     private void Update()
     {
-        if(!_isEquipped) return;
+        if(_equipedItem != this.gameObject) return;
 
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(mousePos);
@@ -40,23 +44,35 @@ public class Hammer: MonoBehaviour
     private void _dropHammer_performed(InputAction.CallbackContext context)
     {
         if(_isInOtherTrigger) return;
-        if(!_isEquipped) return;
+        if(_equipedItem != this.gameObject) return;
+        _canPickUpItem = false;
         transform.parent = null;
-        _isEquipped = false;
+        _hitbox.transform.localPosition = Vector3.zero;
+        _equipedItem = null;
+        _pickUpItem.Raise(this, _equipedItem);
+        StartCoroutine(CanPickUp());
     }
 
     private void _hitAction_performed(InputAction.CallbackContext obj)
     {
         if (_target == null) return;
-        _fixMachine.Raise(this, _target);
+        _fixMachine.Raise(this, _target.name);
+    }
+
+    private IEnumerator CanPickUp()
+    {
+        yield return new WaitForEndOfFrame();
+        _canPickUpItem = true;
     }
 
     public void EquipHammer(Component sender, object obj)
     {
-        if (_isEquipped) return;
+        if (!_canPickUpItem) return;
+        if (_equipedItem != null) return;
         transform.parent = _itemHolder.transform;
         transform.localPosition = Vector3.zero;
-        _isEquipped = true;
+        _equipedItem = this.gameObject;
+        _pickUpItem.Raise(this, _equipedItem);
     }
 
     public void SetTarget(Component sender, object obj)
@@ -66,7 +82,7 @@ public class Hammer: MonoBehaviour
 
     public void SetTrigger(Component sender, object obj)
     {
-        if (sender.transform.parent.gameObject != transform.gameObject) return;
+        if (sender.transform.parent.gameObject.tag != "Machine") return;
         _isInOtherTrigger = (bool)obj;
     }
 }

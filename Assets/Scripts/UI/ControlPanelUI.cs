@@ -50,7 +50,6 @@ public class ControlPanelUI : MonoBehaviour
     private void ChangeIconColor(int maxValue, int value, Color startcolor, Color endcolor, Image icon = null, TextMeshProUGUI text = null)
     {
         float t = (float)value / (float)maxValue;
-        Debug.Log($"{value} / {maxValue} = {t}");
         if(t == 1)
         {
             StartCoroutine(ChangeColor(startcolor / 255f, startcolor / 255f, icon, text));

@@ -46,6 +46,8 @@ public class CentralControlPanel : MonoBehaviour
     private int _maxBrokenMachines = 2;
     [SerializeField]
     private float _decreaseMultiplier = 1.5f;
+    [SerializeField]
+    private int _maxHammerHits = 3;
 
     [Header("Sound Variables")]
     [SerializeField]
@@ -84,6 +86,10 @@ public class CentralControlPanel : MonoBehaviour
 
     private bool _canClosePanel = false;
 
+    private GameObject _equipedItem;
+
+    private List<int> _hammerHits = new List<int>();
+
     private void OnEnable()
     {
         if (GameObject.Find("SoundManager") != null)
@@ -99,6 +105,11 @@ public class CentralControlPanel : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < 4; i++)
+        {
+            _hammerHits.Add(0);
+        }
+
         foreach (GameEvent minigame in _enableMiniGame)
         {
             _isMinigameEnabled.Add(false);
@@ -258,6 +269,7 @@ public class CentralControlPanel : MonoBehaviour
 
     public void OpenControlPanel(Component sender, object obj)
     {
+        if(_equipedItem != null) return;
         if (_canClosePanel) return;
         _openControlPanel.Raise(this, true);
         StartCoroutine(AllowClose(true));
@@ -414,8 +426,71 @@ public class CentralControlPanel : MonoBehaviour
         _activeMiniGames -= 1;
     }
 
-    private void MachineBreaks()
+    public void EquipItem(Component sender, object obj)
     {
+        if (obj is EventArgs) return;
+        _equipedItem = obj  as GameObject;
+    }
 
+    public void FixMachine(Component sender, object obj)
+    {
+        string machineName = obj as string;
+
+        switch (machineName) 
+        {
+            case "PowerConsole":
+                _hammerHits[0]++;
+                if(_hammerHits[0] >= _maxHammerHits)
+                {
+                    //_canDecreasePower = false;
+                    _machinesBroken--;
+                    _isMinigameBroken[0] = false;
+                    //_enableMiniGame[0].Raise(this, EventArgs.Empty);
+                    _powerEfficiency = 100;
+                    _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency, MaxPowerEfficiency = (int)_powerEfficiency });
+                    //_disableMiniGame[0].Raise(this, EventArgs.Empty);
+                }
+                break;
+
+            case "TurbineConsole":
+                _hammerHits[1]++;
+                if (_hammerHits[1] >= _maxHammerHits)
+                {
+                    //_canDecreaseFanRPM = false;
+                    _machinesBroken--;
+                    _isMinigameBroken[1] = false;
+                    //_enableMiniGame[1].Raise(this, EventArgs.Empty);
+                    _fanRPM = 3600;
+                    _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM, MaxFanRPM = (int)_fanRPM });
+                    //_disableMiniGame[1].Raise(this, EventArgs.Empty);
+                }
+                break;
+            case "SteamConsole":
+                _hammerHits[2]++;
+                if (_hammerHits[2] >= _maxHammerHits)
+                {
+                    //_canDecreasePipePressure = false;
+                    _machinesBroken--;
+                    _isMinigameBroken[2] = false;
+                    //_enableMiniGame[2].Raise(this, EventArgs.Empty);
+                    _pipePSI = 150;
+                    _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI, MaxPiperPressure = (int)_pipePSI });
+                    //_disableMiniGame[2].Raise(this, EventArgs.Empty);
+                }
+                break;
+            case "WasteConsole":
+                _hammerHits[3]++;
+                if (_hammerHits[3] >= _maxHammerHits)
+                {
+                    //_canAccumulateWaste = false;
+                    _machinesBroken--;
+                    _isMinigameBroken[3] = false;
+                    //_enableMiniGame[3].Raise(this, EventArgs.Empty);
+                    _wasteTimer = 100;
+                    _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer, MaxWasteTimer = (int)_wasteTimer });
+                    //_disableMiniGame[3].Raise(this, EventArgs.Empty);
+                }
+                break;
+        }
     }
 }
