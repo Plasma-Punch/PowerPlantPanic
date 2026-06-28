@@ -60,6 +60,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private bool _miniGameFinished;
 
+    private GameObject _equipedItem;
+
 
     private void OnEnable()
     {
@@ -76,6 +78,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        if (_equipedItem != null) return;
         if (_updateProgress) return;
         _miniGameFinished = false;
         _updateProgress = true;
@@ -291,5 +294,11 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         yield return new WaitForSeconds(0.75f);
         _miniGameUI.SetActive(false);
         _changeCanWalk.Raise(this, true);
+    }
+
+    public void EquipeItem(Component sender, object obj)
+    {
+        if (obj is EventArgs) return;
+        _equipedItem = obj as GameObject;
     }
 }

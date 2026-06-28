@@ -15,6 +15,8 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     private GameObject _barrelPlaceTrigger;
     [SerializeField]
     private GameEvent _minigameFinished;
+    [SerializeField]
+    private GameEvent _equipItem;
 
     [Header("Waste Mini Game")]
     [Tooltip("Always make sure that the logo's are in the same order as the colliders!")]
@@ -35,6 +37,8 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
 
     private GameObject _heldItem;
     private GameObject _spawnedBarrel;
+
+    private GameObject _equipedItem;
 
     private void OnEnable()
     {
@@ -78,18 +82,9 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         }
     }
 
-    private void SpawnBarrel()
-    {
-        if (_spawnedBarrel != null) return;
-        GameObject go = Instantiate(_barrelPrefab, _barrelSpawnLocation.transform.position, _barrelPrefab.transform.rotation);
-        _spawnedBarrel = go;
-        _barrelPickUpTrigger.SetActive(true);
-
-        ResetDropZoneColliders();
-    }
-
     private void SpawnRandomBarrel()
     {
+        if (_equipedItem != null) return;
         if (_spawnedBarrel != null) return;
         int random = UnityEngine.Random.Range(0, _wasteBarrelSprites.Length);
         _barrelPrefab.GetComponentInChildren<SpriteRenderer>().sprite = _wasteBarrelSprites[random];
@@ -109,6 +104,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
 
     public void PickUpBarrel(Component sender, object obj)
     {
+        if (_equipedItem != null) return;
         if (_heldItem != null) return;
 
         _soundManager.SetSFXVolume(1f);
@@ -119,6 +115,7 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         _heldItem.transform.localPosition = Vector3.zero;
         _barrelPickUpTrigger.SetActive(false);
         _barrelPlaceTrigger.SetActive(true);
+        _equipItem.Raise(this, _heldItem);
     }
 
     public void PlaceBarrel(Component sender, object obj)
@@ -133,5 +130,12 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         _spawnedBarrel = null;
         _barrelPlaceTrigger.SetActive(false);
         completed();
+        _equipItem.Raise(this, null);
+    }
+
+    public void EquipeItem(Component sender, object obj)
+    {
+        if(obj is EventArgs) return;
+        _equipedItem = obj as GameObject;
     }
 }

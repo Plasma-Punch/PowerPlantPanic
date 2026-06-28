@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: d267011ccf1b8474bb5070a29d909fb0
+guid: 2b427718eceada549821f559b94b78c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5182630677611358041
-    second: TUIRPM_0
+      213: 5676731350622841777
+    second: MG_Hole 1_0
+  - first:
+      213: 4610542401254288648
+    second: MG_Hole 1_1
+  - first:
+      213: -8702294104047202170
+    second: MG_Hole 1_2
+  - first:
+      213: 4880156531945606889
+    second: MG_Hole 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TUIRPM_0
+      name: MG_Hole 1_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 15
-        width: 260
-        height: 185
+        x: 28
+        y: 11
+        width: 472
+        height: 489
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 957211d74276ce740800000000000000
-      internalID: 5182630677611358041
+      spriteID: 1bba237361dc7ce40800000000000000
+      internalID: 5676731350622841777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MG_Hole 1_1
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 259
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d63a0e2efebff30800000000000000
+      internalID: 4610542401254288648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MG_Hole 1_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 122
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6805a4d7e9d3b3780800000000000000
+      internalID: -8702294104047202170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MG_Hole 1_3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 7
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee8be6728cc9b340800000000000000
+      internalID: 4880156531945606889
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TUIRPM_0: 5182630677611358041
+      MG_Hole 1_0: 5676731350622841777
+      MG_Hole 1_1: 4610542401254288648
+      MG_Hole 1_2: -8702294104047202170
+      MG_Hole 1_3: 4880156531945606889
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
