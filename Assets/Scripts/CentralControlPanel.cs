@@ -445,6 +445,7 @@ public class CentralControlPanel : MonoBehaviour
                     //_canDecreasePower = false;
                     _machinesBroken--;
                     _isMinigameBroken[0] = false;
+                    _isMinigameEnabled[0] = false;
                     //_enableMiniGame[0].Raise(this, EventArgs.Empty);
                     _powerEfficiency = 100;
                     _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency, MaxPowerEfficiency = (int)_powerEfficiency });
@@ -459,6 +460,7 @@ public class CentralControlPanel : MonoBehaviour
                     //_canDecreaseFanRPM = false;
                     _machinesBroken--;
                     _isMinigameBroken[1] = false;
+                    _isMinigameEnabled[1] = false;
                     //_enableMiniGame[1].Raise(this, EventArgs.Empty);
                     _fanRPM = 3600;
                     _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM, MaxFanRPM = (int)_fanRPM });
@@ -472,6 +474,7 @@ public class CentralControlPanel : MonoBehaviour
                     //_canDecreasePipePressure = false;
                     _machinesBroken--;
                     _isMinigameBroken[2] = false;
+                    _isMinigameEnabled[2] = false;
                     //_enableMiniGame[2].Raise(this, EventArgs.Empty);
                     _pipePSI = 150;
                     _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI, MaxPiperPressure = (int)_pipePSI });
@@ -484,7 +487,8 @@ public class CentralControlPanel : MonoBehaviour
                 {
                     //_canAccumulateWaste = false;
                     _machinesBroken--;
-                    _isMinigameBroken[3] = false;
+                    _isMinigameBroken[3] = false;   
+                    _isMinigameEnabled[3] = false;
                     //_enableMiniGame[3].Raise(this, EventArgs.Empty);
                     _wasteTimer = 100;
                     _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer, MaxWasteTimer = (int)_wasteTimer });
