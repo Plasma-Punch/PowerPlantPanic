@@ -1,3 +1,4 @@
+using DialogueEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Rigidbody2D;
@@ -23,6 +24,8 @@ public class MovementController : MonoBehaviour
     private SlideMovement _sMove;
 
     private bool _canMove = true;
+
+    private bool _isInDialogue;
 
     private void OnEnable()
     {
@@ -106,6 +109,24 @@ public class MovementController : MonoBehaviour
     {
         bool? canMove = obj as bool?;
 
-        _canMove = (bool)canMove;
+        if(sender is ConversationManager && !(bool)canMove)
+        {
+            _isInDialogue = true;
+            _canMove = false;
+        }
+        else if(sender is ConversationManager && (bool)canMove)
+        {
+            _isInDialogue = false;
+            _canMove = true;
+        }
+
+        if(!_isInDialogue)
+            _canMove = (bool)canMove;
+
+        if (!_canMove)
+        {
+            _bodyAnim.StartPlayback();
+            _handsAnim.StartPlayback();
+        }
     }
 }

@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     private InputAction _pauseButton;
+    [SerializeField]
+    private GameEvent _volumeChange;
 
     private int _scenes;
 
@@ -33,6 +35,12 @@ public class PauseMenu : MonoBehaviour
     private void _pauseButton_started(InputAction.CallbackContext obj)
     {
         if (!_canPause) return;
+        if (_pauseMenu.activeSelf)
+        {
+            Time.timeScale = 1f;
+            _pauseMenu.SetActive(false);
+            return;
+        }
         Time.timeScale = 0f;
         _pauseMenu.SetActive(true);
     }
@@ -59,5 +67,10 @@ public class PauseMenu : MonoBehaviour
     {
         bool? setActive = obj as bool?;
         _canPause = !(bool)setActive;
+    }
+
+    public void SetVolume(float value)
+    {
+        _volumeChange.Raise(this, value);
     }
 }

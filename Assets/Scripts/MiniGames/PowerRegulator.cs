@@ -1,11 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.GPUSort;
 
 public class PowerRegulator : MonoBehaviour, IMiniGame
 {
@@ -35,6 +33,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
     private GameEvent _changeCanWalk;
     [SerializeField]
     private int _spaceBetween, _topValue, _bottomValue;
+    [SerializeField]
+    private ParticleSystem _electricityObject;
 
 
     [Header("Sound Variables")]
@@ -60,6 +60,8 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     private bool _miniGameFinished;
 
+    private GameObject _equipedItem;
+
 
     private void OnEnable()
     {
@@ -76,6 +78,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        if (_equipedItem != null) return;
         if (_updateProgress) return;
         _miniGameFinished = false;
         _updateProgress = true;
@@ -102,6 +105,7 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
             image.color = Color.green;
         }
         StartCoroutine(DissableUI());
+        _electricityObject.emissionRate = 0;
     }
 
     public void failed()
@@ -281,10 +285,20 @@ public class PowerRegulator : MonoBehaviour, IMiniGame
         _activeSlider = obj as GameObject;
     }
 
+    public void EnableVFX(Component sender, object obj)
+    {
+        _electricityObject.emissionRate = 30;
+    }
     private IEnumerator DissableUI()
     {
         yield return new WaitForSeconds(0.75f);
         _miniGameUI.SetActive(false);
         _changeCanWalk.Raise(this, true);
+    }
+
+    public void EquipeItem(Component sender, object obj)
+    {
+        if (obj is EventArgs) return;
+        _equipedItem = obj as GameObject;
     }
 }

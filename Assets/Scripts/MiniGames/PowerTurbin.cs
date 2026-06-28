@@ -20,6 +20,7 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
     private GarbageCollection _garbadgeCollection;
 
     private bool _isActive;
+    private GameObject _equipedItem;
 
     private void Start()
     {
@@ -59,6 +60,7 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
 
     public void StartMiniGame(Component sender, object obj)
     {
+        if (_equipedItem != null) return;
         if (_isActive) return;
         _isActive = true;
         turbineScreen.SetActive(true);
@@ -70,7 +72,7 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
 
     IEnumerator DelayedUIClose()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.35f);
 
         completed();
     }
@@ -93,5 +95,11 @@ public class PowerTurbin : MonoBehaviour, IMiniGame
             garbageIndex++;
             garbage.GetComponent<Image>().enabled = true;
         }
+    }
+
+    public void EquipeItem(Component sender, object obj)
+    {
+        if (obj is EventArgs) return;
+        _equipedItem = obj as GameObject;
     }
 }

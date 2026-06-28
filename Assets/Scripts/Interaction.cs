@@ -17,6 +17,8 @@ public class Interaction : MonoBehaviour
 
     private bool _isInTrigger;
 
+    private GameObject _equipedItem;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!IsLayerInMask(_playerMask, collision.gameObject.layer)) return;
@@ -47,19 +49,22 @@ public class Interaction : MonoBehaviour
         if (_changeInteractionUI == null) return;
 
         if (_miniGame == null)
-        {
             _interact.Raise(this, EventArgs.Empty);
-            _changeInteractionUI.Raise(this, false);
-        }
         else
-        {
             _interact.Raise(this, _miniGame as IMiniGame);
-            _changeInteractionUI.Raise(this, false);
-        }
+
+        if (_equipedItem != null) return;
+        _changeInteractionUI.Raise(this, false);
     }
 
     public void DisableTrigger()
     {
         this.gameObject.SetActive(false);
+    }
+
+    public void EquipeItem(Component sender, object obj)
+    {
+        if (obj is EventArgs) return;
+        _equipedItem = obj as GameObject;
     }
 }

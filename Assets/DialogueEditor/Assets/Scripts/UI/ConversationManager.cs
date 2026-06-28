@@ -39,7 +39,7 @@ namespace DialogueEditor
         public Sprite OptionImage;
         public bool OptionImageSliced;
         public bool AllowMouseInteraction;
-        public GameEvent FreezePlayer;
+        public GameEvent ChangeCanMove;
 
         // Non-User facing 
         // Not exposed via custom inspector
@@ -178,7 +178,7 @@ namespace DialogueEditor
             TurnOnUI();
             m_currentSpeech = m_conversation.Root;
             SetState(eState.TransitioningDialogueBoxOn);
-            FreezePlayer.Raise(this, false);
+            ChangeCanMove.Raise(this, false);
         }
 
         public void EndConversation()
@@ -187,7 +187,7 @@ namespace DialogueEditor
 
             if (OnConversationEnded != null)
                 OnConversationEnded.Invoke();
-            FreezePlayer.Raise(this, true);
+            ChangeCanMove.Raise(this, true);
         }
 
         public void SelectNextOption()
