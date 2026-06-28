@@ -31,7 +31,9 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
     private bool _allowRotateWithoutMiniGame = false; // for testing in editor
     [SerializeField]
     private GameEvent _miniGameFinished;
-    
+    [SerializeField]
+    private GameEvent _pickUpItem;
+
     [Header("AudioVariables")]
     [SerializeField]
     private AudioClip _grabSound;
@@ -66,6 +68,12 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
     private int _previousPipe = -1;
     private bool _justOpenedUI;
+    private GameObject _equipedItem;
+
+    private Coroutine _holdCoroutine;
+    private bool _leftPressed;
+    private float _previousMouseAngle;
+    private bool _hasPreviousMouseAngle;
 
     private void OnEnable()
     {
@@ -88,11 +96,6 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
             _leftClickAction.action.canceled -= OnLeftRelease;
         }
     }
-
-    private Coroutine _holdCoroutine;
-    private bool _leftPressed;
-    private float _previousMouseAngle;
-    private bool _hasPreviousMouseAngle;
 
     private void Start()
     {
@@ -139,6 +142,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
     public void RemovePipe(Component sender, object obj)
     {
+        if (_equipedItem != null) return;
         string pipeHolderTag = sender.gameObject.transform.parent.tag;
         if (_isCarryingPipe)
         {
@@ -154,6 +158,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         _brokenPipe.transform.parent = _itemHolder.transform;
         _brokenPipe.transform.localPosition = Vector3.zero;
         _brokenPipe.transform.localEulerAngles = new Vector3(0, 0, 90);
+        _pickUpItem.Raise(this, _heldItem);
 
         _soundManager.SetSFXVolume(1);
         _soundManager.PlaySound("grab");
@@ -172,12 +177,15 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
         _pipes[_currentBrokenPipeIndex] = _heldItem;
         _heldItem = null;
         _itemPlaced = true;
+        _pickUpItem.Raise(this, _heldItem);
+
 
         _soundManager.StopSound();
     }
 
     public void GrabItem(Component sender, object obj)
     {
+        if (_equipedItem != null) return;
         if (_heldItem != null) return;
         string pipeHolderTag = sender.gameObject.transform.parent.tag;
 
@@ -193,6 +201,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
             go.transform.localEulerAngles = new Vector3(0, 0, 90);
         }
         _isCarryingPipe = true;
+        _pickUpItem.Raise(this, _heldItem);
     }
 
     public void TrashItem(Component sender, object obj)
@@ -202,6 +211,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
         _isCarryingPipe = false;
         Destroy(_heldItem.gameObject);
+        _pickUpItem.Raise(this, _heldItem);
     }
 
     public void completed()
@@ -249,6 +259,7 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
     public void OpenPressureControl(Component sender, object obj)
     {
+        if (_equipedItem != null) return;
         if (_heldItem != null) return;
         if (_uiIsOpen) return;
         if (!_canOpenPanel) return;
@@ -593,5 +604,11 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
             Destroy(valve);
             yield break;
         }
+    }
+
+    public void EquipeItem(Component sender, object obj)
+    {
+        if (obj is EventArgs) return;
+        _equipedItem = obj as GameObject;
     }
 }

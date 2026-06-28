@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Hammer: MonoBehaviour
+public class Hammer : MonoBehaviour
 {
     [SerializeField]
     private InputAction _dropHammer;
@@ -33,7 +33,7 @@ public class Hammer: MonoBehaviour
 
     private void Update()
     {
-        if(_equipedItem != this.gameObject) return;
+        if (_equipedItem != this.gameObject) return;
 
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(mousePos);
@@ -43,8 +43,8 @@ public class Hammer: MonoBehaviour
 
     private void _dropHammer_performed(InputAction.CallbackContext context)
     {
-        if(_isInOtherTrigger) return;
-        if(_equipedItem != this.gameObject) return;
+        if (_isInOtherTrigger) return;
+        if (_equipedItem != this.gameObject) return;
         _canPickUpItem = false;
         transform.parent = null;
         _hitbox.transform.localPosition = Vector3.zero;
@@ -67,6 +67,7 @@ public class Hammer: MonoBehaviour
 
     public void EquipHammer(Component sender, object obj)
     {
+        if (_isInOtherTrigger) return;
         if (!_canPickUpItem) return;
         if (_equipedItem != null) return;
         transform.parent = _itemHolder.transform;
@@ -84,5 +85,11 @@ public class Hammer: MonoBehaviour
     {
         if (sender.transform.parent.gameObject.tag != "Machine") return;
         _isInOtherTrigger = (bool)obj;
+    }
+
+    public void SetEquipedItem(Component sender, object obj)
+    {
+        if((GameObject)obj == this.gameObject) return;
+        _equipedItem = (GameObject)obj;
     }
 }
