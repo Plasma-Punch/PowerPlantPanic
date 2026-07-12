@@ -27,6 +27,8 @@ public class CentralControlPanel : MonoBehaviour
     [SerializeField]
     private GameEvent _gameLost;
     [SerializeField]
+    private GameEvent _lowerVisualLvl;
+    [SerializeField]
     private int _powerDrainAmount = 1;
     [SerializeField]
     private int _pressureDrainAmount = 10;
@@ -450,6 +452,7 @@ public class CentralControlPanel : MonoBehaviour
                     _powerEfficiency = 100;
                     _powerEfficiencyChanged.Raise(this, new PowerEfficiencyChangedEventArgs { PowerEfficiency = (int)_powerEfficiency, MaxPowerEfficiency = (int)_powerEfficiency });
                     //_disableMiniGame[0].Raise(this, EventArgs.Empty);
+                    _lowerVisualLvl.Raise(this, machineName);
                 }
                 break;
 
@@ -465,6 +468,7 @@ public class CentralControlPanel : MonoBehaviour
                     _fanRPM = 3600;
                     _fanRPMChanged.Raise(this, new FanRPMChangedEventArgs { FanRPM = (int)_fanRPM, MaxFanRPM = (int)_fanRPM });
                     //_disableMiniGame[1].Raise(this, EventArgs.Empty);
+                    _lowerVisualLvl.Raise(this, machineName);
                 }
                 break;
             case "SteamConsole":
@@ -479,6 +483,7 @@ public class CentralControlPanel : MonoBehaviour
                     _pipePSI = 150;
                     _pipePressureChanged.Raise(this, new PipePresureEventArgs { PiperPressure = (int)_pipePSI, MaxPiperPressure = (int)_pipePSI });
                     //_disableMiniGame[2].Raise(this, EventArgs.Empty);
+                    _lowerVisualLvl.Raise(this, machineName);
                 }
                 break;
             case "WasteConsole":
@@ -493,6 +498,7 @@ public class CentralControlPanel : MonoBehaviour
                     _wasteTimer = 100;
                     _wasteTimerChanged.Raise(this, new WasteTimerChangedEventArgs { WasteTimer = (int)_wasteTimer, MaxWasteTimer = (int)_wasteTimer });
                     //_disableMiniGame[3].Raise(this, EventArgs.Empty);
+                    _lowerVisualLvl.Raise(this, machineName);
                 }
                 break;
         }
