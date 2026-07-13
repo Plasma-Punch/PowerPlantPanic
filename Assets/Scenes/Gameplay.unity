@@ -10352,6 +10352,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9116902608777028121, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6090142913688129956}
+    - targetCorrespondingSourceObject: {fileID: 9116902608777028121, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 6090142913688129954}
     - targetCorrespondingSourceObject: {fileID: 9116902608777028121, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
       insertIndex: -1
@@ -10729,6 +10732,67 @@ PolygonCollider2D:
       - {x: 3.2590418, y: -4.334123}
       - {x: 3.210538, y: -1.153656}
       - {x: 0.17222023, y: 3.8523817}
+  m_UseDelaunayMesh: 0
+--- !u!60 &6090142913688129956
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824164276}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.9203386, y: -1.2091599}
+      - {x: 3.0075793, y: -0.612129}
+      - {x: 3.0314486, y: -0.4419234}
+      - {x: 2.7685385, y: 0.90019804}
+      - {x: 1.0753726, y: 2.5415988}
+      - {x: 0.045228716, y: 2.6169262}
+      - {x: -1.1146497, y: 2.52418}
+      - {x: -2.8029642, y: 0.8561524}
+      - {x: -3.1018264, y: -0.54230666}
+      - {x: -1.9056334, y: -1.2324029}
+      - {x: -0.8618087, y: -0.20573118}
+      - {x: -0.64432114, y: -0.62810224}
+      - {x: 0.565171, y: -0.6281021}
+      - {x: 0.8379847, y: -0.16588435}
   m_UseDelaunayMesh: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
