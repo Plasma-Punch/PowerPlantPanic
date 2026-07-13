@@ -2903,6 +2903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MachineVisuals
   _machineVisual:
   - LevelVisial:
+    - {fileID: 3129157824448724089, guid: 8151557583dc0f9449ab74262f2e2980, type: 3}
+  - LevelVisial:
     - {fileID: -5198020853461530665, guid: 2d528059f8db3e345932cf30dd4124e9, type: 3}
   - LevelVisial:
     - {fileID: -5860542015100387856, guid: 8154732154ed02e479472c323d5392c9, type: 3}
@@ -3925,11 +3927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116448433175898072, guid: 457a029144305e74cb8f31b3feb89c7d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4116448433175898072, guid: 457a029144305e74cb8f31b3feb89c7d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4116448433175898072, guid: 457a029144305e74cb8f31b3feb89c7d, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3941,7 +3943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116448433175898072, guid: 457a029144305e74cb8f31b3feb89c7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4116448433175898072, guid: 457a029144305e74cb8f31b3feb89c7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7610,6 +7612,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MachineVisuals
   _machineVisual:
   - LevelVisial:
+    - {fileID: -1287205435167325629, guid: 6a4833ddf23b9d34ab4f5cf37fffef49, type: 3}
+    - {fileID: 4553938698167802408, guid: 89fec2e7a55d991409d94eb19cac2af9, type: 3}
+    - {fileID: 1301507843525735789, guid: ac57c51d172a6c24c9fc7f799dfedba6, type: 3}
+  - LevelVisial:
     - {fileID: 7552529727562947752, guid: a457e95f7d5c29c4d9b2bfbfff139b94, type: 3}
     - {fileID: 4553938698167802408, guid: 89fec2e7a55d991409d94eb19cac2af9, type: 3}
     - {fileID: 2763261328758909250, guid: 75154cc5e60d93f4c992aa427519cd93, type: 3}
@@ -9580,7 +9586,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034708519}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

@@ -57,7 +57,6 @@ public class ControlPanelUI : MonoBehaviour
         if(t == 1)
         {
             StartCoroutine(ChangeColor(startcolor / 255f, startcolor / 255f, icon, text));
-            if(icon != null) UpVisualLvl(icon.name);
         }
 
         if(t < 0.76f && t > 0.74f)
@@ -65,24 +64,26 @@ public class ControlPanelUI : MonoBehaviour
             if (CheckIfChanged(hasIcon, hasText, startcolor / 255f, icon, text)) return;
             StartCoroutine(ChangeColor(startcolor / 255f, Color.yellow, icon, text));
             if (icon != null) UpVisualLvl(icon.name);
+            if (text != null) UpVisualLvl(text.name);
         }
         if (t < 0.51f && t > 0.49f)
         {
             if (CheckIfChanged(hasIcon, hasText, Color.yellow, icon, text)) return;
             StartCoroutine(ChangeColor(Color.yellow, Color.orange, icon, text));
-            if (icon != null) UpVisualLvl(icon.name);
         }
         if (t < 0.26f && t > 0.24f)
         {
             if (CheckIfChanged(hasIcon, hasText, Color.orange, icon, text)) return;
             StartCoroutine(ChangeColor(Color.orange, Color.red, icon, text));
             if (icon != null) UpVisualLvl(icon.name);
+            if (text != null) UpVisualLvl(text.name);
         }
         if (t < 0.1f)
         {
             if (CheckIfChanged(hasIcon, hasText, Color.red, icon, text)) return;
             StartCoroutine(ChangeColor(Color.red, Color.darkRed, icon, text));
             if (icon != null) UpVisualLvl(icon.name);
+            if (text != null) UpVisualLvl(text.name);
         }
     }
 

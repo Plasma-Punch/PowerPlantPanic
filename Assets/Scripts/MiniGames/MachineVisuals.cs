@@ -18,8 +18,8 @@ public class MachineVisuals : MonoBehaviour
     {
         string name = obj as string;
         if(name != gameObject.name) return;
-        if (_machineVisual.Count - 1 <= _machineLvl) return;
-            _machineLvl ++;
+        if (_machineVisual.Count < _machineLvl) return;
+        _machineLvl++;
         UpdateVisuals();
     }
 
@@ -27,8 +27,8 @@ public class MachineVisuals : MonoBehaviour
     {
         string name = obj as string;
         if (name != gameObject.name) return;
-        if (_machineVisual.Count - 1 >= _machineLvl) return;
-        _machineLvl --;
+        if (0 >= _machineLvl) return;
+        _machineLvl--;
         UpdateVisuals();
     }
 
