@@ -142,7 +142,8 @@ public class PresureRegulator : MonoBehaviour, IMiniGame, IPointerDownHandler, I
 
     public void RemovePipe(Component sender, object obj)
     {
-        if (_equipedItem != null) return;
+        if(_equipedItem != null)
+            if (_equipedItem.tag == "Hammer") return;
         string pipeHolderTag = sender.gameObject.transform.parent.tag;
         if (_isCarryingPipe)
         {
