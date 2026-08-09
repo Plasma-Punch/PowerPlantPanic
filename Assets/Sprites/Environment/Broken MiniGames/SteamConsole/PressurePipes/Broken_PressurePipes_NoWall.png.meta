@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 8154732154ed02e479472c323d5392c9
+guid: 7bc9fdb96a3d23e4380fbf6fd69e71a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5860542015100387856
-    second: PowerConsole_Broken_03_0
+      213: 7534089312410709196
+    second: Broken_PressurePipes_NoWall_0
   - first:
-      213: -8672875153239686851
-    second: PowerConsole_Broken_03_1
+      213: -4780228672260342397
+    second: Broken_PressurePipes_NoWall_1
+  - first:
+      213: 8852880820241555201
+    second: Broken_PressurePipes_NoWall_2
+  - first:
+      213: -776860176865361791
+    second: Broken_PressurePipes_NoWall_3
+  - first:
+      213: -5037933317889079503
+    second: Broken_PressurePipes_NoWall_4
+  - first:
+      213: 4296360959952421501
+    second: Broken_PressurePipes_NoWall_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,62 +124,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PowerConsole_Broken_03_0
+      name: Broken_PressurePipes_NoWall_0
       rect:
         serializedVersion: 2
-        x: 851
-        y: 711
-        width: 466
-        height: 669
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0fd70b6761c2baea0800000000000000
-      internalID: -5860542015100387856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PowerConsole_Broken_03_1
-      rect:
-        serializedVersion: 2
-        x: 1295
-        y: 973
-        width: 25
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3146ddbff1c3a780800000000000000
-      internalID: -8672875153239686851
+      spriteID: cccae44ff467e8860800000000000000
+      internalID: 7534089312410709196
       vertices: []
       indices: 
       edges: []
@@ -176,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3c39a82169717ad479d63dcc9c6000af
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +163,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PowerConsole_Broken_03_0: -5860542015100387856
-      PowerConsole_Broken_03_1: -8672875153239686851
+      Broken_PressurePipes_NoWall_0: 7534089312410709196
+      Broken_PressurePipes_NoWall_1: -4780228672260342397
+      Broken_PressurePipes_NoWall_2: 8852880820241555201
+      Broken_PressurePipes_NoWall_3: -776860176865361791
+      Broken_PressurePipes_NoWall_4: -5037933317889079503
+      Broken_PressurePipes_NoWall_5: 4296360959952421501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

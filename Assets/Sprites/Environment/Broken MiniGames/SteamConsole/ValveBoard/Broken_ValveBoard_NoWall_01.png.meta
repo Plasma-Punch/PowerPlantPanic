@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: b03177bd3fa9a88459100b02be7055dd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4882936302341184144
+    second: Broken_ValveBoard_NoWall_01_0
+  - first:
+      213: -7984407075635533945
+    second: Broken_ValveBoard_NoWall_01_1
+  - first:
+      213: -7585987485130451754
+    second: Broken_ValveBoard_NoWall_01_2
+  - first:
+      213: -4518765225305251590
+    second: Broken_ValveBoard_NoWall_01_3
+  - first:
+      213: -1281751495306093703
+    second: Broken_ValveBoard_NoWall_01_4
+  - first:
+      213: 6366230095696396823
+    second: Broken_ValveBoard_NoWall_01_5
+  - first:
+      213: 439669456742744277
+    second: Broken_ValveBoard_NoWall_01_6
+  - first:
+      213: -1447417911271500113
+    second: Broken_ValveBoard_NoWall_01_7
+  - first:
+      213: -4696141699677155415
+    second: Broken_ValveBoard_NoWall_01_8
+  - first:
+      213: -7231081323784367117
+    second: Broken_ValveBoard_NoWall_01_9
+  - first:
+      213: 7181597782659917574
+    second: Broken_ValveBoard_NoWall_01_10
+  - first:
+      213: -5273532790291093452
+    second: Broken_ValveBoard_NoWall_01_11
+  - first:
+      213: -2671482847086151644
+    second: Broken_ValveBoard_NoWall_01_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_0
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2025
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ad7e132bca3c340800000000000000
+      internalID: 4882936302341184144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_1
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1897
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787e0a26110b13190800000000000000
+      internalID: -7984407075635533945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1051
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d49d36139829b690800000000000000
+      internalID: -7585987485130451754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 73
+        width: 1574
+        height: 1763
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0ea4218fe1a41c0800000000000000
+      internalID: -4518765225305251590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_4
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1019
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b54f75ecd463ee0800000000000000
+      internalID: -1281751495306093703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1008
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7128264da84695850800000000000000
+      internalID: 6366230095696396823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 868
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d08dbb9a050a1600800000000000000
+      internalID: 439669456742744277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_7
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 475
+        width: 349
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6df15141db9ebe0800000000000000
+      internalID: -1447417911271500113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_8
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 587
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af08df5104f3deb0800000000000000
+      internalID: -4696141699677155415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_9
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 269
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f31fd119d906ab90800000000000000
+      internalID: -7231081323784367117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_10
+      rect:
+        serializedVersion: 2
+        x: 1790
+        y: 222
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6076d2332292aa360800000000000000
+      internalID: 7181597782659917574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_11
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 177
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 438235b1ed5a0d6b0800000000000000
+      internalID: -5273532790291093452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_ValveBoard_NoWall_01_12
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 70
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42871e3318cfcead0800000000000000
+      internalID: -2671482847086151644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Broken_ValveBoard_NoWall_01_0: 4882936302341184144
+      Broken_ValveBoard_NoWall_01_1: -7984407075635533945
+      Broken_ValveBoard_NoWall_01_10: 7181597782659917574
+      Broken_ValveBoard_NoWall_01_11: -5273532790291093452
+      Broken_ValveBoard_NoWall_01_12: -2671482847086151644
+      Broken_ValveBoard_NoWall_01_2: -7585987485130451754
+      Broken_ValveBoard_NoWall_01_3: -4518765225305251590
+      Broken_ValveBoard_NoWall_01_4: -1281751495306093703
+      Broken_ValveBoard_NoWall_01_5: 6366230095696396823
+      Broken_ValveBoard_NoWall_01_6: 439669456742744277
+      Broken_ValveBoard_NoWall_01_7: -1447417911271500113
+      Broken_ValveBoard_NoWall_01_8: -4696141699677155415
+      Broken_ValveBoard_NoWall_01_9: -7231081323784367117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

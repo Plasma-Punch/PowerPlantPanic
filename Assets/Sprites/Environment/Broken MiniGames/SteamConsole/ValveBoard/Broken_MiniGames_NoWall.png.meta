@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: b24b2eec82ca1654c8c7f23285290317
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7516457309312712258
+    second: Broken_MiniGames_NoWall_0
+  - first:
+      213: 4701904357079430212
+    second: Broken_MiniGames_NoWall_1
+  - first:
+      213: -6107109002138257750
+    second: Broken_MiniGames_NoWall_2
+  - first:
+      213: 4160745591849262020
+    second: Broken_MiniGames_NoWall_3
+  - first:
+      213: 6621900298681125635
+    second: Broken_MiniGames_NoWall_4
+  - first:
+      213: 5994661027568351315
+    second: Broken_MiniGames_NoWall_5
+  - first:
+      213: -3090274704062662373
+    second: Broken_MiniGames_NoWall_6
+  - first:
+      213: 2946082626502086922
+    second: Broken_MiniGames_NoWall_7
+  - first:
+      213: 8299490032553324054
+    second: Broken_MiniGames_NoWall_8
+  - first:
+      213: 1447963784254811223
+    second: Broken_MiniGames_NoWall_9
+  - first:
+      213: 7064054207379290141
+    second: Broken_MiniGames_NoWall_10
+  - first:
+      213: -4872478151786804249
+    second: Broken_MiniGames_NoWall_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_0
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 2025
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1070da6ed20b790800000000000000
+      internalID: -7516457309312712258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_1
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1896
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444b49bd915804140800000000000000
+      internalID: 4701904357079430212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1050
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa675fa28b03f3ba0800000000000000
+      internalID: -6107109002138257750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 70
+        width: 1576
+        height: 1765
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb92fa3210fdb930800000000000000
+      internalID: 4160745591849262020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1017
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b01f0cc37b5eb50800000000000000
+      internalID: 6621900298681125635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1006
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358f6198170513350800000000000000
+      internalID: 5994661027568351315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_6
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 866
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1938f597832d15d0800000000000000
+      internalID: -3090274704062662373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_7
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 584
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a015b9f2a8692e820800000000000000
+      internalID: 2946082626502086922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_8
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 266
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e6c374636bd2370800000000000000
+      internalID: 8299490032553324054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_9
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 198
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c6320e363381410800000000000000
+      internalID: 1447963784254811223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_10
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 174
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1832f8efdf880260800000000000000
+      internalID: 7064054207379290141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_MiniGames_NoWall_11
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 66
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb45eabfea716cb0800000000000000
+      internalID: -4872478151786804249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Broken_MiniGames_NoWall_0: -7516457309312712258
+      Broken_MiniGames_NoWall_1: 4701904357079430212
+      Broken_MiniGames_NoWall_10: 7064054207379290141
+      Broken_MiniGames_NoWall_11: -4872478151786804249
+      Broken_MiniGames_NoWall_2: -6107109002138257750
+      Broken_MiniGames_NoWall_3: 4160745591849262020
+      Broken_MiniGames_NoWall_4: 6621900298681125635
+      Broken_MiniGames_NoWall_5: 5994661027568351315
+      Broken_MiniGames_NoWall_6: -3090274704062662373
+      Broken_MiniGames_NoWall_7: 2946082626502086922
+      Broken_MiniGames_NoWall_8: 8299490032553324054
+      Broken_MiniGames_NoWall_9: 1447963784254811223
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

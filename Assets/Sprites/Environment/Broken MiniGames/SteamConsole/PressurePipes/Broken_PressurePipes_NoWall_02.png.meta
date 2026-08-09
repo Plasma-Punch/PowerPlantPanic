@@ -1,10 +1,28 @@
 fileFormatVersion: 2
-guid: 7f8ff129d159c344d81f924c0c44b886
+guid: c187690c36843a94b9ec0fd528c1a036
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 613099134352230887
-    second: Pc_0
+      213: -5600081064250362511
+    second: Broken_PressurePipes_NoWall_02_0
+  - first:
+      213: -7205512464716789070
+    second: Broken_PressurePipes_NoWall_02_1
+  - first:
+      213: -7278743014778214115
+    second: Broken_PressurePipes_NoWall_02_2
+  - first:
+      213: 8944059848589904796
+    second: Broken_PressurePipes_NoWall_02_3
+  - first:
+      213: 109035318810801660
+    second: Broken_PressurePipes_NoWall_02_4
+  - first:
+      213: 8816367521066191622
+    second: Broken_PressurePipes_NoWall_02_5
+  - first:
+      213: 8854226054555610084
+    second: Broken_PressurePipes_NoWall_02_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,40 +127,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pc_0
+      name: Broken_PressurePipes_NoWall_02_1
       rect:
         serializedVersion: 2
-        x: 472
-        y: 469
-        width: 80
-        height: 86
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e90a231a6a228800800000000000000
-      internalID: 613099134352230887
+      spriteID: 2ba08ebf690e00c90800000000000000
+      internalID: -7205512464716789070
       vertices: []
       indices: 
       edges: []
@@ -151,7 +156,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d4ba8ec16518e4b4886ae3de0d423327
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +166,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Pc_0: 613099134352230887
+      Broken_PressurePipes_NoWall_02_0: -5600081064250362511
+      Broken_PressurePipes_NoWall_02_1: -7205512464716789070
+      Broken_PressurePipes_NoWall_02_2: -7278743014778214115
+      Broken_PressurePipes_NoWall_02_3: 8944059848589904796
+      Broken_PressurePipes_NoWall_02_4: 109035318810801660
+      Broken_PressurePipes_NoWall_02_5: 8816367521066191622
+      Broken_PressurePipes_NoWall_02_6: 8854226054555610084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
