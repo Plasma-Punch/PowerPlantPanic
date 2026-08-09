@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 54b06771c4f710d408d9001768c7b5ca
+guid: b53d2e05a852c644cbb4c765b297c121
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4378314312387606048
-    second: Rot00_0
+      213: -464105306834412286
+    second: Rot0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rot00_0
+      name: Rot0_0
       rect:
         serializedVersion: 2
-        x: 234
-        y: 0
-        width: 1579
-        height: 2048
+        x: 243
+        y: 10
+        width: 1563
+        height: 2028
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0263fd87ba5e2cc30800000000000000
-      internalID: 4378314312387606048
+      spriteID: 20dd2cfaeaa2f89f0800000000000000
+      internalID: -464105306834412286
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rot00_0: 4378314312387606048
+      Rot0_0: -464105306834412286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
