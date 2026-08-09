@@ -8897,6 +8897,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5556162201321774665, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2096171747}
+    - targetCorrespondingSourceObject: {fileID: 5556162201321774665, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2096171751}
     - targetCorrespondingSourceObject: {fileID: 565896393061997385, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2065810561}
@@ -10901,6 +10904,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3439146099165815189, guid: 8cdf9c5cb441d09439c6c505f459ac0f, type: 3}
   m_PrefabInstance: {fileID: 1740862824}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2096171751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096171744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f72d5c31bdddc43a769badb82169e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WasteVisuals
+  _machineVisual: []
+  _machineObjects: []
 --- !u!1 &2127176368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2030561758053536052, guid: 256bbc11e49d2994bad94736db1ea08b, type: 3}
