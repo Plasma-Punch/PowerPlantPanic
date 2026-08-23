@@ -40,29 +40,31 @@ public class WasteVisuals : MonoBehaviour
     private IEnumerator ScaleUpSprite(GameObject obj)
     {
         float scale = 0;
+        obj.transform.localScale = new Vector3(scale, scale, scale);
 
-        while (scale < 1)
+        while (scale < 0.3263088f)
         {
-            scale += Time.deltaTime;
+            scale += 0.1f * Time.deltaTime;
             obj.transform.localScale = new Vector3(scale, scale, scale);
             yield return null;
         }
 
-        scale = 1;
+        scale = 0.3263088f;
         obj.transform.localScale = new Vector3(scale, scale, scale);
     }
     private IEnumerator ScaleDownSprite(GameObject obj)
     {
-        float scale = 0;
+        float scale = 0.3263088f;
+        obj.transform.localScale = new Vector3(scale, scale, scale);
 
-        while (scale < 1)
+        while (scale > 0)
         {
-            scale += Time.deltaTime;
+            scale -= 0.1f * Time.deltaTime;
             obj.transform.localScale = new Vector3(scale, scale, scale);
             yield return null;
         }
 
-        scale = 1;
+        scale = 0;
         obj.transform.localScale = new Vector3(scale, scale, scale);
     }
 }

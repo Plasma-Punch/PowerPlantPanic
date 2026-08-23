@@ -17,6 +17,8 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     private GameEvent _minigameFinished;
     [SerializeField]
     private GameEvent _equipItem;
+    [SerializeField]
+    private ParticleSystem _particleSystem;
 
     [Header("Waste Mini Game")]
     [Tooltip("Always make sure that the logo's are in the same order as the colliders!")]
@@ -59,13 +61,9 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
 
     public void completed()
     {
+        _particleSystem.emissionRate = 0f;
         _minigameFinished.Raise(this, new MiniGameFinishedEventArgs { FinishedMiniGame = MiniGame.WasteManagement });
         ResetDropZoneColliders();
-    }
-
-    public void failed()
-    {
-
     }
 
     public void StartMiniGame(Component sender, object obj)
@@ -73,6 +71,10 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
         SpawnRandomBarrel();
     }
 
+    public void StartEffects(Component sender, object obj)
+    {
+        _particleSystem.emissionRate = 5;
+    }
     private void ResetDropZoneColliders()
     {
         //Turn off all the colliders from the drop zones
@@ -137,5 +139,10 @@ public class GarbageRegulator : MonoBehaviour, IMiniGame
     {
         if(obj is EventArgs) return;
         _equipedItem = obj as GameObject;
+    }
+
+    public void failed()
+    {
+
     }
 }
