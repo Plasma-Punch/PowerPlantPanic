@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: b412b0cbbc2128e4592cad70c7c82bd4
+guid: b53d2e05a852c644cbb4c765b297c121
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1779932468362809944
-    second: PowerConsole_Broken_04_0
-  - first:
-      213: 6908696679075848961
-    second: PowerConsole_Broken_04_1
+      213: -464105306834412286
+    second: Rot0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PowerConsole_Broken_04_0
+      name: Rot0_0
       rect:
         serializedVersion: 2
-        x: 851
-        y: 711
-        width: 466
-        height: 669
+        x: 243
+        y: 10
+        width: 1563
+        height: 2028
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85213f4462793b810800000000000000
-      internalID: 1779932468362809944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PowerConsole_Broken_04_1
-      rect:
-        serializedVersion: 2
-        x: 1295
-        y: 973
-        width: 25
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 103ac39960f90ef50800000000000000
-      internalID: 6908696679075848961
+      spriteID: 20dd2cfaeaa2f89f0800000000000000
+      internalID: -464105306834412286
       vertices: []
       indices: 
       edges: []
@@ -186,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PowerConsole_Broken_04_0: 1779932468362809944
-      PowerConsole_Broken_04_1: 6908696679075848961
+      Rot0_0: -464105306834412286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

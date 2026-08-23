@@ -22,6 +22,8 @@ public class ControlPanelUI : MonoBehaviour
     [SerializeField]
     private GameEvent _ChangeCanMove;
     [SerializeField]
+    private GameEvent _upVisualLvl;
+    [SerializeField]
     private List<Image> _uiIcons = new List<Image>();
     [SerializeField]
     private List<TextMeshProUGUI> _uiText = new List<TextMeshProUGUI>();
@@ -49,6 +51,8 @@ public class ControlPanelUI : MonoBehaviour
 
     private void ChangeIconColor(int maxValue, int value, Color startcolor, Color endcolor, Image icon = null, TextMeshProUGUI text = null)
     {
+        bool hasIcon = icon != null;
+        bool hasText = text != null;
         float t = (float)value / (float)maxValue;
         if(t == 1)
         {
@@ -57,19 +61,55 @@ public class ControlPanelUI : MonoBehaviour
 
         if(t < 0.76f && t > 0.74f)
         {
+            if (CheckIfChanged(hasIcon, hasText, startcolor / 255f, icon, text)) return;
             StartCoroutine(ChangeColor(startcolor / 255f, Color.yellow, icon, text));
+            if (icon != null) UpVisualLvl(icon.name);
+            if (text != null) UpVisualLvl(text.name);
         }
         if (t < 0.51f && t > 0.49f)
         {
+            if (CheckIfChanged(hasIcon, hasText, Color.yellow, icon, text)) return;
             StartCoroutine(ChangeColor(Color.yellow, Color.orange, icon, text));
         }
         if (t < 0.26f && t > 0.24f)
         {
+            if (CheckIfChanged(hasIcon, hasText, Color.orange, icon, text)) return;
             StartCoroutine(ChangeColor(Color.orange, Color.red, icon, text));
+            if (icon != null) UpVisualLvl(icon.name);
+            if (text != null) UpVisualLvl(text.name);
         }
         if (t < 0.1f)
         {
+            if (CheckIfChanged(hasIcon, hasText, Color.red, icon, text)) return;
             StartCoroutine(ChangeColor(Color.red, Color.darkRed, icon, text));
+            if (icon != null) UpVisualLvl(icon.name);
+            if (text != null) UpVisualLvl(text.name);
+        }
+    }
+
+    private bool CheckIfChanged(bool hasIcon, bool hasText, Color color, Image icon, TextMeshProUGUI text)
+    {
+        if (hasIcon && icon.color != color) return true;
+        else if (hasText && text.color != color) return true;
+        return false;
+    }
+
+    private void UpVisualLvl(string name)
+    {
+        switch (name)
+        {
+            case "Output":
+                _upVisualLvl.Raise(this, "PowerConsole");
+                break;
+            case "RPM":
+                _upVisualLvl.Raise(this, "TurbineConsole");
+                break;
+            case "Pressure":
+                _upVisualLvl.Raise(this, "SteamConsole");   
+                break;
+            case "Waste":
+                _upVisualLvl.Raise(this, "WasteConsole");
+                break;
         }
     }
 

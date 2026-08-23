@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 54b06771c4f710d408d9001768c7b5ca
+guid: 6133664604735034497f9861616c1078
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4378314312387606048
-    second: Rot00_0
+      213: 5759856140454331686
+    second: PowerSlider_Broken_03_0
+  - first:
+      213: -6582815042706959816
+    second: PowerSlider_Broken_03_1
+  - first:
+      213: 5704294445512273732
+    second: PowerSlider_Broken_03_2
+  - first:
+      213: -4416065284391307702
+    second: PowerSlider_Broken_03_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +118,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rot00_0
+      name: PowerSlider_Broken_03_0
       rect:
         serializedVersion: 2
-        x: 234
-        y: 0
-        width: 1579
-        height: 2048
+        x: 588
+        y: 49
+        width: 1038
+        height: 1568
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0263fd87ba5e2cc30800000000000000
-      internalID: 4378314312387606048
+      spriteID: 625022984ae1fef40800000000000000
+      internalID: 5759856140454331686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerSlider_Broken_03_1
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1607
+        width: 31
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8329a5d889425a4a0800000000000000
+      internalID: -6582815042706959816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerSlider_Broken_03_2
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 1603
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f2ef65399b92f40800000000000000
+      internalID: 5704294445512273732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerSlider_Broken_03_3
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 1603
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46fbea650cf6b2c0800000000000000
+      internalID: -4416065284391307702
       vertices: []
       indices: 
       edges: []
@@ -161,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rot00_0: 4378314312387606048
+      PowerSlider_Broken_03_0: 5759856140454331686
+      PowerSlider_Broken_03_1: -6582815042706959816
+      PowerSlider_Broken_03_2: 5704294445512273732
+      PowerSlider_Broken_03_3: -4416065284391307702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
