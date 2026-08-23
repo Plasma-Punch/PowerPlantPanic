@@ -6146,6 +6146,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9db3e2021deedbb4e857385944c636e8, type: 2}
   - {fileID: 11400000, guid: 95ffd7c6c08c8494181f81c7bd3460ee, type: 2}
   - {fileID: 11400000, guid: d6215d112b30f8d4a86bc04a3ea78c1a, type: 2}
+  - {fileID: 11400000, guid: dca2eacd2670233409040b6e0eb15cfd, type: 2}
+  - {fileID: 11400000, guid: 834b833ac922efc43935894b9018a665, type: 2}
   Responses:
   - m_PersistentCalls:
       m_Calls:
@@ -6180,6 +6182,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1353662573}
         m_TargetAssemblyTypeName: RPMVisuals, Assembly-CSharp
         m_MethodName: LowerMachineLvl
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1353662573}
+        m_TargetAssemblyTypeName: RPMVisuals, Assembly-CSharp
+        m_MethodName: StartParticles
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1353662573}
+        m_TargetAssemblyTypeName: RPMVisuals, Assembly-CSharp
+        m_MethodName: StopParticles
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11596,6 +11626,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9060461990577898695, guid: 457a029144305e74cb8f31b3feb89c7d, type: 3}
       propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060461990577898695, guid: 457a029144305e74cb8f31b3feb89c7d, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

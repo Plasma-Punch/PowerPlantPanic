@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.Rendering.GPUSort;
 
 public class RPMVisuals : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class RPMVisuals : MonoBehaviour
     private int _machineLvl = 0;
     [SerializeField, Range(0.1f, 1)]
     private float _speed = 1f;
+    private bool _playSpark = false;
 
     public void RaiseMachineLvl(Component sender, object obj)
     {
@@ -31,23 +33,41 @@ public class RPMVisuals : MonoBehaviour
         UpdateVisuals();
     }
 
+    public void StartParticles(Component sender, object obj)
+    {
+        _playSpark = true;
+        StartCoroutine(PlayParticle());
+        _smoke.emissionRate = 30;
+    }
+
+    public void StopParticles(Component sender, object obj)
+    {
+        MiniGameFinishedEventArgs args = obj as MiniGameFinishedEventArgs;
+        switch (args.FinishedMiniGame) 
+        { 
+            case MiniGame.FanBlock:
+                _playSpark = false;
+                _smoke.emissionRate = 0;
+                break;
+        }
+    }
+
     private void UpdateVisuals()
     {
         float multiplier =  1 - (_machineLvl * 0.1f);
         _animator.SetFloat("Speed", multiplier);
-        if(_machineLvl != 0)
+        if (_machineLvl == 0)
         {
-            StartCoroutine(PlayParticle());
-            _smoke.enableEmission = true;
+            _smoke.emissionRate = 0;
+            _playSpark = false;
         }
-        else _smoke.enableEmission = false;
     }
 
     private IEnumerator PlayParticle()
     {
         yield return new WaitForSeconds(_speed);
         _sparks.Emit(UnityEngine.Random.Range(3, 8));
-        if (_machineLvl != 0)
+        if (_playSpark)
            StartCoroutine(PlayParticle());
     }
 }
