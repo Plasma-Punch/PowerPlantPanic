@@ -8673,21 +8673,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MachineVisuals
   _machineVisual:
   - LevelVisial:
-    - {fileID: -1287205435167325629, guid: 6a4833ddf23b9d34ab4f5cf37fffef49, type: 3}
-    - {fileID: 4553938698167802408, guid: 89fec2e7a55d991409d94eb19cac2af9, type: 3}
-    - {fileID: 1301507843525735789, guid: ac57c51d172a6c24c9fc7f799dfedba6, type: 3}
+    - {fileID: 4160745591849262020, guid: b24b2eec82ca1654c8c7f23285290317, type: 3}
+    - {fileID: -219889392596703441, guid: 0ee87b56b62b9fe44ba674d166f26e7f, type: 3}
+    - {fileID: 7534089312410709196, guid: 7bc9fdb96a3d23e4380fbf6fd69e71a5, type: 3}
   - LevelVisial:
-    - {fileID: 7552529727562947752, guid: a457e95f7d5c29c4d9b2bfbfff139b94, type: 3}
-    - {fileID: 4553938698167802408, guid: 89fec2e7a55d991409d94eb19cac2af9, type: 3}
-    - {fileID: 2763261328758909250, guid: 75154cc5e60d93f4c992aa427519cd93, type: 3}
-  - LevelVisial:
-    - {fileID: 7552529727562947752, guid: a457e95f7d5c29c4d9b2bfbfff139b94, type: 3}
-    - {fileID: 4553938698167802408, guid: 89fec2e7a55d991409d94eb19cac2af9, type: 3}
-    - {fileID: -4268102711477478082, guid: cddf7c29e3b70eb4288763e138335cb5, type: 3}
-  - LevelVisial:
-    - {fileID: -2146925989694970274, guid: c1e377f267d592345a544e7767239b98, type: 3}
+    - {fileID: -4518765225305251590, guid: b03177bd3fa9a88459100b02be7055dd, type: 3}
     - {fileID: -3371922816639709784, guid: a597ab7464cd78f4ba27ce4380030af5, type: 3}
-    - {fileID: 3011519366054024010, guid: 7d288a0d4adb66d4b8ac43c56e47e3bf, type: 3}
+    - {fileID: 8269058106177190462, guid: a9a7ec17dbb180745b95b3f01099a4c5, type: 3}
+  - LevelVisial:
+    - {fileID: -4518765225305251590, guid: b03177bd3fa9a88459100b02be7055dd, type: 3}
+    - {fileID: -3371922816639709784, guid: a597ab7464cd78f4ba27ce4380030af5, type: 3}
+    - {fileID: -7205512464716789070, guid: c187690c36843a94b9ec0fd528c1a036, type: 3}
+  - LevelVisial:
+    - {fileID: -7682454943519402146, guid: 0af7ea67f80dc934ea502f11a28fb02b, type: 3}
+    - {fileID: -3371922816639709784, guid: a597ab7464cd78f4ba27ce4380030af5, type: 3}
+    - {fileID: -2395310957834284129, guid: 9add75caf5043a2408b9e6600fd686a6, type: 3}
   _machineObjects:
   - {fileID: 1289859160}
   - {fileID: 1788335543}
