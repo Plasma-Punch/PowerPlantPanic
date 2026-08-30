@@ -1101,6 +1101,86 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8257615263177925516, guid: 256bbc11e49d2994bad94736db1ea08b, type: 3}
   m_PrefabInstance: {fileID: 542372279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &290116876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 290116879}
+  - component: {fileID: 290116878}
+  - component: {fileID: 290116877}
+  m_Layer: 0
+  m_Name: DoorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &290116877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290116876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beea91935ee6d2746a0a632c4f077ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  Events:
+  - {fileID: 11400000, guid: ed22ca5b6924fa54fa9c329d82bf5eb3, type: 2}
+  Responses:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 290116878}
+        m_TargetAssemblyTypeName: BrokenDoorManager, Assembly-CSharp
+        m_MethodName: BreakDoor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &290116878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290116876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b264b89aaf913ba48987b700db8bd438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrokenDoorManager
+  _doors:
+  - {fileID: 835460056}
+  - {fileID: 673068319}
+  - {fileID: 1679388832}
+  - {fileID: 1570406438}
+  _breakDoor: {fileID: 11400000, guid: 868fecfca71d8d2469864eb33c7f8cc1, type: 2}
+--- !u!4 &290116879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290116876}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -5.27, y: -0.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &299170250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1617,7 +1697,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1679388836}
   m_SourcePrefab: {fileID: 100100000, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
 --- !u!4 &451149563 stripped
 Transform:
@@ -2062,7 +2145,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 835460060}
   m_SourcePrefab: {fileID: 100100000, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
 --- !u!1 &468090020 stripped
 GameObject:
@@ -3487,6 +3573,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -42}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &673068319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 875533328}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &673068320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8508433805603476048, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 875533328}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673068319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634ca6fbae293174db7907688fc7a2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &673068323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673068319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beea91935ee6d2746a0a632c4f077ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  Events:
+  - {fileID: 11400000, guid: 868fecfca71d8d2469864eb33c7f8cc1, type: 2}
+  Responses:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 673068320}
+        m_TargetAssemblyTypeName: SlidingDoors, Assembly-CSharp
+        m_MethodName: BreakDoor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &719820869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,13 +4251,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570406442}
   m_SourcePrefab: {fileID: 100100000, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
 --- !u!1 &824164276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9116902608777028121, guid: 25736de174f96ad4eacd95347ea8addf, type: 3}
   m_PrefabInstance: {fileID: 6090142913688129948}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &835460056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 458140756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &835460057 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8508433805603476048, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 458140756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835460056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634ca6fbae293174db7907688fc7a2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &835460060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835460056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beea91935ee6d2746a0a632c4f077ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  Events:
+  - {fileID: 11400000, guid: 868fecfca71d8d2469864eb33c7f8cc1, type: 2}
+  Responses:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835460057}
+        m_TargetAssemblyTypeName: SlidingDoors, Assembly-CSharp
+        m_MethodName: BreakDoor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &852173023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 354165069188073441, guid: 7c069abf56adcb54cbaeb18ce6362a7b, type: 3}
@@ -4502,7 +4681,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 673068323}
   m_SourcePrefab: {fileID: 100100000, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
 --- !u!1 &882247460 stripped
 GameObject:
@@ -7679,6 +7861,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3523637773854573007, guid: 1665e2f2a09c6754bab1c7626832618e, type: 3}
   m_PrefabInstance: {fileID: 196825120}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1570406438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 823001718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1570406439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8508433805603476048, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 823001718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570406438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634ca6fbae293174db7907688fc7a2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1570406442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570406438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beea91935ee6d2746a0a632c4f077ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  Events:
+  - {fileID: 11400000, guid: 868fecfca71d8d2469864eb33c7f8cc1, type: 2}
+  Responses:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1570406439}
+        m_TargetAssemblyTypeName: SlidingDoors, Assembly-CSharp
+        m_MethodName: BreakDoor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1579695707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7693810497147041634, guid: f2fd7ef4d2b3b66499b3b613e5e3ec25, type: 3}
@@ -7819,6 +8046,10 @@ PrefabInstance:
       propertyPath: _RPMDrainSpeed
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
+      propertyPath: _startMiniGame
+      value: 
+      objectReference: {fileID: 11400000, guid: ed22ca5b6924fa54fa9c329d82bf5eb3, type: 2}
     - target: {fileID: 6402226421691418178, guid: 322fbb2a6dd1b554c9490ec0e63d875b, type: 3}
       propertyPath: _RPMDrainAmount
       value: 1
@@ -8856,6 +9087,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2096171749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1679388832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3093651117600880311, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 419095246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679388833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8508433805603476048, guid: 77574193cce700c4b950d6ea8176abd2, type: 3}
+  m_PrefabInstance: {fileID: 419095246}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679388832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634ca6fbae293174db7907688fc7a2ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1679388836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679388832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beea91935ee6d2746a0a632c4f077ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  Events:
+  - {fileID: 11400000, guid: 868fecfca71d8d2469864eb33c7f8cc1, type: 2}
+  Responses:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1679388833}
+        m_TargetAssemblyTypeName: SlidingDoors, Assembly-CSharp
+        m_MethodName: BreakDoor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1709345236
 GameObject:
   m_ObjectHideFlags: 0
@@ -12480,6 +12756,7 @@ SceneRoots:
   - {fileID: 875533328}
   - {fileID: 419095246}
   - {fileID: 823001718}
+  - {fileID: 290116879}
   - {fileID: 200784405}
   - {fileID: 1907251881}
   - {fileID: 1580492951}

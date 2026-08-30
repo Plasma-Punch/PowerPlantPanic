@@ -1,7 +1,6 @@
 using System.Collections;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SlidingDoors : MonoBehaviour
 {
@@ -15,6 +14,8 @@ public class SlidingDoors : MonoBehaviour
     private GameObject _brokenCollider;
     [SerializeField]
     private ParticleSystem _sparks;
+    [SerializeField]
+    private List<GameObject> _consoleTriggers = new List<GameObject>();
 
     private Vector2 _leftClosedPosition, _rightOpenPosition;
 
@@ -25,7 +26,6 @@ public class SlidingDoors : MonoBehaviour
         _leftClosedPosition = doorLeft.transform.position;
         _rightOpenPosition = doorRight.transform.position;
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -50,12 +50,17 @@ public class SlidingDoors : MonoBehaviour
         StartCoroutine(OpenDoors());
     }
 
-    [ContextMenu("BreakDoor")]
-    public void BreakDoor()
+    public void BreakDoor(Component sender, object obj)
     {
+        GameObject door = obj as GameObject;
+        if (door.name != gameObject.name) return;
         _sparks.gameObject.SetActive(true);
         _brokenCollider.SetActive(true);
         _Works = false;
+        foreach (GameObject consoleTrigger in _consoleTriggers)
+        {
+            consoleTrigger.SetActive(true);
+        }
         StopAllCoroutines();
         StartCoroutine(BrokenDoors());
     }

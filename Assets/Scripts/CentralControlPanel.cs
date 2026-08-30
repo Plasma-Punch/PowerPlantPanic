@@ -11,6 +11,8 @@ public class CentralControlPanel : MonoBehaviour
     [SerializeField]
     private float _minigamesInterval;
     [SerializeField]
+    private GameEvent _startMiniGame;
+    [SerializeField]
     private List<GameEvent> _enableMiniGame = new List<GameEvent>();
     [SerializeField]
     private List<GameEvent> _disableMiniGame = new List<GameEvent>();
@@ -164,6 +166,7 @@ public class CentralControlPanel : MonoBehaviour
                 _isMinigameEnabled[index] = true;
                 _enableMiniGame[index].Raise(this, EventArgs.Empty);
                 _activeMiniGames += 1;
+                _startMiniGame.Raise(this, EventArgs.Empty);
             }
 
             _lastEnabledMiniGame = index;
