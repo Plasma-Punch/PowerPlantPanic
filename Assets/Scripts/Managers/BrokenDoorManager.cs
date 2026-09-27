@@ -21,7 +21,7 @@ public class BrokenDoorManager : MonoBehaviour
     }
 
     [ContextMenu("Break Door")]
-    public void BreakDoor()
+    public void BreakDoor(Component sender, object obj)
     {
         _minigamesStarted++;
 
