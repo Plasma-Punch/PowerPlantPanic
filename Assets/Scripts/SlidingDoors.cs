@@ -65,6 +65,22 @@ public class SlidingDoors : MonoBehaviour
         StartCoroutine(BrokenDoors());
     }
 
+    public void FixedDoor(Component sender, object obj)
+    {
+        GameObject door = obj as GameObject;
+        if (door != this.gameObject) return;
+        if(_Works) return;
+        _sparks.gameObject.SetActive(false);
+        _brokenCollider.SetActive(false);
+        _Works = true;
+        foreach (GameObject consoleTrigger in _consoleTriggers)
+        {
+            consoleTrigger.SetActive(false);
+        }
+        StopAllCoroutines();
+        StartCoroutine(OpenDoors());
+    }
+
     IEnumerator OpenDoors() 
     {
         Vector3 leftDoorTargetPos = doorLeftPosition.position - transform.right * ((doorLeft.GetComponent<SpriteRenderer>().size.x / 2) * doorLeft.transform.localScale.x);

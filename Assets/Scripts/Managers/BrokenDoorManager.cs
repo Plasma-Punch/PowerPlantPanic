@@ -20,12 +20,13 @@ public class BrokenDoorManager : MonoBehaviour
         }
     }
 
-    public void BreakDoor(Component sender, object obj)
+    [ContextMenu("Break Door")]
+    public void BreakDoor()
     {
         _minigamesStarted++;
 
         if(_minigamesStarted < 3) return;
-        int randNum = Random.Range(0, 4);
+        int randNum = Random.Range(0, 3);
 
         if (randNum != 2) return;
         SelectrandomDoor();

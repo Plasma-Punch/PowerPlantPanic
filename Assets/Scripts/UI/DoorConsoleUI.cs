@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,7 +18,13 @@ public class DoorConsoleUI : MonoBehaviour
     [SerializeField]
     private GameObject _cameraSprite;
     [SerializeField]
+    private GameObject _sliderA;
+    [SerializeField]
+    private GameObject _sliderS;
+    [SerializeField]
     private AnimationCurve _scaleCurve;
+    [SerializeField]
+    private GameEvent _fixedDoor;
 
     private int _correctAngle;
     private float _correctScale;
@@ -35,8 +43,10 @@ public class DoorConsoleUI : MonoBehaviour
     private float scale;
     private float angle;
 
+    private GameObject _opendDoorUI;
+
     [ContextMenu("Run My Function")]
-    public void DoorBroken()
+    public void DoorBroken(Component sender, object obj)
     {
         if (_isMiniGameActive) return;
         _isMiniGameActive = true;
@@ -58,8 +68,17 @@ public class DoorConsoleUI : MonoBehaviour
         _cameraSprite.transform.localScale = new Vector3(_cameraSprite.transform.localScale.x, cameraScale, 1);
         _coneSprite.transform.localScale = new Vector3(_coneSprite.transform.localScale.x, coneScale, 1);
         _correctScale = coneScale;
+
+        InitializeSliders(cameraAngle, cameraScale);
     }
 
+    public void OpenDoorUI(Component sender, object obj)
+    {
+        GameObject trigger = sender.gameObject;
+        GameObject console = trigger.transform.parent.gameObject;
+        _opendDoorUI = console.transform.parent.gameObject;
+        _doorUi.SetActive(true);
+    }
     public void SetActivatedSlider(Component sender, object obj)
     {
         if (_isHoldingSlider) return;
@@ -84,6 +103,25 @@ public class DoorConsoleUI : MonoBehaviour
         return scale;
     }
 
+    private void InitializeSliders(int cameraAngle, float cameraScale)
+    {
+        float angleNormalized = Mathf.Clamp01((float)cameraAngle / 90f);
+        float scaleNormalized = Mathf.Clamp01(cameraScale / 2f);
+
+        SetSliderPosition(_sliderA, angleNormalized);
+        SetSliderPosition(_sliderS, scaleNormalized);
+    }
+
+    private void SetSliderPosition(GameObject slider, float normalizedValue)
+    {
+        if (slider == null) return;
+
+        var rect = (RectTransform)slider.transform;
+        Vector3 pos = rect.localPosition;
+        pos.y = normalizedValue * 520f - 260f;
+        rect.localPosition = pos;
+    }
+
     private void MoveSlider(Vector3 newPos)
     {
         if (!_isMiniGameActive) return;
@@ -98,7 +136,7 @@ public class DoorConsoleUI : MonoBehaviour
             case "Slider_A":
                 angle = (int)(normedYPos * 90f);
                 _cameraPivot.transform.localEulerAngles = new Vector3(0, 0, angle);
-                SetScale(scaleSliderValue);
+                //SetScale(scaleSliderValue);
                 break;
 
             case "Slider_S":
@@ -120,12 +158,22 @@ public class DoorConsoleUI : MonoBehaviour
 
     private void CheckSolution()
     {
-        if (_ConePivot.transform.localEulerAngles.z + 2 < _cameraPivot.transform.localEulerAngles.z &&
-            _ConePivot.transform.localEulerAngles.z - 2 > _cameraPivot.transform.localEulerAngles.z) return;
-        Debug.Log("within Angle");
-
+        float coneZ = _ConePivot.transform.localEulerAngles.z;
+        float cameraZ = _cameraPivot.transform.localEulerAngles.z;
+        if (cameraZ < coneZ - 15 || cameraZ > coneZ + 15) return;
         if (Mathf.Abs(_coneSprite.transform.localScale.y - _cameraSprite.transform.localScale.y) > 0.1f) return;
-        Debug.Log("Fixed");
+
+        _cameraPivot.transform.localEulerAngles = _ConePivot.transform.localEulerAngles;
+        _cameraSprite.transform.localScale = _coneSprite.transform.localScale;
+        _fixedDoor.Raise(this, _opendDoorUI);
+        StartCoroutine(CloseDoorUI());
+    }
+
+    private IEnumerator CloseDoorUI()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _doorUi.SetActive(false);
+        _isMiniGameActive = false;
     }
 
     private void Update()
