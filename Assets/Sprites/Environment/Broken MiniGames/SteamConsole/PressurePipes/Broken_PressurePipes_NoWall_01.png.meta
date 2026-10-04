@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a9a7ec17dbb180745b95b3f01099a4c5
+guid: c60da72fd5481ee4e9ec69321d3adf2b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -131,15 +131,37 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: Broken_PressurePipes_NoWall_01_0
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1302
+        width: 278
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffc7baa6de01d1c0800000000000000
+      internalID: -4480783839106969604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Broken_PressurePipes_NoWall_01_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2048
-        height: 2048
+        x: 453
+        y: 820
+        width: 902
+        height: 617
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,11 +174,121 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Broken_PressurePipes_NoWall_01_2
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 1285
+        width: 260
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71678522e11184870800000000000000
+      internalID: 8667196303997433367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_PressurePipes_NoWall_01_3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 396
+        width: 259
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa7d48537b76d3e0800000000000000
+      internalID: -2029298846750901506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_PressurePipes_NoWall_01_4
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 612
+        width: 563
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c09893fee13cc24e0800000000000000
+      internalID: -2005013196456752884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_PressurePipes_NoWall_01_5
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 811
+        width: 218
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7664e58f956e4c0800000000000000
+      internalID: -4258617474363791439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken_PressurePipes_NoWall_01_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 612
+        width: 310
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c856821f251fca30800000000000000
+      internalID: 4237629066297366720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c78f480d1b30aa24297e3d19dbe926a2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
